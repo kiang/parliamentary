@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2014-06-21 12:46+0800\n"
-"PO-Revision-Date: 2014-06-21 13:57+0800\n"
+"PO-Revision-Date: 2014-06-21 19:58+0800\n"
 "Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: olc.tw <service@olc.tw>\n"
 "Language: zh-hant\n"
@@ -410,24 +410,20 @@ msgid "Create Administrator"
 msgstr "建立管理者"
 
 #: View/Motions/admin_form.ctp:5
-#, fuzzy
 msgid "Edit Motions"
-msgstr "編輯旅行團"
+msgstr "編輯議案"
 
 #: View/Motions/admin_form.ctp:7
-#, fuzzy
 msgid "Add Motions"
-msgstr "操作"
+msgstr "新增議案"
 
 #: View/Motions/admin_index.ctp:7 View/Motions/index.ctp:2
-#, fuzzy
 msgid "Motions"
-msgstr "操作"
+msgstr "議案"
 
 #: View/Motions/admin_view.ctp:2 View/Motions/view.ctp:2
-#, fuzzy
 msgid "View Motions"
-msgstr "檢視旅行團"
+msgstr "檢視議案"
 
 #: View/Motions/admin_view.ctp:162 View/Motions/view.ctp:160
 msgid "Motions List"
@@ -435,19 +431,16 @@ msgstr ""
 
 #: View/Motions/admin_view.ctp:163 View/Motions/view.ctp:161
 #: View/Parties/admin_view.ctp:19 View/Parties/view.ctp:17
-#, fuzzy
 msgid "View Related Parliamentarians"
-msgstr "檢視相關供應商"
+msgstr "檢視相關議員"
 
 #: View/Motions/admin_view.ctp:164
-#, fuzzy
 msgid "Set Related Parliamentarians"
-msgstr "設定相關供應商"
+msgstr "設定相關議員"
 
 #: View/Parliamentarians/admin_form.ctp:5
-#, fuzzy
 msgid "Edit Parliamentarians"
-msgstr "編輯供應商"
+msgstr "編輯議員"
 
 #: View/Parliamentarians/admin_form.ctp:7
 msgid "Add Parliamentarians"
@@ -458,47 +451,40 @@ msgid "Parliamentarians"
 msgstr ""
 
 #: View/Parliamentarians/admin_view.ctp:2 View/Parliamentarians/view.ctp:2
-#, fuzzy
 msgid "View Parliamentarians"
-msgstr "檢視供應商"
+msgstr "檢視議員"
 
 #: View/Parliamentarians/admin_view.ctp:158 View/Parliamentarians/view.ctp:156
 msgid "Parliamentarians List"
 msgstr ""
 
 #: View/Parliamentarians/admin_view.ctp:159 View/Parliamentarians/view.ctp:157
-#, fuzzy
 msgid "View Related Motions"
-msgstr "相關旅行團"
+msgstr "相關議案"
 
 #: View/Parliamentarians/admin_view.ctp:160
-#, fuzzy
 msgid "Set Related Motions"
-msgstr "設定相關旅行團"
+msgstr "設定相關議案"
 
 #: View/Parties/admin_form.ctp:5
-#, fuzzy
 msgid "Edit Parties"
-msgstr "編輯供應商"
+msgstr "編輯政黨"
 
 #: View/Parties/admin_form.ctp:7
-#, fuzzy
 msgid "Add Parties"
-msgstr "新增供應商"
+msgstr "新增政黨"
 
 #: View/Parties/admin_index.ctp:7 View/Parties/index.ctp:2
 msgid "Parties"
 msgstr ""
 
 #: View/Parties/admin_view.ctp:2 View/Parties/view.ctp:2
-#, fuzzy
 msgid "View Parties"
-msgstr "檢視供應商"
+msgstr "檢視政黨"
 
 #: View/Parties/admin_view.ctp:18 View/Parties/view.ctp:16
-#, fuzzy
 msgid "Parties List"
-msgstr "供應商清單"
+msgstr "政黨清單"
 
 #: cake2/lib/Cake/View/ViewBlock.php:80 View/ViewBlock.php:80
 msgid "A view block with the name '%s' is already/still open."
@@ -566,12 +552,10 @@ msgstr ""
 
 #: cake2/lib/Cake/Controller/Scaffold.php:168;235;304
 #: Controller/Scaffold.php:168;235;304
-#, fuzzy
 msgid "Invalid %s"
-msgstr "群組有誤"
+msgstr "%s 有誤"
 
 #: cake2/lib/Cake/Controller/Scaffold.php:223 Controller/Scaffold.php:223
-#, fuzzy
 msgid "updated"
 msgstr "已更新"
 
@@ -580,18 +564,16 @@ msgid "saved"
 msgstr ""
 
 #: cake2/lib/Cake/Controller/Scaffold.php:246 Controller/Scaffold.php:246
-#, fuzzy
 msgid "The %1$s has been %2$s"
-msgstr "資料已經儲存"
+msgstr "%1$s 已經 %2$s"
 
 #: cake2/lib/Cake/Controller/Scaffold.php:256 Controller/Scaffold.php:256
 msgid "Please correct errors below."
 msgstr ""
 
 #: cake2/lib/Cake/Controller/Scaffold.php:307 Controller/Scaffold.php:307
-#, fuzzy
 msgid "The %1$s with id: %2$s has been deleted."
-msgstr "資料已經刪除"
+msgstr "%1$s 編號 %2$s 刪除了"
 
 #: cake2/lib/Cake/Controller/Scaffold.php:310 Controller/Scaffold.php:310
 msgid "There was an error deleting the %1$s with id: %2$s"
@@ -805,9 +787,8 @@ msgstr ""
 #: cake2/lib/Cake/View/Helper/FormHelper.php:934
 #: cake2/lib/Cake/View/Scaffolds/view.ctp:53;111
 #: View/Helper/FormHelper.php:934 View/Scaffolds/view.ctp:53;111
-#, fuzzy
 msgid "Edit %s"
-msgstr "編輯"
+msgstr "編輯 %s"
 
 #: cake2/lib/Cake/View/Helper/FormHelper.php:1505
 #: View/Helper/FormHelper.php:1505
@@ -856,9 +837,8 @@ msgstr ""
 
 #: cake2/lib/Cake/View/Helper/FormHelper.php:2894
 #: View/Helper/FormHelper.php:2894
-#, fuzzy
 msgid "September"
-msgstr "使用者"
+msgstr "九月"
 
 #: cake2/lib/Cake/View/Helper/FormHelper.php:2895
 #: View/Helper/FormHelper.php:2895
@@ -867,15 +847,13 @@ msgstr ""
 
 #: cake2/lib/Cake/View/Helper/FormHelper.php:2896
 #: View/Helper/FormHelper.php:2896
-#, fuzzy
 msgid "November"
-msgstr "使用者"
+msgstr "十一月"
 
 #: cake2/lib/Cake/View/Helper/FormHelper.php:2897
 #: View/Helper/FormHelper.php:2897
-#, fuzzy
 msgid "December"
-msgstr "使用者"
+msgstr "十二月"
 
 #: cake2/lib/Cake/View/Helper/HtmlHelper.php:769
 #: View/Helper/HtmlHelper.php:769
@@ -891,9 +869,8 @@ msgstr ""
 #: cake2/lib/Cake/View/Scaffolds/index.ctp:87
 #: cake2/lib/Cake/View/Scaffolds/view.ctp:61;74 View/Scaffolds/form.ctp:44
 #: View/Scaffolds/index.ctp:87 View/Scaffolds/view.ctp:61;74
-#, fuzzy
 msgid "List %s"
-msgstr "清單"
+msgstr "%s 清單"
 
 #: cake2/lib/Cake/View/Scaffolds/index.ctp:70 View/Scaffolds/index.ctp:70
 msgid "previous"
@@ -904,20 +881,17 @@ msgid "next"
 msgstr ""
 
 #: cake2/lib/Cake/View/Scaffolds/view.ctp:20 View/Scaffolds/view.ctp:20
-#, fuzzy
 msgid "View %s"
-msgstr "檢視"
+msgstr "檢視 %s"
 
 #: cake2/lib/Cake/View/Scaffolds/view.ctp:57 View/Scaffolds/view.ctp:57
-#, fuzzy
 msgid "Delete %s"
-msgstr "刪除"
+msgstr "刪除 %s"
 
 #: cake2/lib/Cake/View/Scaffolds/view.ctp:95;135
 #: View/Scaffolds/view.ctp:95;135
-#, fuzzy
 msgid "Related %s"
-msgstr "設定相關旅行團"
+msgstr "相關 %s"
 
 #: cake2/app/View/Layouts/default.ctp:20
 msgid "CakePHP %s"
@@ -1232,9 +1206,8 @@ msgid "%s cache was unable to write '%s' to %s cache"
 msgstr ""
 
 #: cake2/lib/Cake/Cache/Cache.php:538 Cache/Cache.php:538
-#, fuzzy
 msgid "Invalid cache group %s"
-msgstr "群組有誤"
+msgstr "快取群組 %s 有誤"
 
 #: cake2/lib/Cake/Cache/Engine/FileEngine.php:312
 #: Cache/Engine/FileEngine.php:312
@@ -1310,21 +1283,18 @@ msgstr ""
 
 #: cake2/lib/Cake/Console/Command/Task/PluginTask.php:180
 #: Console/Command/Task/PluginTask.php:180
-#, fuzzy
 msgid "%s modified"
-msgstr "更新時間"
+msgstr "%s 更新了"
 
 #: cake2/lib/Cake/Console/Command/Task/TestTask.php:322
 #: Console/Command/Task/TestTask.php:322
-#, fuzzy
 msgid "Invalid object type."
-msgstr "群組有誤"
+msgstr "物件類型有誤"
 
 #: cake2/lib/Cake/Console/Command/Task/TestTask.php:341
 #: Console/Command/Task/TestTask.php:341
-#, fuzzy
 msgid "Invalid type name"
-msgstr "群組有誤"
+msgstr "類型名稱有誤"
 
 #: cake2/lib/Cake/Console/Templates/skel/webroot/test.php:84
 msgid "Debug setting does not allow access to this URL."
@@ -1473,9 +1443,8 @@ msgstr ""
 
 #: cake2/lib/Cake/Log/LogEngineCollection.php:69
 #: Log/LogEngineCollection.php:69
-#, fuzzy
 msgid "Could not load class %s"
-msgstr "找不到 %s"
+msgstr "無法載入類別 %s"
 
 #: cake2/lib/Cake/Log/Engine/FileLog.php:150 Log/Engine/FileLog.php:150
 msgid "Could not apply permission mask \"%s\" on log file \"%s\""
@@ -1527,14 +1496,12 @@ msgid "ACO permissions key %s does not exist in %s"
 msgstr ""
 
 #: cake2/lib/Cake/Model/Permission.php:179 Model/Permission.php:179
-#, fuzzy
 msgid "%s - Invalid node"
-msgstr "群組有誤"
+msgstr "%s - 節點有誤"
 
 #: cake2/lib/Cake/Model/Permission.php:197 Model/Permission.php:197
-#, fuzzy
 msgid "Invalid permission key \"%s\""
-msgstr "錯誤的群組權限"
+msgstr "權限索引 %s 錯誤"
 
 #: cake2/lib/Cake/Model/Behavior/AclBehavior.php:66
 #: Model/Behavior/AclBehavior.php:66
@@ -1611,9 +1578,8 @@ msgstr ""
 #: cake2/lib/Cake/Model/Datasource/Database/Sqlite.php:407
 #: Model/Datasource/DboSource.php:3309
 #: Model/Datasource/Database/Sqlite.php:407
-#, fuzzy
 msgid "Column type %s does not exist"
-msgstr "頁面不存在"
+msgstr "欄位類型 %s 不存在"
 
 #: cake2/lib/Cake/Model/Datasource/Database/Mysql.php:341
 #: cake2/lib/Cake/Model/Datasource/Database/Sqlserver.php:227
@@ -1628,9 +1594,8 @@ msgid "Could not find validation handler %s for %s"
 msgstr ""
 
 #: cake2/lib/Cake/Network/CakeRequest.php:451 Network/CakeRequest.php:451
-#, fuzzy
 msgid "Method %s does not exist"
-msgstr "頁面不存在"
+msgstr "方法 %s 不存在"
 
 #: cake2/lib/Cake/Network/CakeResponse.php:628 Network/CakeResponse.php:628
 msgid "Unknown status code"
@@ -1729,9 +1694,8 @@ msgstr ""
 
 #: cake2/lib/Cake/Network/Email/CakeEmail.php:1035
 #: Network/Email/CakeEmail.php:1035
-#, fuzzy
 msgid "File not found: \"%s\""
-msgstr "找不到 %s"
+msgstr "找不到檔案 %s"
 
 #: cake2/lib/Cake/Network/Email/CakeEmail.php:1118
 #: Network/Email/CakeEmail.php:1118
@@ -1810,9 +1774,8 @@ msgstr ""
 
 #: cake2/lib/Cake/Network/Http/HttpSocket.php:244
 #: Network/Http/HttpSocket.php:244
-#, fuzzy
 msgid "Invalid resource."
-msgstr "群組有誤"
+msgstr "資源有誤"
 
 #: cake2/lib/Cake/Network/Http/HttpSocket.php:404
 #: Network/Http/HttpSocket.php:404
@@ -1856,9 +1819,8 @@ msgstr ""
 
 #: cake2/lib/Cake/Network/Http/HttpSocketResponse.php:151
 #: Network/Http/HttpSocketResponse.php:151
-#, fuzzy
 msgid "Invalid response."
-msgstr "群組有誤"
+msgstr "回應有誤"
 
 #: cake2/lib/Cake/Network/Http/HttpSocketResponse.php:155
 #: Network/Http/HttpSocketResponse.php:155
@@ -1879,9 +1841,8 @@ msgid "No fixture manager to load the test fixture"
 msgstr ""
 
 #: cake2/lib/Cake/TestSuite/CakeTestRunner.php:98
-#, fuzzy
 msgid "Could not find fixture manager %s."
-msgstr "找不到 %s"
+msgstr "找不到範例資料管理物件 %s"
 
 #: cake2/lib/Cake/TestSuite/Fixture/CakeFixtureManager.php:172
 msgid "Referenced fixture class %s (%s) not found"
@@ -1961,9 +1922,8 @@ msgid "%s is a file"
 msgstr ""
 
 #: cake2/lib/Cake/Utility/Folder.php:519;697 Utility/Folder.php:519;697
-#, fuzzy
 msgid "%s created"
-msgstr "建立時間"
+msgstr "建立時間 %s"
 
 #: cake2/lib/Cake/Utility/Folder.php:523 Utility/Folder.php:523
 msgid "%s NOT created"
@@ -2070,9 +2030,8 @@ msgid "XML cannot be read."
 msgstr ""
 
 #: cake2/lib/Cake/Utility/Xml.php:115;194 Utility/Xml.php:115;194
-#, fuzzy
 msgid "Invalid input."
-msgstr "群組有誤"
+msgstr "輸入有誤"
 
 #: cake2/lib/Cake/Utility/Xml.php:149 Utility/Xml.php:149
 msgid "Xml cannot be read."
@@ -2083,9 +2042,8 @@ msgid "The key of input must be alphanumeric"
 msgstr ""
 
 #: cake2/lib/Cake/Utility/Xml.php:275;288 Utility/Xml.php:275;288
-#, fuzzy
 msgid "Invalid array"
-msgstr "群組有誤"
+msgstr "陣列有誤"
 
 #: cake2/lib/Cake/Utility/Xml.php:339 Utility/Xml.php:339
 msgid "The input is not instance of SimpleXMLElement, DOMDocument or DOMNode."
@@ -2218,7 +2176,6 @@ msgstr ""
 #: cake2/lib/Cake/View/Errors/missing_helper.ctp:24
 #: View/Errors/missing_behavior.ctp:24 View/Errors/missing_component.ctp:24
 #: View/Errors/missing_controller.ctp:24 View/Errors/missing_helper.ctp:24
-#, fuzzy
 msgid "%s could not be found."
 msgstr "找不到 %s"
 
@@ -2425,7 +2382,6 @@ msgstr ""
 #: View/Helper/TimeHelper.php:61
 #: cake2/lib/Cake/Console/Command/ApiShell.php:211
 #: Console/Command/ApiShell.php:211
-#, fuzzy
 msgid "%s could not be found"
 msgstr "找不到 %s"
 
@@ -2568,9 +2524,8 @@ msgid "<warning>File `%s` exists</warning>"
 msgstr ""
 
 #: cake2/lib/Cake/Console/Shell.php:704 Console/Shell.php:704
-#, fuzzy
 msgid "Do you want to overwrite?"
-msgstr "確定要刪除？"
+msgstr "確定要覆寫？"
 
 #: cake2/lib/Cake/Console/Shell.php:707 Console/Shell.php:707
 msgid "<error>Quitting</error>."
@@ -2716,27 +2671,23 @@ msgstr ""
 
 #: cake2/lib/Cake/Console/Command/AclShell.php:275
 #: Console/Command/AclShell.php:275
-#, fuzzy
 msgid "Permission denied."
-msgstr "權限"
+msgstr "權限拒絕了"
 
 #: cake2/lib/Cake/Console/Command/AclShell.php:277
 #: Console/Command/AclShell.php:277
-#, fuzzy
 msgid "Permission was not denied."
-msgstr "群組權限沒有刪除"
+msgstr "權限沒有拒絕"
 
 #: cake2/lib/Cake/Console/Command/AclShell.php:290
 #: Console/Command/AclShell.php:290
-#, fuzzy
 msgid "Permission inherited."
-msgstr "權限設定"
+msgstr "權限繼承了"
 
 #: cake2/lib/Cake/Console/Command/AclShell.php:292
 #: Console/Command/AclShell.php:292
-#, fuzzy
 msgid "Permission was not inherited."
-msgstr "群組權限沒有刪除"
+msgstr "權限沒有繼承"
 
 #: cake2/lib/Cake/Console/Command/AclShell.php:376
 #: Console/Command/AclShell.php:376
@@ -2910,9 +2861,8 @@ msgstr ""
 
 #: cake2/lib/Cake/Console/Command/AclShell.php:474
 #: Console/Command/AclShell.php:474
-#, fuzzy
 msgid "Action to deny"
-msgstr "操作"
+msgstr "禁止操作"
 
 #: cake2/lib/Cake/Console/Command/AclShell.php:478
 #: Console/Command/AclShell.php:478
@@ -3288,9 +3238,8 @@ msgstr ""
 
 #: cake2/lib/Cake/Console/Command/ConsoleShell.php:211
 #: Console/Command/ConsoleShell.php:211
-#, fuzzy
 msgid "Invalid command"
-msgstr "群組有誤"
+msgstr "指令有誤"
 
 #: cake2/lib/Cake/Console/Command/ConsoleShell.php:276
 #: Console/Command/ConsoleShell.php:276
@@ -3452,9 +3401,8 @@ msgstr ""
 
 #: cake2/lib/Cake/Console/Command/SchemaShell.php:300
 #: Console/Command/SchemaShell.php:300
-#, fuzzy
 msgid "Name: %s"
-msgstr "名稱"
+msgstr "名稱： %s"
 
 #: cake2/lib/Cake/Console/Command/SchemaShell.php:333;399
 #: Console/Command/SchemaShell.php:333;399
@@ -3468,9 +3416,8 @@ msgstr ""
 
 #: cake2/lib/Cake/Console/Command/SchemaShell.php:342
 #: Console/Command/SchemaShell.php:342
-#, fuzzy
 msgid "Are you sure you want to drop the table(s)?"
-msgstr "確定要刪除？"
+msgstr "確定要刪除資料表？"
 
 #: cake2/lib/Cake/Console/Command/SchemaShell.php:344
 #: Console/Command/SchemaShell.php:344
@@ -3484,9 +3431,8 @@ msgstr ""
 
 #: cake2/lib/Cake/Console/Command/SchemaShell.php:353
 #: Console/Command/SchemaShell.php:353
-#, fuzzy
 msgid "Are you sure you want to create the table(s)?"
-msgstr "確定要刪除 %s ？"
+msgstr "確定要建立資料表 ？"
 
 #: cake2/lib/Cake/Console/Command/SchemaShell.php:355
 #: Console/Command/SchemaShell.php:355
@@ -3510,9 +3456,8 @@ msgstr ""
 
 #: cake2/lib/Cake/Console/Command/SchemaShell.php:407
 #: Console/Command/SchemaShell.php:407
-#, fuzzy
 msgid "Are you sure you want to alter the tables?"
-msgstr "確定要刪除？"
+msgstr "確定要異動資料表？"
 
 #: cake2/lib/Cake/Console/Command/SchemaShell.php:410
 #: Console/Command/SchemaShell.php:410
@@ -3541,9 +3486,8 @@ msgstr ""
 
 #: cake2/lib/Cake/Console/Command/SchemaShell.php:456
 #: Console/Command/SchemaShell.php:456
-#, fuzzy
 msgid "%s updated."
-msgstr "已更新"
+msgstr "%s 已更新"
 
 #: cake2/lib/Cake/Console/Command/SchemaShell.php:473
 #: Console/Command/SchemaShell.php:473
@@ -3629,9 +3573,8 @@ msgstr ""
 
 #: cake2/lib/Cake/Console/Command/SchemaShell.php:537
 #: Console/Command/SchemaShell.php:537
-#, fuzzy
 msgid "Generate a snapshot."
-msgstr "產生權限管理物件"
+msgstr "產生快照"
 
 #: cake2/lib/Cake/Console/Command/SchemaShell.php:541
 #: Console/Command/SchemaShell.php:541
@@ -4287,9 +4230,8 @@ msgstr ""
 
 #: cake2/lib/Cake/Console/Command/Task/DbConfigTask.php:98
 #: Console/Command/Task/DbConfigTask.php:98
-#, fuzzy
 msgid "Name:"
-msgstr "名稱"
+msgstr "名稱："
 
 #: cake2/lib/Cake/Console/Command/Task/DbConfigTask.php:101
 #: Console/Command/Task/DbConfigTask.php:101
@@ -4324,15 +4266,13 @@ msgstr ""
 
 #: cake2/lib/Cake/Console/Command/Task/DbConfigTask.php:133
 #: Console/Command/Task/DbConfigTask.php:133
-#, fuzzy
 msgid "User:"
-msgstr "帳號"
+msgstr "帳號："
 
 #: cake2/lib/Cake/Console/Command/Task/DbConfigTask.php:139
 #: Console/Command/Task/DbConfigTask.php:139
-#, fuzzy
 msgid "Password:"
-msgstr "密碼"
+msgstr "密碼："
 
 #: cake2/lib/Cake/Console/Command/Task/DbConfigTask.php:142
 #: Console/Command/Task/DbConfigTask.php:142
@@ -4454,9 +4394,8 @@ msgstr ""
 
 #: cake2/lib/Cake/Console/Command/Task/ExtractTask.php:141;213
 #: Console/Command/Task/ExtractTask.php:141;213
-#, fuzzy
 msgid "The directory path you supplied was not found. Please try again."
-msgstr "群組權限無法儲存，請重試"
+msgstr "提供的路徑不存在，請重試"
 
 #: cake2/lib/Cake/Console/Command/Task/ExtractTask.php:175
 #: Console/Command/Task/ExtractTask.php:175
@@ -4752,9 +4691,8 @@ msgstr ""
 
 #: cake2/lib/Cake/Console/Command/Task/ModelTask.php:266
 #: Console/Command/Task/ModelTask.php:266
-#, fuzzy
 msgid "Associations:"
-msgstr "操作"
+msgstr "關聯："
 
 #: cake2/lib/Cake/Console/Command/Task/ModelTask.php:320
 #: Console/Command/Task/ModelTask.php:320
@@ -5114,9 +5052,8 @@ msgstr ""
 
 #: cake2/lib/Cake/Console/Command/Task/ProjectTask.php:129
 #: Console/Command/Task/ProjectTask.php:129
-#, fuzzy
 msgid "Could not set permissions on %s"
-msgstr "找不到 %s"
+msgstr "無法設定 %s 的權限"
 
 #: cake2/lib/Cake/Console/Command/Task/ProjectTask.php:134
 #: Console/Command/Task/ProjectTask.php:134
@@ -5239,9 +5176,8 @@ msgstr ""
 
 #: cake2/lib/Cake/Console/Command/Task/TemplateTask.php:213
 #: Console/Command/Task/TemplateTask.php:213
-#, fuzzy
 msgid "Could not find template for %s"
-msgstr "找不到 %s"
+msgstr "找不到 %s 的樣板"
 
 #: cake2/lib/Cake/Console/Command/Task/TestTask.php:111
 #: Console/Command/Task/TestTask.php:111
