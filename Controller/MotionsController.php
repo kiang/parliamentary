@@ -5,6 +5,11 @@ class MotionsController extends AppController {
     public $name = 'Motions';
     public $paginate = array();
     public $helpers = array();
+    
+    function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allowedActions = array('view', 'index');
+    }
 
     function index($foreignModel = null, $foreignId = 0) {
         $foreignId = intval($foreignId);
