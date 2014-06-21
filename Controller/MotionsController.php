@@ -46,6 +46,9 @@ class MotionsController extends AppController {
         }
         $this->set('scope', $scope);
         $this->paginate['Motion']['limit'] = 20;
+        $this->paginate['Motion']['order'] = array(
+            'Motion.modified' => 'DESC',
+        );
         $items = $this->paginate($this->Motion, $scope);
         $this->set('items', $items);
         $this->set('foreignId', $foreignId);
@@ -53,7 +56,13 @@ class MotionsController extends AppController {
     }
 
     function view($id = null) {
-        if (!$id || !$this->data = $this->Motion->read(null, $id)) {
+        $item = $this->Motion->find('first', array(
+            'conditions' => array('Motion.id' => $id),
+            'contain' => array('Parliamentarian'),
+        ));
+        if(!empty($item)) {
+            $this->set('item', $item);
+        } else {
             $this->Session->setFlash(__('Please do following links in the page', true));
             $this->redirect(array('action' => 'index'));
         }

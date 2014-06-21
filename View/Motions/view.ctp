@@ -1,175 +1,119 @@
-<div id="MotionsView">
-    <h3><?php echo __('View Motions', true); ?></h3><hr />
-    <div class="col-sm-12">
+<div id="masthead">  
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1><?php echo $item['Motion']['summary']; ?></h1>
+            </div>
+        </div> 
+    </div><!--/container-->
+</div><!--/masthead-->
 
-        <div class="col-sm-2">Sequence</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['sequence']) {
-
-                echo $this->data['Motion']['sequence'];
+<div class="container">
+    <div class="row">
+        <!--left-->
+        <div class="col-md-3" id="leftCol">
+            <?php
+            foreach ($item['Parliamentarian'] AS $p) {
+                ?>
+                <div class="well well-lg"> 
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="<?php echo $p['image_url']; ?>" style="height: 100px;">
+                        </div>
+                        <div class="col-sm-8">
+                            <ul>
+                                <li><?php echo $this->Html->link($p['name'], '/parliamentarians/view/' . $p['id']); ?></li>
+                                <li><?php echo $p['contacts_phone']; ?></li>
+                                <li><?php echo $p['district']; ?></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <?php
             }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Type</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['type']) {
+            ?>
+        </div><!--/left-->
 
-                echo $this->data['Motion']['type'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Group Type</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['group_type']) {
-
-                echo $this->data['Motion']['group_type'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Number</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['number']) {
-
-                echo $this->data['Motion']['number'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Source</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['source']) {
-
-                echo $this->data['Motion']['source'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Requested Date</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['requested_date']) {
-
-                echo $this->data['Motion']['requested_date'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Requested Number</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['requested_number']) {
-
-                echo $this->data['Motion']['requested_number'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Requester</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['requester']) {
-
-                echo $this->data['Motion']['requester'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Petition People</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['petition_people']) {
-
-                echo $this->data['Motion']['petition_people'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Summary</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['summary']) {
-
-                echo $this->data['Motion']['summary'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Description</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['description']) {
-
-                echo $this->data['Motion']['description'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Rules</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['rules']) {
-
-                echo $this->data['Motion']['rules'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Comments</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['comments']) {
-
-                echo $this->data['Motion']['comments'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Result</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['result']) {
-
-                echo $this->data['Motion']['result'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Status</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['status']) {
-
-                echo $this->data['Motion']['status'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Result Date</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['result_date']) {
-
-                echo $this->data['Motion']['result_date'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Posting Date</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['posting_date']) {
-
-                echo $this->data['Motion']['posting_date'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Posting Number</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['posting_number']) {
-
-                echo $this->data['Motion']['posting_number'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Attachments</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Motion']['attachments']) {
-
-                echo $this->data['Motion']['attachments'];
-            }
-?>&nbsp;
-        </div>
-    </div>
-    <div class="actions">
-        <ul>
-            <li><?php echo $this->Html->link(__('Motions List', true), array('action' => 'index')); ?> </li>
-            <li><?php echo $this->Html->link(__('View Related Parliamentarians', true), array('controller' => 'parliamentarians', 'action' => 'index', 'Motion', $this->data['Motion']['id']), array('class' => 'MotionsViewControl')); ?></li>
-        </ul>
-    </div>
-    <div id="MotionsViewPanel"></div>
-    <script type="text/javascript">
-        //<![CDATA[
-        $(function() {
-            $('a.MotionsViewControl').click(function() {
-                $('#MotionsViewPanel').parent().load(this.href);
-                return false;
-            });
-        });
-        //]]>
-    </script>
-</div>
+        <!--right-->
+        <div class="col-md-9">
+            <table class="table table-bordered">
+                <tr>
+                    <td class="col-md-2">議案屆次別</td>
+                    <td class="col-md-10"><?php echo $item['Motion']['sequence']; ?></td>
+                </tr>
+                <tr>
+                    <td>大會類別</td>
+                    <td><?php echo $item['Motion']['type']; ?></td>
+                </tr>
+                <tr>
+                    <td>審查會別</td>
+                    <td><?php echo $item['Motion']['group_type']; ?></td>
+                </tr>
+                <tr>
+                    <td>案號</td>
+                    <td><?php echo $item['Motion']['number']; ?></td>
+                </tr>
+                <tr>
+                    <td>提案類別</td>
+                    <td><?php echo $item['Motion']['source']; ?></td>
+                </tr>
+                <tr>
+                    <td>來文日期</td>
+                    <td><?php echo $item['Motion']['requested_date']; ?></td>
+                </tr>
+                <tr>
+                    <td>來文字號</td>
+                    <td><?php echo $item['Motion']['requested_number']; ?></td>
+                </tr>
+                <tr>
+                    <td>提案單位/人</td>
+                    <td><?php echo $item['Motion']['requester']; ?></td>
+                </tr>
+                <tr>
+                    <td>連署人</td>
+                    <td><?php echo $item['Motion']['petition_people']; ?></td>
+                </tr>
+                <tr>
+                    <td>主旨</td>
+                    <td><?php echo $item['Motion']['summary']; ?></td>
+                </tr>
+                <tr>
+                    <td>說明</td>
+                    <td><?php echo nl2br($item['Motion']['description']); ?></td>
+                </tr>
+                <tr>
+                    <td>辦法</td>
+                    <td><?php echo $item['Motion']['rules']; ?></td>
+                </tr>
+                <tr>
+                    <td>審查意見</td>
+                    <td><?php echo $item['Motion']['comments']; ?></td>
+                </tr>
+                <tr>
+                    <td>大會決議</td>
+                    <td><?php echo $item['Motion']['result']; ?></td>
+                </tr>
+                <tr>
+                    <td>辦理情形</td>
+                    <td><?php echo nl2br($item['Motion']['status']); ?></td>
+                </tr>
+                <tr>
+                    <td>決議日期</td>
+                    <td><?php echo $item['Motion']['result_date']; ?></td>
+                </tr>
+                <tr>
+                    <td>發文日期</td>
+                    <td><?php echo $item['Motion']['posting_date']; ?></td>
+                </tr>
+                <tr>
+                    <td>發文字號</td>
+                    <td><?php echo $item['Motion']['posting_number']; ?></td>
+                </tr>
+                <tr>
+                    <td>議會附件</td>
+                    <td><?php echo $item['Motion']['attachments']; ?></td>
+                </tr>
+            </table>
+        </div><!--/right-->
+    </div><!--/row-->
+</div><!--/container-->
