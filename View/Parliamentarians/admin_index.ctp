@@ -27,7 +27,7 @@ if (!empty($foreignId) && !empty($foreignModel)) {
                 }
                 ?>
                 <?php if (empty($scope['Parliamentarian.Party_id'])): ?>
-                    <th><?php echo $this->Paginator->sort('Parliamentarian.Party_id', 'Parties', array('url' => $url)); ?></th>
+                    <th><?php echo $this->Paginator->sort('Parliamentarian.Party_id', 'Party', array('url' => $url)); ?></th>
                 <?php endif; ?>
 
                 <th><?php echo $this->Paginator->sort('Parliamentarian.name', 'Name', array('url' => $url)); ?></th>
@@ -35,7 +35,6 @@ if (!empty($foreignId) && !empty($foreignModel)) {
                 <th><?php echo $this->Paginator->sort('Parliamentarian.contacts_phone', 'Phone', array('url' => $url)); ?></th>
                 <th><?php echo $this->Paginator->sort('Parliamentarian.contacts_email', 'Email', array('url' => $url)); ?></th>
                 <th><?php echo $this->Paginator->sort('Parliamentarian.gender', 'Gender', array('url' => $url)); ?></th>
-                <th><?php echo $this->Paginator->sort('Parliamentarian.party', 'Party', array('url' => $url)); ?></th>
                 <th><?php echo __('Action', true); ?></th>
             </tr>
         </thead>

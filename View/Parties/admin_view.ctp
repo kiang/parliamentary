@@ -1,9 +1,9 @@
 <div id="PartiesAdminView">
     <h3><?php echo __('View Parties', true); ?></h3><hr />
-    <div class="span12">
+    <div class="col-sm-12">
 
-        <div class="span2">Name</div>
-        <div class="span9">&nbsp;<?php
+        <div class="col-sm-2">Name</div>
+        <div class="col-sm-9">&nbsp;<?php
             if ($this->data['Party']['name']) {
 
                 echo $this->data['Party']['name'];
