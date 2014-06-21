@@ -102,6 +102,7 @@ class ParliamentariansController extends AppController {
             ));
             $this->set('motions', $motions);
             $this->set('item', $item);
+            $this->set('url', array($id));
         } else {
             $this->Session->setFlash(__('Please do following links in the page', true));
             $this->redirect(array('action' => 'index'));
