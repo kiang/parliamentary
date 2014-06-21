@@ -8,7 +8,7 @@ class ParliamentariansController extends AppController {
     
     function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allowedActions = array('view', 'index');
+        $this->Auth->allowedActions = array('view', 'index', 'stat');
     }
 
     function index($foreignModel = null, $foreignId = 0) {
@@ -107,6 +107,15 @@ class ParliamentariansController extends AppController {
             $this->Session->setFlash(__('Please do following links in the page', true));
             $this->redirect(array('action' => 'index'));
         }
+    }
+    
+    function stat() {
+        $this->set('items1', $this->Parliamentarian->find('all', array(
+            'order' => array('count_submits' => 'DESC'),
+        )));
+        $this->set('items2', $this->Parliamentarian->find('all', array(
+            'order' => array('count_petitions' => 'DESC'),
+        )));
     }
 
     function admin_index($foreignModel = null, $foreignId = 0, $op = null) {
