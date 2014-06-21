@@ -1,0 +1,1595 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2014-06-21 12:46+0800\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: cake2/app/View/Layouts/default.ctp:19
+#: cake2/app/View/Layouts/error.ctp:19
+#: cake2/lib/Cake/Console/Templates/skel/View/Layouts/default.ctp:10
+#: cake2/lib/Cake/Console/Templates/skel/View/Layouts/error.ctp:10
+msgid "CakePHP: the rapid development php framework"
+msgstr ""
+
+#: cake2/app/View/Layouts/default.ctp:20
+msgid "CakePHP %s"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:16
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:16
+msgid "Release Notes for CakePHP %s."
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:18
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:18
+msgid "Read the changelog"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:29
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:29
+msgid "URL rewriting is not properly configured on your server."
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:40
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:40
+msgid "Your version of PHP is 5.2.8 or higher."
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:44
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:44
+msgid "Your version of PHP is too low. You need PHP 5.2.8 or higher to use CakePHP."
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:53
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:53
+msgid "Your tmp directory is writable."
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:57
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:57
+msgid "Your tmp directory is NOT writable."
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:67
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:67
+msgid "The %s is being used for core caching. To change the config edit %s"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:71
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:71
+msgid "Your cache is NOT working. Please check the settings in %s"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:81
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:81
+msgid "Your database configuration file is present."
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:86
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:86
+msgid "Your database configuration file is NOT present."
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:88
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:88
+msgid "Rename %s to %s"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:113
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:113
+msgid "CakePHP is able to connect to the database."
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:117
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:117
+msgid "CakePHP is NOT able to connect to the database."
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:129
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:129
+msgid "PCRE has not been compiled with Unicode support."
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:131
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:131
+msgid "Recompile PCRE with Unicode support by adding <code>--enable-unicode-properties</code> when configuring"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:140
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:140
+msgid "DebugKit plugin is present"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:144
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:144
+msgid "DebugKit is not installed. It will help you inspect and debug different aspects of your application."
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:146
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:146
+msgid "You can install it from %s"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:152
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:152
+msgid "Editing this Page"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:155
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:155
+msgid "To change the content of this page, edit: %s.<br />\nTo change its layout, edit: %s.<br />\nYou can also add some CSS styles for your pages at: %s."
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:162
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:162
+msgid "Getting Started"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:166
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:166
+msgid "New"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:166
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:166
+msgid "CakePHP 2.0 Docs"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:175
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:175
+msgid "The 15 min Blog Tutorial"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:182
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:182
+msgid "Official Plugins"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:187
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:187
+msgid "provides a debugging toolbar and enhanced debugging tools for CakePHP applications."
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:191
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:191
+msgid "contains various localized validation classes and translations for specific countries"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:196
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:196
+msgid "More about CakePHP"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:198
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:198
+msgid "CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC."
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:201
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:201
+msgid "Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility."
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:206
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:206
+msgid "The Rapid Development Framework"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:207
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:207
+msgid "CakePHP Documentation"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:208
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:208
+msgid "Your Rapid Development Cookbook"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:209
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:209
+msgid "CakePHP API"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:210
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:210
+msgid "Quick API Reference"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:211
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:211
+msgid "The Bakery"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:212
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:212
+msgid "Everything CakePHP"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:213
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:213
+msgid "CakePHP Plugins"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:214
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:214
+msgid "A comprehensive list of all CakePHP plugins created by the community"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:215
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:215
+msgid "CakePHP Community Center"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:216
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:216
+msgid "Everything related to the CakePHP community in one place"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:217
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:217
+msgid "CakePHP Google Group"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:218
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:218
+msgid "Community mailing list"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:220
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:220
+msgid "Live chat about CakePHP"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:221
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:221
+msgid "CakePHP Code"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:222
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:222
+msgid "Find the CakePHP code on GitHub and contribute to the framework"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:223;224
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:223;224
+msgid "CakePHP Issues"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:225;226
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:225;226
+msgid "CakePHP Roadmaps"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:227
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:227
+msgid "Training"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:228
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:228
+msgid "Join a live session and get skilled with the framework"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:229
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:229
+msgid "CakeFest"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:230
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:230
+msgid "Don't miss our annual CakePHP conference"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:231
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:231
+msgid "Cake Software Foundation"
+msgstr ""
+
+#: cake2/app/View/Pages/home.ctp:232
+#: cake2/lib/Cake/Console/Templates/skel/View/Pages/home.ctp:232
+msgid "Promoting development related to CakePHP"
+msgstr ""
+
+#: cake2/app/webroot/test.php:93
+msgid "Debug setting does not allow access to this url."
+msgstr ""
+
+#: cake2/lib/Cake/Cache/Cache.php:173
+#: Cache/Cache.php:173
+msgid "Cache engine %s is not available."
+msgstr ""
+
+#: cake2/lib/Cake/Cache/Cache.php:177
+#: Cache/Cache.php:177
+msgid "Cache engines must use %s as a base class."
+msgstr ""
+
+#: cake2/lib/Cake/Cache/Cache.php:181
+#: Cache/Cache.php:181
+msgid "Cache engine %s is not properly configured."
+msgstr ""
+
+#: cake2/lib/Cake/Cache/Cache.php:316
+#: Cache/Cache.php:316
+msgid "%s cache was unable to write '%s' to %s cache"
+msgstr ""
+
+#: cake2/lib/Cake/Cache/Cache.php:538
+#: Cache/Cache.php:538
+msgid "Invalid cache group %s"
+msgstr ""
+
+#: cake2/lib/Cake/Cache/Engine/FileEngine.php:312
+#: Cache/Engine/FileEngine.php:312
+msgid "Files cannot be atomically decremented."
+msgstr ""
+
+#: cake2/lib/Cake/Cache/Engine/FileEngine.php:324
+#: Cache/Engine/FileEngine.php:324
+msgid "Files cannot be atomically incremented."
+msgstr ""
+
+#: cake2/lib/Cake/Cache/Engine/FileEngine.php:361
+#: Cache/Engine/FileEngine.php:361
+msgid "Could not apply permission mask \"%s\" on cache file \"%s\""
+msgstr ""
+
+#: cake2/lib/Cake/Cache/Engine/FileEngine.php:384
+#: Cache/Engine/FileEngine.php:384
+msgid "%s is not writable"
+msgstr ""
+
+#: cake2/lib/Cake/Cache/Engine/MemcacheEngine.php:166;183
+#: Cache/Engine/MemcacheEngine.php:166;183
+msgid "Method %s not implemented for compressed cache in %s"
+msgstr ""
+
+#: cake2/lib/Cake/Cache/Engine/MemcachedEngine.php:126
+#: Cache/Engine/MemcachedEngine.php:126
+msgid "Memcached extension is not build with SASL support"
+msgstr ""
+
+#: cake2/lib/Cake/Cache/Engine/MemcachedEngine.php:146
+#: Cache/Engine/MemcachedEngine.php:146
+msgid "%s is not a valid serializer engine for Memcached"
+msgstr ""
+
+#: cake2/lib/Cake/Cache/Engine/MemcachedEngine.php:152
+#: Cache/Engine/MemcachedEngine.php:152
+msgid "Memcached extension is not compiled with %s support"
+msgstr ""
+
+#: cake2/lib/Cake/Configure/IniReader.php:100
+#: cake2/lib/Cake/Configure/PhpReader.php:62
+#: Configure/IniReader.php:100
+#: Configure/PhpReader.php:62
+msgid "Cannot load configuration files with ../ in them."
+msgstr ""
+
+#: cake2/lib/Cake/Configure/IniReader.php:105
+#: cake2/lib/Cake/Configure/PhpReader.php:67
+#: Configure/IniReader.php:105
+#: Configure/PhpReader.php:67
+msgid "Could not load configuration file: %s"
+msgstr ""
+
+#: cake2/lib/Cake/Configure/PhpReader.php:72
+#: Configure/PhpReader.php:72
+msgid "No variable %s found in %s"
+msgstr ""
+
+#: cake2/lib/Cake/Console/Command/TestShell.php:175
+#: Console/Command/TestShell.php:175
+msgid "Please install PHPUnit framework v3.7 <info>(http://www.phpunit.de)</info>"
+msgstr ""
+
+#: cake2/lib/Cake/Console/Command/TestShell.php:371
+#: Console/Command/TestShell.php:371
+msgid "Test case %s cannot be run via this shell"
+msgstr ""
+
+#: cake2/lib/Cake/Console/Command/TestShell.php:384;401
+#: Console/Command/TestShell.php:384;401
+msgid "Test case %s not found"
+msgstr ""
+
+#: cake2/lib/Cake/Console/Command/Task/PluginTask.php:180
+#: Console/Command/Task/PluginTask.php:180
+msgid "%s modified"
+msgstr ""
+
+#: cake2/lib/Cake/Console/Command/Task/TestTask.php:322
+#: Console/Command/Task/TestTask.php:322
+msgid "Invalid object type."
+msgstr ""
+
+#: cake2/lib/Cake/Console/Command/Task/TestTask.php:341
+#: Console/Command/Task/TestTask.php:341
+msgid "Invalid type name"
+msgstr ""
+
+#: cake2/lib/Cake/Console/Templates/skel/webroot/test.php:84
+msgid "Debug setting does not allow access to this URL."
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/AclComponent.php:67
+#: Controller/Component/AclComponent.php:67
+msgid "Could not find %s."
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/AclComponent.php:91
+#: Controller/Component/AclComponent.php:91
+msgid "AclComponent adapters must implement AclInterface"
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/AclComponent.php:162;176
+#: Controller/Component/AclComponent.php:162;176
+msgid "%s is deprecated, use %s instead"
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/AuthComponent.php:494
+#: Controller/Component/AuthComponent.php:494
+msgid "Authorization adapter \"%s\" was not found."
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/AuthComponent.php:497
+#: Controller/Component/AuthComponent.php:497
+msgid "Authorization objects must implement an %s method."
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/AuthComponent.php:787
+#: Controller/Component/AuthComponent.php:787
+msgid "Authentication adapter \"%s\" was not found."
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/AuthComponent.php:790
+#: Controller/Component/AuthComponent.php:790
+msgid "Authentication objects must implement an %s method."
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/CookieComponent.php:387
+#: Controller/Component/CookieComponent.php:387
+msgid "You must use cipher, rijndael or aes for cookie encryption type"
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/RequestHandlerComponent.php:756
+#: Controller/Component/RequestHandlerComponent.php:756
+msgid "You must give a handler callback."
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/SecurityComponent.php:335;619
+#: Controller/Component/SecurityComponent.php:335;619
+msgid "The request has been black-holed"
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/Acl/PhpAcl.php:104
+#: Controller/Component/Acl/PhpAcl.php:104
+msgid "\"roles\" section not found in configuration."
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/Acl/PhpAcl.php:108
+#: Controller/Component/Acl/PhpAcl.php:108
+msgid "Neither \"allow\" nor \"deny\" rules were provided in configuration."
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/Acl/PhpAcl.php:528
+#: Controller/Component/Acl/PhpAcl.php:528
+msgid "cycle detected when inheriting %s from %s. Path: %s"
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/Auth/BaseAuthenticate.php:154
+#: Controller/Component/Auth/BaseAuthenticate.php:154
+msgid "Password hasher class \"%s\" was not found."
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/Auth/BaseAuthenticate.php:157
+#: Controller/Component/Auth/BaseAuthenticate.php:157
+msgid "Password hasher must extend AbstractPasswordHasher class."
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/Auth/BaseAuthorize.php:97
+#: Controller/Component/Auth/BaseAuthorize.php:97
+msgid "$controller needs to be an instance of Controller"
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/Auth/ControllerAuthorize.php:51
+#: Controller/Component/Auth/ControllerAuthorize.php:51
+msgid "$controller does not implement an %s method."
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/Auth/CrudAuthorize.php:85
+#: Controller/Component/Auth/CrudAuthorize.php:85
+msgid "CrudAuthorize::authorize() - Attempted access of un-mapped action \"%1$s\" in controller \"%2$s\""
+msgstr ""
+
+#: cake2/lib/Cake/Core/Configure.php:73
+#: Core/Configure.php:73
+msgid "Can't find application core file. Please create %s, and make sure it is readable by PHP."
+msgstr ""
+
+#: cake2/lib/Cake/Core/Configure.php:93
+#: Core/Configure.php:93
+msgid "Can't find application bootstrap file. Please create %s, and make sure it is readable by PHP."
+msgstr ""
+
+#: cake2/lib/Cake/Core/Configure.php:340
+#: Core/Configure.php:340
+msgid "There is no \"%s\" adapter."
+msgstr ""
+
+#: cake2/lib/Cake/Core/Configure.php:343
+#: Core/Configure.php:343
+msgid "The \"%s\" adapter, does not have a %s method."
+msgstr ""
+
+#: cake2/lib/Cake/Event/CakeEventManager.php:104
+#: Event/CakeEventManager.php:104
+msgid "The eventKey variable is required"
+msgstr ""
+
+#: cake2/lib/Cake/I18n/I18n.php:226
+#: I18n/I18n.php:226
+msgid "You cannot use \"\" as a domain."
+msgstr ""
+
+#: cake2/lib/Cake/I18n/I18n.php:264
+#: I18n/I18n.php:264
+msgid "Missing plural form translation for \"%s\" in \"%s\" domain, \"%s\" locale.  Check your po file for correct plurals and valid Plural-Forms header."
+msgstr ""
+
+#: cake2/lib/Cake/Log/CakeLog.php:190
+#: Log/CakeLog.php:190
+msgid "Invalid key name"
+msgstr ""
+
+#: cake2/lib/Cake/Log/CakeLog.php:193
+#: Log/CakeLog.php:193
+msgid "Missing logger class name"
+msgstr ""
+
+#: cake2/lib/Cake/Log/CakeLog.php:314;332;351
+#: Log/CakeLog.php:314;332;351
+msgid "Stream %s not found"
+msgstr ""
+
+#: cake2/lib/Cake/Log/LogEngineCollection.php:44
+#: Log/LogEngineCollection.php:44
+msgid "logger class %s does not implement a %s method."
+msgstr ""
+
+#: cake2/lib/Cake/Log/LogEngineCollection.php:69
+#: Log/LogEngineCollection.php:69
+msgid "Could not load class %s"
+msgstr ""
+
+#: cake2/lib/Cake/Log/Engine/FileLog.php:150
+#: Log/Engine/FileLog.php:150
+msgid "Could not apply permission mask \"%s\" on log file \"%s\""
+msgstr ""
+
+#: cake2/lib/Cake/Model/AclNode.php:176
+#: Model/AclNode.php:176
+msgid "AclNode::node() - Couldn't find %s node identified by \"%s\""
+msgstr ""
+
+#: cake2/lib/Cake/Model/BehaviorCollection.php:226
+#: Model/BehaviorCollection.php:226
+msgid "%s - Method %s not found in any attached behavior"
+msgstr ""
+
+#: cake2/lib/Cake/Model/CakeSchema.php:615
+#: Model/CakeSchema.php:615
+msgid "Schema generation error: invalid column type %s for %s.%s does not exist in DBO"
+msgstr ""
+
+#: cake2/lib/Cake/Model/Model.php:1383
+#: Model/Model.php:1383
+msgid "(Model::getColumnTypes) Unable to build model field data. If you are using a model without a database table, try implementing schema()"
+msgstr ""
+
+#: cake2/lib/Cake/Model/Model.php:3586
+#: Model/Model.php:3586
+msgid "Invalid join model settings in %s. The association parameter has the wrong type, expecting a string or array, but was passed type: %s"
+msgstr ""
+
+#: cake2/lib/Cake/Model/Permission.php:86
+#: Model/Permission.php:86
+msgid "%s - Failed ARO node lookup in permissions check. Node references:\nAro: %s\nAco: %s"
+msgstr ""
+
+#: cake2/lib/Cake/Model/Permission.php:97
+#: Model/Permission.php:97
+msgid "%s - Failed ACO node lookup in permissions check. Node references:\nAro: %s\nAco: %s"
+msgstr ""
+
+#: cake2/lib/Cake/Model/Permission.php:108
+#: Model/Permission.php:108
+msgid "ACO permissions key %s does not exist in %s"
+msgstr ""
+
+#: cake2/lib/Cake/Model/Permission.php:179
+#: Model/Permission.php:179
+msgid "%s - Invalid node"
+msgstr ""
+
+#: cake2/lib/Cake/Model/Permission.php:197
+#: Model/Permission.php:197
+msgid "Invalid permission key \"%s\""
+msgstr ""
+
+#: cake2/lib/Cake/Model/Behavior/AclBehavior.php:66
+#: Model/Behavior/AclBehavior.php:66
+msgid "Callback %s not defined in %s"
+msgstr ""
+
+#: cake2/lib/Cake/Model/Behavior/AclBehavior.php:83
+#: Model/Behavior/AclBehavior.php:83
+msgid "AclBehavior is setup with more then one type, please specify type parameter for node()"
+msgstr ""
+
+#: cake2/lib/Cake/Model/Behavior/ContainableBehavior.php:342
+#: Model/Behavior/ContainableBehavior.php:342
+msgid "Model \"%s\" is not associated with model \"%s\""
+msgstr ""
+
+#: cake2/lib/Cake/Model/Behavior/TranslateBehavior.php:71
+#: Model/Behavior/TranslateBehavior.php:71
+msgid "Datasource %s for TranslateBehavior of model %s is not connected"
+msgstr ""
+
+#: cake2/lib/Cake/Model/Behavior/TranslateBehavior.php:601
+#: Model/Behavior/TranslateBehavior.php:601
+msgid "You cannot bind a translation named \"name\"."
+msgstr ""
+
+#: cake2/lib/Cake/Model/Behavior/TranslateBehavior.php:623
+#: Model/Behavior/TranslateBehavior.php:623
+msgid "Association %s is already bound to model %s"
+msgstr ""
+
+#: cake2/lib/Cake/Model/Datasource/CakeSession.php:509
+#: Model/Datasource/CakeSession.php:509
+msgid "Unable to configure the session, setting %s failed."
+msgstr ""
+
+#: cake2/lib/Cake/Model/Datasource/CakeSession.php:567
+#: Model/Datasource/CakeSession.php:567
+msgid "Could not load %s to handle the session."
+msgstr ""
+
+#: cake2/lib/Cake/Model/Datasource/CakeSession.php:573
+#: Model/Datasource/CakeSession.php:573
+msgid "Chosen SessionHandler does not implement CakeSessionHandlerInterface it cannot be used with an engine key."
+msgstr ""
+
+#: cake2/lib/Cake/Model/Datasource/DboSource.php:255
+#: Model/Datasource/DboSource.php:255
+msgid "Selected driver is not enabled"
+msgstr ""
+
+#: cake2/lib/Cake/Model/Datasource/DboSource.php:1244
+#: Model/Datasource/DboSource.php:1244
+msgid "Error in Model %s"
+msgstr ""
+
+#: cake2/lib/Cake/Model/Datasource/DboSource.php:3194
+#: Model/Datasource/DboSource.php:3194
+msgid "Invalid schema object"
+msgstr ""
+
+#: cake2/lib/Cake/Model/Datasource/DboSource.php:3304
+#: cake2/lib/Cake/Model/Datasource/Database/Sqlite.php:402
+#: Model/Datasource/DboSource.php:3304
+#: Model/Datasource/Database/Sqlite.php:402
+msgid "Column name or type not defined in schema"
+msgstr ""
+
+#: cake2/lib/Cake/Model/Datasource/DboSource.php:3309
+#: cake2/lib/Cake/Model/Datasource/Database/Sqlite.php:407
+#: Model/Datasource/DboSource.php:3309
+#: Model/Datasource/Database/Sqlite.php:407
+msgid "Column type %s does not exist"
+msgstr ""
+
+#: cake2/lib/Cake/Model/Datasource/Database/Mysql.php:341
+#: cake2/lib/Cake/Model/Datasource/Database/Sqlserver.php:227
+#: Model/Datasource/Database/Mysql.php:341
+#: Model/Datasource/Database/Sqlserver.php:227
+msgid "Could not describe table for %s"
+msgstr ""
+
+#: cake2/lib/Cake/Model/Validator/CakeValidationRule.php:281
+#: Model/Validator/CakeValidationRule.php:281
+msgid "Could not find validation handler %s for %s"
+msgstr ""
+
+#: cake2/lib/Cake/Network/CakeRequest.php:451
+#: Network/CakeRequest.php:451
+msgid "Method %s does not exist"
+msgstr ""
+
+#: cake2/lib/Cake/Network/CakeResponse.php:628
+#: Network/CakeResponse.php:628
+msgid "Unknown status code"
+msgstr ""
+
+#: cake2/lib/Cake/Network/CakeResponse.php:672
+#: Network/CakeResponse.php:672
+msgid "Invalid status code"
+msgstr ""
+
+#: cake2/lib/Cake/Network/CakeResponse.php:1336
+#: Network/CakeResponse.php:1336
+msgid "The requested file contains `..` and will not be read."
+msgstr ""
+
+#: cake2/lib/Cake/Network/CakeResponse.php:1349
+#: Network/CakeResponse.php:1349
+msgid "The requested file %s was not found or not readable"
+msgstr ""
+
+#: cake2/lib/Cake/Network/CakeSocket.php:304
+#: Network/CakeSocket.php:304
+msgid "Connection timed out"
+msgstr ""
+
+#: cake2/lib/Cake/Network/CakeSocket.php:371
+#: Network/CakeSocket.php:371
+msgid "Invalid encryption scheme chosen"
+msgstr ""
+
+#: cake2/lib/Cake/Network/CakeSocket.php:384
+#: Network/CakeSocket.php:384
+msgid "Unable to perform enableCrypto operation on CakeSocket"
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/CakeEmail.php:365
+#: Network/Email/CakeEmail.php:365
+msgid "From requires only 1 email address."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/CakeEmail.php:380
+#: Network/Email/CakeEmail.php:380
+msgid "Sender requires only 1 email address."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/CakeEmail.php:395
+#: Network/Email/CakeEmail.php:395
+msgid "Reply-To requires only 1 email address."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/CakeEmail.php:410
+#: Network/Email/CakeEmail.php:410
+msgid "Disposition-Notification-To requires only 1 email address."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/CakeEmail.php:425
+#: Network/Email/CakeEmail.php:425
+msgid "Return-Path requires only 1 email address."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/CakeEmail.php:589
+#: Network/Email/CakeEmail.php:589
+msgid "Invalid email: \"%s\""
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/CakeEmail.php:666;681
+#: Network/Email/CakeEmail.php:666;681
+msgid "$headers should be an array."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/CakeEmail.php:888
+#: Network/Email/CakeEmail.php:888
+msgid "Format not available."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/CakeEmail.php:923
+#: Network/Email/CakeEmail.php:923
+msgid "Class \"%s\" not found."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/CakeEmail.php:925
+#: Network/Email/CakeEmail.php:925
+msgid "The \"%s\" does not have a %s method."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/CakeEmail.php:946
+#: Network/Email/CakeEmail.php:946
+msgid "Invalid format for Message-ID. The text should be something like \"<uuid@server.com>\""
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/CakeEmail.php:1025
+#: Network/Email/CakeEmail.php:1025
+msgid "No file or data specified."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/CakeEmail.php:1028
+#: Network/Email/CakeEmail.php:1028
+msgid "No filename specified."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/CakeEmail.php:1035
+#: Network/Email/CakeEmail.php:1035
+msgid "File not found: \"%s\""
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/CakeEmail.php:1118
+#: Network/Email/CakeEmail.php:1118
+msgid "From is not specified."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/CakeEmail.php:1121
+#: Network/Email/CakeEmail.php:1121
+msgid "You need to specify at least one destination for to, cc or bcc."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/CakeEmail.php:1196
+#: Network/Email/CakeEmail.php:1196
+msgid "%s not found."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/CakeEmail.php:1200
+#: Network/Email/CakeEmail.php:1200
+msgid "Unknown email configuration \"%s\"."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/SmtpTransport.php:155
+#: Network/Email/SmtpTransport.php:155
+msgid "Unable to connect to SMTP server."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/SmtpTransport.php:176
+#: Network/Email/SmtpTransport.php:176
+msgid "SMTP server did not accept the connection or trying to connect to non TLS SMTP server using TLS."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/SmtpTransport.php:181
+#: Network/Email/SmtpTransport.php:181
+msgid "SMTP server did not accept the connection."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/SmtpTransport.php:197
+#: Network/Email/SmtpTransport.php:197
+msgid "SMTP server did not accept the username."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/SmtpTransport.php:200
+#: Network/Email/SmtpTransport.php:200
+msgid "SMTP server did not accept the password."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/SmtpTransport.php:203
+#: Network/Email/SmtpTransport.php:203
+msgid "SMTP authentication method not allowed, check if SMTP server requires TLS"
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/SmtpTransport.php:205
+#: Network/Email/SmtpTransport.php:205
+msgid "SMTP does not require authentication."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/SmtpTransport.php:356
+#: Network/Email/SmtpTransport.php:356
+msgid "SMTP timeout."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Email/SmtpTransport.php:369
+#: Network/Email/SmtpTransport.php:369
+msgid "SMTP Error: %s"
+msgstr ""
+
+#: cake2/lib/Cake/Network/Http/HttpResponse.php:21
+#: Network/Http/HttpResponse.php:21
+msgid "HttpResponse is deprecated due to naming conflicts. Use HttpSocketResponse instead."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Http/HttpSocket.php:244
+#: Network/Http/HttpSocket.php:244
+msgid "Invalid resource."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Http/HttpSocket.php:404
+#: Network/Http/HttpSocket.php:404
+msgid "Class %s not found."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Http/HttpSocket.php:602
+#: Network/Http/HttpSocket.php:602
+msgid "Unknown authentication method."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Http/HttpSocket.php:605
+#: Network/Http/HttpSocket.php:605
+msgid "The %s does not support authentication."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Http/HttpSocket.php:631
+#: Network/Http/HttpSocket.php:631
+msgid "Unknown authentication method for proxy."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Http/HttpSocket.php:634
+#: Network/Http/HttpSocket.php:634
+msgid "The %s does not support proxy authentication."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Http/HttpSocket.php:886
+#: Network/Http/HttpSocket.php:886
+msgid "HttpSocket::_buildRequestLine - Passed an invalid request line string. Activate quirks mode to do this."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Http/HttpSocket.php:904
+#: Network/Http/HttpSocket.php:904
+msgid "HttpSocket::_buildRequestLine - The \"*\" asterisk character is only allowed for the following methods: %s. Activate quirks mode to work outside of HTTP/1.1 specs."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Http/HttpSocketResponse.php:151
+#: Network/Http/HttpSocketResponse.php:151
+msgid "Invalid response."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Http/HttpSocketResponse.php:155
+#: Network/Http/HttpSocketResponse.php:155
+msgid "Invalid HTTP response."
+msgstr ""
+
+#: cake2/lib/Cake/Network/Http/HttpSocketResponse.php:223
+#: Network/Http/HttpSocketResponse.php:223
+msgid "HttpSocket::_decodeChunkedBody - Could not parse malformed chunk."
+msgstr ""
+
+#: cake2/lib/Cake/Routing/Router.php:234
+#: Routing/Router.php:234
+msgid "Route class not found, or route class is not a subclass of CakeRoute"
+msgstr ""
+
+#: cake2/lib/Cake/TestSuite/CakeTestCase.php:207
+msgid "No fixture manager to load the test fixture"
+msgstr ""
+
+#: cake2/lib/Cake/TestSuite/CakeTestRunner.php:98
+msgid "Could not find fixture manager %s."
+msgstr ""
+
+#: cake2/lib/Cake/TestSuite/Fixture/CakeFixtureManager.php:172
+msgid "Referenced fixture class %s (%s) not found"
+msgstr ""
+
+#: cake2/lib/Cake/TestSuite/Fixture/CakeFixtureManager.php:280
+msgid "Referenced fixture class %s not found"
+msgstr ""
+
+#: cake2/lib/Cake/TestSuite/Fixture/CakeTestFixture.php:110
+msgid "Invalid datasource name \"%s\" for \"%s\" fixture. Fixture datasource names must begin with \"test\"."
+msgstr ""
+
+#: cake2/lib/Cake/TestSuite/Fixture/CakeTestFixture.php:237
+msgid "Fixture creation for \"%s\" failed \"%s\""
+msgstr ""
+
+#: cake2/lib/Cake/TestSuite/Reporter/CakeBaseReporter.php:199
+#: cake2/lib/Cake/TestSuite/Reporter/CakeHtmlReporter.php:380
+msgid "Running  %s"
+msgstr ""
+
+#: cake2/lib/Cake/TestSuite/Reporter/CakeHtmlReporter.php:271;310
+msgid "Test case: %s"
+msgstr ""
+
+#: cake2/lib/Cake/TestSuite/Reporter/CakeHtmlReporter.php:272;311
+msgid "Stack trace:"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeNumber.php:163
+#: Utility/CakeNumber.php:163
+msgid "No unit type."
+msgstr ""
+
+#: cake2/lib/Cake/Utility/ClassRegistry.php:116
+#: Utility/ClassRegistry.php:116
+msgid "(ClassRegistry::init() Attempted to create instance of a class with a numeric name"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/ClassRegistry.php:148
+#: Utility/ClassRegistry.php:148
+msgid "Cannot create instance of %s, as it is abstract or is an interface"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/ClassRegistry.php:189
+#: Utility/ClassRegistry.php:189
+msgid "(ClassRegistry::init() could not create instance of %s"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Debugger.php:631
+#: Utility/Debugger.php:631
+msgid "Invalid Debugger output format."
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Debugger.php:847
+#: Utility/Debugger.php:847
+msgid "Please change the value of %s in %s to a salt value specific to your application."
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Debugger.php:851
+#: Utility/Debugger.php:851
+msgid "Please change the value of %s in %s to a numeric (digits only) seed value specific to your application."
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Folder.php:387;410
+#: Utility/Folder.php:387;410
+msgid "%s changed to %s"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Folder.php:391;412
+#: Utility/Folder.php:391;412
+msgid "%s NOT changed to %s"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Folder.php:508
+#: Utility/Folder.php:508
+msgid "%s is a file"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Folder.php:519;697
+#: Utility/Folder.php:519;697
+msgid "%s created"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Folder.php:523
+#: Utility/Folder.php:523
+msgid "%s NOT created"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Folder.php:595;603;615
+#: Utility/Folder.php:595;603;615
+msgid "%s removed"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Folder.php:597;605;617
+#: Utility/Folder.php:597;605;617
+msgid "%s NOT removed"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Folder.php:655
+#: Utility/Folder.php:655
+msgid "%s not found"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Folder.php:664
+#: Utility/Folder.php:664
+msgid "%s not writable"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Folder.php:680
+#: Utility/Folder.php:680
+msgid "%s copied to %s"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Folder.php:682
+#: Utility/Folder.php:682
+msgid "%s NOT copied to %s"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Folder.php:701
+#: Utility/Folder.php:701
+msgid "%s not created"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Hash.php:402
+#: Utility/Hash.php:402
+msgid "Hash::combine() needs an equal number of keys + values."
+msgstr ""
+
+#: cake2/lib/Cake/Utility/ObjectCollection.php:125
+#: Utility/ObjectCollection.php:125
+msgid "Cannot use modParams with indexes that do not exist."
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Security.php:159
+#: Utility/Security.php:159
+msgid "Invalid value, cost must be between %s and %s"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Security.php:186;219
+#: Utility/Security.php:186;219
+msgid "You cannot use an empty key for %s"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Security.php:223
+#: Utility/Security.php:223
+msgid "You must specify the operation for Security::rijndael(), either encrypt or decrypt"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Security.php:227
+#: Utility/Security.php:227
+msgid "You must use a key larger than 32 bytes for Security::rijndael()"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Security.php:281
+#: Utility/Security.php:281
+msgid "Invalid salt: %s for %s Please visit http://www.php.net/crypt and read the appropriate section for building %s salts."
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Security.php:334
+#: Utility/Security.php:334
+msgid "Invalid key for %s, key must be at least 256 bits (32 bytes) long."
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Security.php:350
+#: Utility/Security.php:350
+msgid "The data to decrypt cannot be empty."
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Validation.php:257
+#: Utility/Validation.php:257
+msgid "You must define the $operator parameter for %s"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Validation.php:275
+#: Utility/Validation.php:275
+msgid "You must define a regular expression for %s"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Validation.php:852
+#: Utility/Validation.php:852
+msgid "Could not find %s class, unable to complete validation."
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Validation.php:856
+#: Utility/Validation.php:856
+msgid "Method %s does not exist on %s unable to complete validation."
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Validation.php:950
+#: Utility/Validation.php:950
+msgid "Can not determine the mimetype."
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Xml.php:108;112;117
+#: Utility/Xml.php:108;112;117
+msgid "XML cannot be read."
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Xml.php:115;194
+#: Utility/Xml.php:115;194
+msgid "Invalid input."
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Xml.php:149
+#: Utility/Xml.php:149
+msgid "Xml cannot be read."
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Xml.php:198
+#: Utility/Xml.php:198
+msgid "The key of input must be alphanumeric"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Xml.php:275;288
+#: Utility/Xml.php:275;288
+msgid "Invalid array"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/Xml.php:339
+#: Utility/Xml.php:339
+msgid "The input is not instance of SimpleXMLElement, DOMDocument or DOMNode."
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper.php:192
+#: View/Helper.php:192
+msgid "Method %1$s::%2$s does not exist"
+msgstr ""
+
+#: cake2/lib/Cake/View/View.php:425
+#: View/View.php:425
+msgid "Element Not Found: %s"
+msgstr ""
+
+#: cake2/lib/Cake/View/View.php:727
+#: View/View.php:727
+msgid "You cannot extend an element which does not exist (%s)."
+msgstr ""
+
+#: cake2/lib/Cake/View/View.php:743
+#: View/View.php:743
+msgid "You cannot have views extend themselves."
+msgstr ""
+
+#: cake2/lib/Cake/View/View.php:746
+#: View/View.php:746
+msgid "You cannot have views extend in a loop."
+msgstr ""
+
+#: cake2/lib/Cake/View/View.php:929
+#: View/View.php:929
+msgid "The \"%s\" block was left open. Blocks are not allowed to cross files."
+msgstr ""
+
+#: cake2/lib/Cake/View/Elements/sql_dump.ctp:81
+#: View/Elements/sql_dump.ctp:81
+msgid "Encountered unexpected %s. Cannot generate SQL log."
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/fatal_error.ctp:20
+#: View/Errors/fatal_error.ctp:20
+msgid "Fatal Error"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/fatal_error.ctp:22
+#: cake2/lib/Cake/View/Errors/missing_action.ctp:21;25
+#: cake2/lib/Cake/View/Errors/missing_behavior.ctp:23;27
+#: cake2/lib/Cake/View/Errors/missing_component.ctp:23;27
+#: cake2/lib/Cake/View/Errors/missing_connection.ctp:21;32
+#: cake2/lib/Cake/View/Errors/missing_controller.ctp:23;27
+#: cake2/lib/Cake/View/Errors/missing_database.ctp:21;25
+#: cake2/lib/Cake/View/Errors/missing_datasource.ctp:23
+#: cake2/lib/Cake/View/Errors/missing_datasource_config.ctp:21
+#: cake2/lib/Cake/View/Errors/missing_helper.ctp:23;27
+#: cake2/lib/Cake/View/Errors/missing_layout.ctp:21;25
+#: cake2/lib/Cake/View/Errors/missing_plugin.ctp:21;25
+#: cake2/lib/Cake/View/Errors/missing_table.ctp:21
+#: cake2/lib/Cake/View/Errors/missing_view.ctp:21;25
+#: cake2/lib/Cake/View/Errors/pdo_error.ctp:21
+#: cake2/lib/Cake/View/Errors/private_action.ctp:21
+#: cake2/lib/Cake/View/Errors/scaffold_error.ctp:21
+#: View/Errors/fatal_error.ctp:22
+#: View/Errors/missing_action.ctp:21;25
+#: View/Errors/missing_behavior.ctp:23;27
+#: View/Errors/missing_component.ctp:23;27
+#: View/Errors/missing_connection.ctp:21;32
+#: View/Errors/missing_controller.ctp:23;27
+#: View/Errors/missing_database.ctp:21;25
+#: View/Errors/missing_datasource.ctp:23
+#: View/Errors/missing_datasource_config.ctp:21
+#: View/Errors/missing_helper.ctp:23;27
+#: View/Errors/missing_layout.ctp:21;25
+#: View/Errors/missing_plugin.ctp:21;25
+#: View/Errors/missing_table.ctp:21
+#: View/Errors/missing_view.ctp:21;25
+#: View/Errors/pdo_error.ctp:21
+#: View/Errors/private_action.ctp:21
+#: View/Errors/scaffold_error.ctp:21
+msgid "Error"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/fatal_error.ctp:26
+#: View/Errors/fatal_error.ctp:26
+msgid "File"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/fatal_error.ctp:30
+#: View/Errors/fatal_error.ctp:30
+msgid "Line"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/fatal_error.ctp:34
+#: cake2/lib/Cake/View/Errors/missing_action.ctp:40
+#: cake2/lib/Cake/View/Errors/missing_behavior.ctp:37
+#: cake2/lib/Cake/View/Errors/missing_component.ctp:37
+#: cake2/lib/Cake/View/Errors/missing_connection.ctp:37
+#: cake2/lib/Cake/View/Errors/missing_controller.ctp:37
+#: cake2/lib/Cake/View/Errors/missing_database.ctp:29
+#: cake2/lib/Cake/View/Errors/missing_datasource.ctp:30
+#: cake2/lib/Cake/View/Errors/missing_datasource_config.ctp:25
+#: cake2/lib/Cake/View/Errors/missing_helper.ctp:37
+#: cake2/lib/Cake/View/Errors/missing_layout.ctp:29
+#: cake2/lib/Cake/View/Errors/missing_plugin.ctp:41
+#: cake2/lib/Cake/View/Errors/missing_table.ctp:25
+#: cake2/lib/Cake/View/Errors/missing_view.ctp:29
+#: cake2/lib/Cake/View/Errors/pdo_error.ctp:35
+#: cake2/lib/Cake/View/Errors/private_action.ctp:25
+#: cake2/lib/Cake/View/Errors/scaffold_error.ctp:25
+#: View/Errors/fatal_error.ctp:34
+#: View/Errors/missing_action.ctp:40
+#: View/Errors/missing_behavior.ctp:37
+#: View/Errors/missing_component.ctp:37
+#: View/Errors/missing_connection.ctp:37
+#: View/Errors/missing_controller.ctp:37
+#: View/Errors/missing_database.ctp:29
+#: View/Errors/missing_datasource.ctp:30
+#: View/Errors/missing_datasource_config.ctp:25
+#: View/Errors/missing_helper.ctp:37
+#: View/Errors/missing_layout.ctp:29
+#: View/Errors/missing_plugin.ctp:41
+#: View/Errors/missing_table.ctp:25
+#: View/Errors/missing_view.ctp:29
+#: View/Errors/pdo_error.ctp:35
+#: View/Errors/private_action.ctp:25
+#: View/Errors/scaffold_error.ctp:25
+msgid "Notice"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/fatal_error.ctp:35
+#: cake2/lib/Cake/View/Errors/missing_action.ctp:41
+#: cake2/lib/Cake/View/Errors/missing_behavior.ctp:38
+#: cake2/lib/Cake/View/Errors/missing_component.ctp:38
+#: cake2/lib/Cake/View/Errors/missing_connection.ctp:38
+#: cake2/lib/Cake/View/Errors/missing_controller.ctp:38
+#: cake2/lib/Cake/View/Errors/missing_database.ctp:30
+#: cake2/lib/Cake/View/Errors/missing_datasource.ctp:31
+#: cake2/lib/Cake/View/Errors/missing_datasource_config.ctp:26
+#: cake2/lib/Cake/View/Errors/missing_helper.ctp:38
+#: cake2/lib/Cake/View/Errors/missing_layout.ctp:30
+#: cake2/lib/Cake/View/Errors/missing_plugin.ctp:42
+#: cake2/lib/Cake/View/Errors/missing_table.ctp:26
+#: cake2/lib/Cake/View/Errors/missing_view.ctp:30
+#: cake2/lib/Cake/View/Errors/pdo_error.ctp:36
+#: cake2/lib/Cake/View/Errors/private_action.ctp:26
+#: cake2/lib/Cake/View/Errors/scaffold_error.ctp:26
+#: View/Errors/fatal_error.ctp:35
+#: View/Errors/missing_action.ctp:41
+#: View/Errors/missing_behavior.ctp:38
+#: View/Errors/missing_component.ctp:38
+#: View/Errors/missing_connection.ctp:38
+#: View/Errors/missing_controller.ctp:38
+#: View/Errors/missing_database.ctp:30
+#: View/Errors/missing_datasource.ctp:31
+#: View/Errors/missing_datasource_config.ctp:26
+#: View/Errors/missing_helper.ctp:38
+#: View/Errors/missing_layout.ctp:30
+#: View/Errors/missing_plugin.ctp:42
+#: View/Errors/missing_table.ctp:26
+#: View/Errors/missing_view.ctp:30
+#: View/Errors/pdo_error.ctp:36
+#: View/Errors/private_action.ctp:26
+#: View/Errors/scaffold_error.ctp:26
+msgid "If you want to customize this error message, create %s"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_action.ctp:20
+#: View/Errors/missing_action.ctp:20
+msgid "Missing Method in %s"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_action.ctp:22
+#: View/Errors/missing_action.ctp:22
+msgid "The action %1$s is not defined in controller %2$s"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_action.ctp:26
+#: View/Errors/missing_action.ctp:26
+msgid "Create %1$s%2$s in file: %3$s."
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_behavior.ctp:21
+#: View/Errors/missing_behavior.ctp:21
+msgid "Missing Behavior"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_behavior.ctp:24
+#: cake2/lib/Cake/View/Errors/missing_component.ctp:24
+#: cake2/lib/Cake/View/Errors/missing_controller.ctp:24
+#: cake2/lib/Cake/View/Errors/missing_helper.ctp:24
+#: View/Errors/missing_behavior.ctp:24
+#: View/Errors/missing_component.ctp:24
+#: View/Errors/missing_controller.ctp:24
+#: View/Errors/missing_helper.ctp:24
+msgid "%s could not be found."
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_behavior.ctp:28
+#: cake2/lib/Cake/View/Errors/missing_component.ctp:28
+#: cake2/lib/Cake/View/Errors/missing_controller.ctp:28
+#: cake2/lib/Cake/View/Errors/missing_helper.ctp:28
+#: View/Errors/missing_behavior.ctp:28
+#: View/Errors/missing_component.ctp:28
+#: View/Errors/missing_controller.ctp:28
+#: View/Errors/missing_helper.ctp:28
+msgid "Create the class %s below in file: %s"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_component.ctp:21
+#: View/Errors/missing_component.ctp:21
+msgid "Missing Component"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_connection.ctp:19
+#: cake2/lib/Cake/View/Errors/missing_database.ctp:19
+#: View/Errors/missing_connection.ctp:19
+#: View/Errors/missing_database.ctp:19
+msgid "Missing Database Connection"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_connection.ctp:22
+#: View/Errors/missing_connection.ctp:22
+msgid "A Database connection using \"%s\" was missing or unable to connect."
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_connection.ctp:26
+#: View/Errors/missing_connection.ctp:26
+msgid "The database server returned this error: %s"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_connection.ctp:33
+#: View/Errors/missing_connection.ctp:33
+msgid "%s driver is NOT enabled"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_controller.ctp:21
+#: View/Errors/missing_controller.ctp:21
+msgid "Missing Controller"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_database.ctp:22
+#: View/Errors/missing_database.ctp:22
+msgid "Scaffold requires a database connection"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_database.ctp:26
+#: cake2/lib/Cake/View/Errors/missing_layout.ctp:26
+#: cake2/lib/Cake/View/Errors/missing_view.ctp:26
+#: View/Errors/missing_database.ctp:26
+#: View/Errors/missing_layout.ctp:26
+#: View/Errors/missing_view.ctp:26
+msgid "Confirm you have created the file: %s"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_datasource.ctp:21
+#: View/Errors/missing_datasource.ctp:21
+msgid "Missing Datasource"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_datasource.ctp:24
+#: View/Errors/missing_datasource.ctp:24
+msgid "Datasource class %s could not be found."
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_datasource_config.ctp:19
+#: View/Errors/missing_datasource_config.ctp:19
+msgid "Missing Datasource Configuration"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_datasource_config.ctp:22
+#: View/Errors/missing_datasource_config.ctp:22
+msgid "The datasource configuration %1$s was not found in database.php."
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_helper.ctp:21
+#: View/Errors/missing_helper.ctp:21
+msgid "Missing Helper"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_layout.ctp:19
+#: View/Errors/missing_layout.ctp:19
+msgid "Missing Layout"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_layout.ctp:22
+#: View/Errors/missing_layout.ctp:22
+msgid "The layout file %s can not be found or does not exist."
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_plugin.ctp:19
+#: View/Errors/missing_plugin.ctp:19
+msgid "Missing Plugin"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_plugin.ctp:22
+#: View/Errors/missing_plugin.ctp:22
+msgid "The application is trying to load a file from the %s plugin"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_plugin.ctp:26
+#: View/Errors/missing_plugin.ctp:26
+msgid "Make sure your plugin %s is in the %s directory and was loaded"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_plugin.ctp:34
+#: View/Errors/missing_plugin.ctp:34
+msgid "Loading all plugins"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_plugin.ctp:35
+#: View/Errors/missing_plugin.ctp:35
+msgid "If you wish to load all plugins at once, use the following line in your %s file"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_table.ctp:19
+#: View/Errors/missing_table.ctp:19
+msgid "Missing Database Table"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_table.ctp:22
+#: View/Errors/missing_table.ctp:22
+msgid "Table %1$s for model %2$s was not found in datasource %3$s."
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_view.ctp:19
+#: View/Errors/missing_view.ctp:19
+msgid "Missing View"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/missing_view.ctp:22
+#: View/Errors/missing_view.ctp:22
+msgid "The view for %1$s%2$s was not found."
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/pdo_error.ctp:19
+#: View/Errors/pdo_error.ctp:19
+msgid "Database Error"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/pdo_error.ctp:26
+#: View/Errors/pdo_error.ctp:26
+msgid "SQL Query"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/pdo_error.ctp:31
+#: View/Errors/pdo_error.ctp:31
+msgid "SQL Query Params"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/private_action.ctp:19
+#: View/Errors/private_action.ctp:19
+msgid "Private Method in %s"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/private_action.ctp:22
+#: View/Errors/private_action.ctp:22
+msgid "%s%s cannot be accessed directly."
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/scaffold_error.ctp:19
+#: View/Errors/scaffold_error.ctp:19
+msgid "Scaffold Error"
+msgstr ""
+
+#: cake2/lib/Cake/View/Errors/scaffold_error.ctp:22
+#: View/Errors/scaffold_error.ctp:22
+msgid "Method _scaffoldError in was not found in the controller"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/CacheHelper.php:156
+#: View/Helper/CacheHelper.php:156
+msgid "Unable to write view cache file: \"%s\" for \"%s\""
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/FormHelper.php:1632
+#: View/Helper/FormHelper.php:1632
+msgid "Missing field name for FormHelper::%s"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/HtmlHelper.php:1222
+#: View/Helper/HtmlHelper.php:1222
+msgid "Cannot load the configuration file. Wrong \"configFile\" configuration."
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/HtmlHelper.php:1228
+#: View/Helper/HtmlHelper.php:1228
+msgid "Cannot load the configuration file. Unknown reader."
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/JsHelper.php:152
+#: View/Helper/JsHelper.php:152
+msgid "JsHelper:: Missing Method %s is undefined"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/MootoolsEngineHelper.php:311
+#: View/Helper/MootoolsEngineHelper.php:311
+msgid "%s requires a \"drag\" option to properly function"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/NumberHelper.php:63
+#: cake2/lib/Cake/View/Helper/TextHelper.php:78
+#: cake2/lib/Cake/View/Helper/TimeHelper.php:61
+#: View/Helper/NumberHelper.php:63
+#: View/Helper/TextHelper.php:78
+#: View/Helper/TimeHelper.php:61
+msgid "%s could not be found"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/PaginatorHelper.php:99
+#: View/Helper/PaginatorHelper.php:99
+msgid "%s does not implement a %s method, it is incompatible with %s"
+msgstr ""
+

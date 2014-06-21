@@ -1,0 +1,496 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2014-06-21 12:46+0800\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: cake2/app/View/Errors/error400.ctp:21
+#: cake2/app/View/Errors/error500.ctp:21
+#: cake2/lib/Cake/Console/Templates/skel/View/Errors/error400.ctp:12
+#: cake2/lib/Cake/Console/Templates/skel/View/Errors/error500.ctp:12
+msgid "Error"
+msgstr ""
+
+#: cake2/app/View/Errors/error400.ctp:23
+#: cake2/lib/Cake/Console/Templates/skel/View/Errors/error400.ctp:14
+msgid "The requested address %s was not found on this server."
+msgstr ""
+
+#: cake2/app/View/Errors/error500.ctp:22
+#: cake2/lib/Cake/Console/Templates/skel/View/Errors/error500.ctp:13
+#: cake2/lib/Cake/Error/ExceptionRenderer.php:234
+#: Error/ExceptionRenderer.php:234
+msgid "An Internal Error Has Occurred."
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Scaffold.php:129
+#: Controller/Scaffold.php:129
+msgid "Scaffold :: "
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Scaffold.php:168;235;304
+#: Controller/Scaffold.php:168;235;304
+msgid "Invalid %s"
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Scaffold.php:223
+#: Controller/Scaffold.php:223
+msgid "updated"
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Scaffold.php:226
+#: Controller/Scaffold.php:226
+msgid "saved"
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Scaffold.php:246
+#: Controller/Scaffold.php:246
+msgid "The %1$s has been %2$s"
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Scaffold.php:256
+#: Controller/Scaffold.php:256
+msgid "Please correct errors below."
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Scaffold.php:307
+#: Controller/Scaffold.php:307
+msgid "The %1$s with id: %2$s has been deleted."
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Scaffold.php:310
+#: Controller/Scaffold.php:310
+msgid "There was an error deleting the %1$s with id: %2$s"
+msgstr ""
+
+#: cake2/lib/Cake/Controller/Component/AuthComponent.php:430
+#: Controller/Component/AuthComponent.php:430
+msgid "You are not authorized to access that location."
+msgstr ""
+
+#: cake2/lib/Cake/Error/ExceptionRenderer.php:211
+#: Error/ExceptionRenderer.php:211
+msgid "Not Found"
+msgstr ""
+
+#: cake2/lib/Cake/Model/Validator/CakeValidationSet.php:286
+#: Model/Validator/CakeValidationSet.php:286
+msgid "This field cannot be left blank"
+msgstr ""
+
+#: cake2/lib/Cake/Network/CakeResponse.php:1351
+#: Network/CakeResponse.php:1351
+msgid "The requested file was not found"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeNumber.php:119
+#: Utility/CakeNumber.php:119
+msgid "%s KB"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeNumber.php:121
+#: Utility/CakeNumber.php:121
+msgid "%s MB"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeNumber.php:123
+#: Utility/CakeNumber.php:123
+msgid "%s GB"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeNumber.php:125
+#: Utility/CakeNumber.php:125
+msgid "%s TB"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeNumber.php:117
+#: Utility/CakeNumber.php:117
+msgid "%d Byte"
+msgid_plural "%d Bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:398
+#: Utility/CakeTime.php:398
+msgid "Today, %s"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:401
+#: Utility/CakeTime.php:401
+msgid "Yesterday, %s"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:404
+#: Utility/CakeTime.php:404
+msgid "Tomorrow, %s"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:409
+#: Utility/CakeTime.php:409
+msgid "Sunday"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:410
+#: Utility/CakeTime.php:410
+msgid "Monday"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:411
+#: Utility/CakeTime.php:411
+msgid "Tuesday"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:412
+#: Utility/CakeTime.php:412
+msgid "Wednesday"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:413
+#: Utility/CakeTime.php:413
+msgid "Thursday"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:414
+#: Utility/CakeTime.php:414
+msgid "Friday"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:415
+#: Utility/CakeTime.php:415
+msgid "Saturday"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:421
+#: Utility/CakeTime.php:421
+msgid "On %s %s"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:742
+#: Utility/CakeTime.php:742
+msgid "%s ago"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:743
+#: Utility/CakeTime.php:743
+msgid "on %s"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:795
+#: Utility/CakeTime.php:795
+msgid "just now"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:911
+#: Utility/CakeTime.php:911
+msgid "about a second ago"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:912
+#: Utility/CakeTime.php:912
+msgid "about a minute ago"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:913
+#: Utility/CakeTime.php:913
+msgid "about an hour ago"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:914
+#: Utility/CakeTime.php:914
+msgid "about a day ago"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:915
+#: Utility/CakeTime.php:915
+msgid "about a week ago"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:916
+#: Utility/CakeTime.php:916
+msgid "about a year ago"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:925
+#: Utility/CakeTime.php:925
+msgid "in about a second"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:926
+#: Utility/CakeTime.php:926
+msgid "in about a minute"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:927
+#: Utility/CakeTime.php:927
+msgid "in about an hour"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:928
+#: Utility/CakeTime.php:928
+msgid "in about a day"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:929
+#: Utility/CakeTime.php:929
+msgid "in about a week"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:930
+#: Utility/CakeTime.php:930
+msgid "in about a year"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:952;974
+#: Utility/CakeTime.php:952;974
+msgid "days"
+msgstr ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:884
+#: Utility/CakeTime.php:884
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:887
+#: Utility/CakeTime.php:887
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:890
+#: Utility/CakeTime.php:890
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:893
+#: Utility/CakeTime.php:893
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:896
+#: Utility/CakeTime.php:896
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:899
+#: Utility/CakeTime.php:899
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: cake2/lib/Cake/Utility/CakeTime.php:902
+#: Utility/CakeTime.php:902
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: cake2/lib/Cake/View/Helper/FormHelper.php:739
+#: View/Helper/FormHelper.php:739
+msgid "Error in field %s"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/FormHelper.php:928
+#: cake2/lib/Cake/View/Scaffolds/form.ctp:48
+#: cake2/lib/Cake/View/Scaffolds/index.ctp:79;94
+#: cake2/lib/Cake/View/Scaffolds/view.ctp:65;80;190
+#: View/Helper/FormHelper.php:928
+#: View/Scaffolds/form.ctp:48
+#: View/Scaffolds/index.ctp:79;94
+#: View/Scaffolds/view.ctp:65;80;190
+msgid "New %s"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/FormHelper.php:934
+#: cake2/lib/Cake/View/Scaffolds/view.ctp:53;111
+#: View/Helper/FormHelper.php:934
+#: View/Scaffolds/view.ctp:53;111
+msgid "Edit %s"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/FormHelper.php:1505
+#: View/Helper/FormHelper.php:1505
+msgid "empty"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/FormHelper.php:1899
+#: cake2/lib/Cake/View/Scaffolds/form.ctp:23
+#: View/Helper/FormHelper.php:1899
+#: View/Scaffolds/form.ctp:23
+msgid "Submit"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/FormHelper.php:2886
+#: View/Helper/FormHelper.php:2886
+msgid "January"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/FormHelper.php:2887
+#: View/Helper/FormHelper.php:2887
+msgid "February"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/FormHelper.php:2888
+#: View/Helper/FormHelper.php:2888
+msgid "March"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/FormHelper.php:2889
+#: View/Helper/FormHelper.php:2889
+msgid "April"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/FormHelper.php:2890
+#: View/Helper/FormHelper.php:2890
+msgid "May"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/FormHelper.php:2891
+#: View/Helper/FormHelper.php:2891
+msgid "June"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/FormHelper.php:2892
+#: View/Helper/FormHelper.php:2892
+msgid "July"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/FormHelper.php:2893
+#: View/Helper/FormHelper.php:2893
+msgid "August"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/FormHelper.php:2894
+#: View/Helper/FormHelper.php:2894
+msgid "September"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/FormHelper.php:2895
+#: View/Helper/FormHelper.php:2895
+msgid "October"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/FormHelper.php:2896
+#: View/Helper/FormHelper.php:2896
+msgid "November"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/FormHelper.php:2897
+#: View/Helper/FormHelper.php:2897
+msgid "December"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/HtmlHelper.php:769
+#: View/Helper/HtmlHelper.php:769
+msgid "Home"
+msgstr ""
+
+#: cake2/lib/Cake/View/Helper/PaginatorHelper.php:637
+#: View/Helper/PaginatorHelper.php:637
+msgid " of "
+msgstr ""
+
+#: cake2/lib/Cake/View/Scaffolds/form.ctp:27
+#: cake2/lib/Cake/View/Scaffolds/index.ctp:26;77
+#: cake2/lib/Cake/View/Scaffolds/view.ctp:49
+#: View/Scaffolds/form.ctp:27
+#: View/Scaffolds/index.ctp:26;77
+#: View/Scaffolds/view.ctp:49
+msgid "Actions"
+msgstr ""
+
+#: cake2/lib/Cake/View/Scaffolds/form.ctp:31
+#: cake2/lib/Cake/View/Scaffolds/index.ctp:51
+#: cake2/lib/Cake/View/Scaffolds/view.ctp:175
+#: View/Scaffolds/form.ctp:31
+#: View/Scaffolds/index.ctp:51
+#: View/Scaffolds/view.ctp:175
+msgid "Delete"
+msgstr ""
+
+#: cake2/lib/Cake/View/Scaffolds/form.ctp:34
+#: cake2/lib/Cake/View/Scaffolds/index.ctp:54
+#: cake2/lib/Cake/View/Scaffolds/view.ctp:57;178
+#: View/Scaffolds/form.ctp:34
+#: View/Scaffolds/index.ctp:54
+#: View/Scaffolds/view.ctp:57;178
+msgid "Are you sure you want to delete # %s?"
+msgstr ""
+
+#: cake2/lib/Cake/View/Scaffolds/form.ctp:37
+#: View/Scaffolds/form.ctp:37
+msgid "List"
+msgstr ""
+
+#: cake2/lib/Cake/View/Scaffolds/form.ctp:44
+#: cake2/lib/Cake/View/Scaffolds/index.ctp:87
+#: cake2/lib/Cake/View/Scaffolds/view.ctp:61;74
+#: View/Scaffolds/form.ctp:44
+#: View/Scaffolds/index.ctp:87
+#: View/Scaffolds/view.ctp:61;74
+msgid "List %s"
+msgstr ""
+
+#: cake2/lib/Cake/View/Scaffolds/index.ctp:48
+#: cake2/lib/Cake/View/Scaffolds/view.ctp:163
+#: View/Scaffolds/index.ctp:48
+#: View/Scaffolds/view.ctp:163
+msgid "View"
+msgstr ""
+
+#: cake2/lib/Cake/View/Scaffolds/index.ctp:49
+#: cake2/lib/Cake/View/Scaffolds/view.ctp:169
+#: View/Scaffolds/index.ctp:49
+#: View/Scaffolds/view.ctp:169
+msgid "Edit"
+msgstr ""
+
+#: cake2/lib/Cake/View/Scaffolds/index.ctp:65
+#: View/Scaffolds/index.ctp:65
+msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
+msgstr ""
+
+#: cake2/lib/Cake/View/Scaffolds/index.ctp:70
+#: View/Scaffolds/index.ctp:70
+msgid "previous"
+msgstr ""
+
+#: cake2/lib/Cake/View/Scaffolds/index.ctp:72
+#: View/Scaffolds/index.ctp:72
+msgid "next"
+msgstr ""
+
+#: cake2/lib/Cake/View/Scaffolds/view.ctp:20
+#: View/Scaffolds/view.ctp:20
+msgid "View %s"
+msgstr ""
+
+#: cake2/lib/Cake/View/Scaffolds/view.ctp:57
+#: View/Scaffolds/view.ctp:57
+msgid "Delete %s"
+msgstr ""
+
+#: cake2/lib/Cake/View/Scaffolds/view.ctp:95;135
+#: View/Scaffolds/view.ctp:95;135
+msgid "Related %s"
+msgstr ""
+
