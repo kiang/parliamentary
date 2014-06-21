@@ -5,7 +5,9 @@
         <title>
             議員觀測中心::
             <?php echo $title_for_layout; ?>
-        </title><?php
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <?php
         echo $this->Html->meta('icon');
         echo $this->Html->css('jquery-ui');
         echo $this->Html->css('bootstrap');
@@ -18,44 +20,50 @@
         ?>
     </head>
     <body>
-        <div class="container">
-            <div id="header">
-                <h1><?php echo $this->Html->link('議員觀測中心', '/'); ?></h1>
-            </div>
-            <div id="content">
-                <div class="btn-group">
-                    <?php if ($this->Session->read('Auth.User.id')): ?>
-                        <?php echo $this->Html->link('Parliamentarians', '/admin/parliamentarians', array('class' => 'btn')); ?>
-                        <?php echo $this->Html->link('Parties', '/admin/parties', array('class' => 'btn')); ?>
-                        <?php echo $this->Html->link('Motions', '/admin/motions', array('class' => 'btn')); ?>
-                        <?php echo $this->Html->link('Members', '/admin/members', array('class' => 'btn')); ?>
-                        <?php echo $this->Html->link('Groups', '/admin/groups', array('class' => 'btn')); ?>
-                        <?php echo $this->Html->link('Logout', '/members/logout', array('class' => 'btn')); ?>
-                    <?php else: ?>
-                        <?php echo $this->Html->link('Login', '/members/login', array('class' => 'btn')); ?>
-                    <?php endif; ?>
-                    <?php
-                    if (!empty($actions_for_layout)) {
-                        foreach ($actions_for_layout as $title => $url) {
-                            echo $this->Html->link($title, $url, array('class' => 'btn'));
-                        }
-                    }
-                    ?>
-                </div>
 
-                <?php echo $this->Session->flash(); ?>
-                <div id="viewContent"><?php echo $content_for_layout; ?></div>
+        <nav class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <?php echo $this->Html->link('議員觀測中心', '/', array('class' => 'navbar-brand')); ?>
+                </div>
+                <nav class="collapse navbar-collapse" role="navigation">
+                    <ul class="nav navbar-nav">
+                        <?php if ($this->Session->read('Auth.User.id')): ?>
+                            <li><?php echo $this->Html->link('Parliamentarians', '/admin/parliamentarians'); ?></li>
+                            <li><?php echo $this->Html->link('Parties', '/admin/parties'); ?></li>
+                            <li><?php echo $this->Html->link('Motions', '/admin/motions'); ?></li>
+                            <li><?php echo $this->Html->link('Members', '/admin/members'); ?></li>
+                            <li><?php echo $this->Html->link('Groups', '/admin/groups'); ?></li>
+                            <li><?php echo $this->Html->link('Logout', '/members/logout'); ?></li>
+                        <?php else: ?>
+                            <li><?php echo $this->Html->link('Login', '/members/login'); ?></li>
+                        <?php endif; ?>
+                        <?php
+                        if (!empty($actions_for_layout)) {
+                            foreach ($actions_for_layout as $title => $url) {
+                                echo '<li>' . $this->Html->link($title, $url) . '</li>';
+                            }
+                        }
+                        ?>
+                    </ul>
+                </nav>
             </div>
-            <div id="footer">
-                <?php
-                echo $this->Html->link(
-                        $this->Html->image('cake.power.gif', array(
-                            'alt' => __("CakePHP: the rapid development php framework", true), 'border' => "0")
-                        ), 'http://www.cakephp.org/', array('target' => '_blank', 'escape' => false)
-                );
-                ?>
-                & <?php echo $this->Html->link('Just This Computer Studio', 'http://olc.tw/', array('target' => '_blank')); ?>
-            </div>
+        </nav>
+
+
+
+        <div id="content">
+            <?php echo $this->Session->flash(); ?>
+            <div id="viewContent"><?php echo $content_for_layout; ?></div>
+        </div>
+        <div id="footer" class="container">
+            <?php echo $this->Html->link('江明宗 . 政 . 路過', 'http://k.olc.tw/', array('target' => '_blank')); ?>
         </div>
         <?php
         echo $this->element('sql_dump');
