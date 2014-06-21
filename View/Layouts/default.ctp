@@ -43,8 +43,6 @@
                             <li><?php echo $this->Html->link('Members', '/admin/members'); ?></li>
                             <li><?php echo $this->Html->link('Groups', '/admin/groups'); ?></li>
                             <li><?php echo $this->Html->link('Logout', '/members/logout'); ?></li>
-                        <?php else: ?>
-                            <li><?php echo $this->Html->link('Login', '/members/login'); ?></li>
                         <?php endif; ?>
                         <?php
                         if (!empty($actions_for_layout)) {
@@ -64,6 +62,9 @@
         <div id="footer" class="container">
             --<br />
             <?php echo $this->Html->link('江明宗 . 政 . 路過', 'http://k.olc.tw/', array('target' => '_blank')); ?>
+            <?php if (!$this->Session->read('Auth.User.id')): ?>
+                / <?php echo $this->Html->link('Login', '/members/login'); ?>
+            <?php endif; ?>
         </div>
         <?php
         echo $this->element('sql_dump');
