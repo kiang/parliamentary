@@ -1,0 +1,381 @@
+---
+DOWN: 
+  drop_table: 
+    - acos
+    - aros
+    - aros_acos
+    - members
+    - groups
+    - parliamentarians
+    - motions_parliamentarians
+    - parties
+    - motions
+UP: 
+  create_table: 
+    acos: 
+      id: 
+        type: integer
+        null: false
+        length: 11
+        key: primary
+        primary: id
+      parent_id: 
+        type: integer
+        null: false
+        length: 11
+      model: 
+        type: string
+        null: false
+        length: 64
+      foreign_key: 
+        type: integer
+        null: false
+        length: 11
+      alias: 
+        type: string
+        default: 
+        length: 128
+      lft: 
+        type: integer
+        null: false
+        length: 11
+      rght: 
+        type: integer
+        null: false
+        length: 11
+    aros: 
+      id: 
+        type: integer
+        null: false
+        length: 11
+        key: primary
+        primary: id
+      parent_id: 
+        type: integer
+        null: false
+        length: 11
+      model: 
+        type: string
+        default: 
+        length: 64
+      foreign_key: 
+        type: integer
+        null: false
+        length: 11
+      alias: 
+        type: string
+        default: 
+        length: 128
+      lft: 
+        type: integer
+        null: false
+        length: 11
+      rght: 
+        type: integer
+        null: false
+        length: 11
+    aros_acos: 
+      id: 
+        type: integer
+        null: false
+        length: 11
+        key: primary
+        primary: id
+      aro_id: 
+        type: integer
+        null: false
+        length: 11
+      aco_id: 
+        type: integer
+        null: false
+        length: 11
+      _create: 
+        type: integer
+        null: false
+        default: 0
+        length: 2
+      _read: 
+        type: integer
+        null: false
+        default: 0
+        length: 2
+      _update: 
+        type: integer
+        null: false
+        default: 0
+        length: 2
+      _delete: 
+        type: integer
+        null: false
+        default: 0
+        length: 2
+    members: 
+      id: 
+        type: integer
+        null: false
+        length: 11
+        key: primary
+        primary: id
+      group_id: 
+        type: integer
+        null: false
+        length: 11
+      username: 
+        type: string
+        null: false
+        length: 64
+      password: 
+        type: string
+        null: false
+        length: 48
+      user_status: 
+        type: string
+        null: false
+        default: N
+        length: 1
+      created: 
+        type: datetime
+        null: false
+      modified: 
+        type: datetime
+        null: false
+    groups: 
+      id: 
+        type: integer
+        null: false
+        length: 11
+        key: primary
+        primary: id
+      parent_id: 
+        type: integer
+        null: false
+        length: 11
+      name: 
+        type: string
+        null: false
+        length: 64
+    group_permissions: 
+      id: 
+        type: integer
+        null: false
+        length: 11
+        key: primary
+        primary: id
+      parent_id: 
+        type: integer
+        null: false
+        length: 11
+      order: 
+        type: integer
+        null: false
+        length: 11
+      name: 
+        type: string
+        null: false
+        length: 64
+      description: 
+        type: string
+        null: true
+        length: 255
+      acos: 
+        type: string
+        null: false
+        length: 255
+    parliamentarians: 
+      id: 
+        type: integer
+        null: false
+        default: 
+        length: 11
+        key: primary
+        primary: id
+      Party_id: 
+        type: integer
+        null: false
+        default: 
+        length: 11
+        key: index
+      name: 
+        type: string
+        null: false
+        default: 
+      district: 
+        type: string
+        null: true
+        default: 
+      contacts_phone: 
+        type: string
+        null: true
+        default: 
+      contacts_fax: 
+        type: string
+        null: true
+        default: 
+      contacts_email: 
+        type: string
+        null: true
+        default: 
+      contacts_address: 
+        type: string
+        null: true
+        default: 
+      links_council: 
+        type: string
+        null: true
+        default: 
+      gender: 
+        type: string
+        null: true
+        default: 
+      image_url: 
+        type: string
+        null: true
+        default: 
+      experience: 
+        type: text
+        null: true
+        default: 
+      platform: 
+        type: text
+        null: true
+        default: 
+      birth: 
+        type: date
+        null: true
+        default: 
+      party: 
+        type: string
+        null: true
+        default: 
+      constituency: 
+        type: string
+        null: true
+        default: 
+      education: 
+        type: text
+        null: true
+        default: 
+      group: 
+        type: string
+        null: true
+        default: 
+      ad: 
+        type: integer
+        null: true
+        default: 
+    motions_parliamentarians: 
+      id: 
+        type: integer
+        null: false
+        default: 
+        length: 11
+        key: primary
+        primary: id
+      Parliamentarian_id: 
+        type: integer
+        null: false
+        default: 
+        length: 11
+        key: index
+      Motion_id: 
+        type: integer
+        null: false
+        default: 
+        length: 11
+        key: index
+    parties: 
+      id: 
+        type: integer
+        null: false
+        default: 
+        length: 11
+        key: primary
+        primary: id
+      name: 
+        type: string
+        null: false
+        default: 
+    motions: 
+      id: 
+        type: integer
+        null: false
+        default: 
+        length: 11
+        key: primary
+        primary: id
+      sequence: 
+        type: string
+        null: true
+        default: 
+      type: 
+        type: string
+        null: true
+        default: 
+      group_type: 
+        type: string
+        null: true
+        default: 
+      number: 
+        type: string
+        null: true
+        default: 
+      source: 
+        type: string
+        null: true
+        default: 
+      requested_date: 
+        type: date
+        null: true
+        default: 
+      requested_number: 
+        type: string
+        null: true
+        default: 
+      requester: 
+        type: text
+        null: true
+        default: 
+      petition_people: 
+        type: text
+        null: true
+        default: 
+      summary: 
+        type: text
+        null: true
+        default: 
+      description: 
+        type: text
+        null: true
+        default: 
+      rules: 
+        type: string
+        null: true
+        default: 
+      comments: 
+        type: string
+        null: true
+        default: 
+      result: 
+        type: text
+        null: true
+        default: 
+      status: 
+        type: string
+        null: true
+        default: 
+      result_date: 
+        type: date
+        null: true
+        default: 
+      posting_date: 
+        type: date
+        null: true
+        default: 
+      posting_number: 
+        type: string
+        null: true
+        default: 
+      attachments: 
+        type: string
+        null: true
+        default: 
