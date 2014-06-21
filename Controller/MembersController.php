@@ -4,21 +4,19 @@
  * @property Member Member
  *
  */
-class MembersController extends AppController
-{
+class MembersController extends AppController {
+
     public $name = 'Members';
     public $paginate = array();
 
-    public function beforeFilter()
-    {
+    public function beforeFilter() {
         parent::beforeFilter();
         if (isset($this->Auth)) {
             $this->Auth->allow('login', 'logout', 'setup');
         }
     }
 
-    public function login()
-    {
+    public function login() {
         if (!$this->Member->hasAny()) {
             $this->redirect(array('action' => 'setup'));
         }
@@ -31,14 +29,12 @@ class MembersController extends AppController
         }
     }
 
-    public function logout()
-    {
+    public function logout() {
         $this->Auth->logout();
         $this->redirect(array('action' => 'login'));
     }
 
-    public function setup()
-    {
+    public function setup() {
         if ($this->Member->hasAny(array('user_status' => 'Y'))) {
             $this->Session->setFlash(__('There are members in database. If you want to reset, please remove them first.', true));
             $this->redirect('/members/login');
@@ -70,8 +66,7 @@ class MembersController extends AppController
         }
     }
 
-    public function admin_index()
-    {
+    public function admin_index() {
         $scope = array();
         $keyword = '';
         if (isset($this->params['named']['keyword'])) {
@@ -95,8 +90,7 @@ class MembersController extends AppController
         $this->set('keyword', $keyword);
     }
 
-    public function admin_view($id = null)
-    {
+    public function admin_view($id = null) {
         if (!$id) {
             $this->Session->setFlash(__('Please do following links in the page', true));
             $this->redirect(array('action' => 'index'));
@@ -104,8 +98,7 @@ class MembersController extends AppController
         $this->set('member', $this->Member->read(null, $id));
     }
 
-    public function admin_add()
-    {
+    public function admin_add() {
         if (!empty($this->request->data)) {
             $this->Member->create();
             if ($this->Member->save($this->request->data)) {
@@ -119,8 +112,7 @@ class MembersController extends AppController
         $this->set('groups', $this->Member->Group->find('list'));
     }
 
-    public function admin_edit($id = null)
-    {
+    public function admin_edit($id = null) {
         if (!$id && empty($this->request->data)) {
             $this->Session->setFlash(__('Please do following links in the page', true));
             $this->redirect(array('action' => 'index'));
@@ -147,8 +139,7 @@ class MembersController extends AppController
         $this->set('groups', $this->Member->Group->find('list'));
     }
 
-    public function admin_delete($id = null)
-    {
+    public function admin_delete($id = null) {
         if (!$id) {
             $this->Session->setFlash(__('Please do following links in the page', true));
             $this->redirect(array('action' => 'index'));
@@ -159,8 +150,7 @@ class MembersController extends AppController
         }
     }
 
-    public function admin_test($count = 50)
-    {
+    public function admin_test($count = 50) {
         $count = intval($count);
         if ($count > 0) {
             for ($i = 0; $i < $count; $i++) {
@@ -173,7 +163,7 @@ class MembersController extends AppController
                                 'user_status' => 'Y',
                                 'nick' => $uid,
                                 'email' => $uid . '@example.com',
-                                )))) {
+                    )))) {
                     $this->Acl->Aro->saveField('alias', 'Member' . $this->Member->getInsertID());
                 }
             }
@@ -182,8 +172,7 @@ class MembersController extends AppController
         $this->redirect($this->referer());
     }
 
-    public function admin_acos()
-    {
+    public function admin_acos() {
         $this->loadModel('Permissible.PermissibleAco');
         $this->PermissibleAco->refresh();
         $this->redirect($this->referer());
