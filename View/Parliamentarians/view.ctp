@@ -1,171 +1,63 @@
-<div id="ParliamentariansView">
-    <h3><?php echo __('View Parliamentarians', true); ?></h3><hr />
-    <div class="col-sm-12">
-        <div class="col-sm-2">Parties</div>
-        <div class="col-sm-9"><?php
-if (empty($this->data['Party']['id'])) {
-    echo '--';
-} else {
-    echo $this->Html->link($this->data['Party']['id'], array(
-        'controller' => 'parties',
-        'action' => 'view',
-        $this->data['Party']['id']
-    ));
-}
-?></div>
+<div id="masthead">  
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h1><?php echo $item['Parliamentarian']['name']; ?>
+                    <p class="lead"><?php echo $item['Parliamentarian']['district']; ?></p>
+                </h1>
+            </div>
+            <div class="col-md-7">
+                <div class="well well-lg"> 
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="<?php echo $item['Parliamentarian']['image_url']; ?>" style="height: 200px;">
+                        </div>
+                        <div class="col-sm-8">
+                            <ul>
+                                <li>電話：<?php echo $item['Parliamentarian']['contacts_phone']; ?></li>
+                                <li>傳真：<?php echo $item['Parliamentarian']['contacts_fax']; ?></li>
+                                <li>信箱：<?php echo $item['Parliamentarian']['contacts_email']; ?></li>
+                                <li>服務處：<?php echo $item['Parliamentarian']['contacts_address']; ?></li>
+                                <li>政黨：<?php echo $item['Parliamentarian']['party']; ?></li>
+                                <li>選區：<?php echo $item['Parliamentarian']['constituency']; ?></li>
+                                <li>生日：<?php echo $item['Parliamentarian']['birth']; ?></li>
+                                <li>性別：<?php echo $item['Parliamentarian']['gender']; ?></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div><!--/container-->
+</div><!--/masthead-->
 
-        <div class="col-sm-2">Name</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Parliamentarian']['name']) {
+<div class="container">
+    <div class="row">
+        <!--left-->
+        <div class="col-md-3" id="leftCol">
+            <div class="success">政見</div><?php echo nl2br($item['Parliamentarian']['platform']); ?>
+            <div class="success">經歷</div><?php echo nl2br($item['Parliamentarian']['experience']); ?>
+            <div class="success">學歷</div><?php echo nl2br($item['Parliamentarian']['education']); ?>
+        </div><!--/left-->
 
-                echo $this->data['Parliamentarian']['name'];
+        <!--right-->
+        <div class="col-md-9">
+            <div class="paging"><?php echo $this->element('paginator'); ?></div>
+            <?php
+            foreach ($motions AS $motion) {
+                ?>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><h3><?php echo $this->Html->link($motion['Motion']['summary'], '/motions/view/' . $motion['Motion']['id']); ?></h3></div>
+                            <div class="panel-body"><?php echo nl2br($motion['Motion']['description']); ?></div>
+                        </div>
+                    </div>
+                </div>
+                <?php
             }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">District</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Parliamentarian']['district']) {
-
-                echo $this->data['Parliamentarian']['district'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Phone</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Parliamentarian']['contacts_phone']) {
-
-                echo $this->data['Parliamentarian']['contacts_phone'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Fax</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Parliamentarian']['contacts_fax']) {
-
-                echo $this->data['Parliamentarian']['contacts_fax'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Email</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Parliamentarian']['contacts_email']) {
-
-                echo $this->data['Parliamentarian']['contacts_email'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Address</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Parliamentarian']['contacts_address']) {
-
-                echo $this->data['Parliamentarian']['contacts_address'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Council Link</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Parliamentarian']['links_council']) {
-
-                echo $this->data['Parliamentarian']['links_council'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Gender</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Parliamentarian']['gender']) {
-
-                echo $this->data['Parliamentarian']['gender'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Image Url</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Parliamentarian']['image_url']) {
-
-                echo $this->data['Parliamentarian']['image_url'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Experience</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Parliamentarian']['experience']) {
-
-                echo $this->data['Parliamentarian']['experience'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Platform</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Parliamentarian']['platform']) {
-
-                echo $this->data['Parliamentarian']['platform'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Birthday</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Parliamentarian']['birth']) {
-
-                echo $this->data['Parliamentarian']['birth'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Party</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Parliamentarian']['party']) {
-
-                echo $this->data['Parliamentarian']['party'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Constituency</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Parliamentarian']['constituency']) {
-
-                echo $this->data['Parliamentarian']['constituency'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Education</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Parliamentarian']['education']) {
-
-                echo $this->data['Parliamentarian']['education'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Group</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Parliamentarian']['group']) {
-
-                echo $this->data['Parliamentarian']['group'];
-            }
-?>&nbsp;
-        </div>
-        <div class="col-sm-2">Ad</div>
-        <div class="col-sm-9"><?php
-            if ($this->data['Parliamentarian']['ad']) {
-
-                echo $this->data['Parliamentarian']['ad'];
-            }
-?>&nbsp;
-        </div>
-    </div>
-    <div class="actions">
-        <ul>
-            <li><?php echo $this->Html->link(__('Parliamentarians List', true), array('action' => 'index')); ?> </li>
-            <li><?php echo $this->Html->link(__('View Related Motions', true), array('controller' => 'motions', 'action' => 'index', 'Parliamentarian', $this->data['Parliamentarian']['id']), array('class' => 'ParliamentariansViewControl')); ?></li>
-        </ul>
-    </div>
-    <div id="ParliamentariansViewPanel"></div>
-    <script type="text/javascript">
-        //<![CDATA[
-        $(function() {
-            $('a.ParliamentariansViewControl').click(function() {
-                $('#ParliamentariansViewPanel').parent().load(this.href);
-                return false;
-            });
-        });
-        //]]>
-    </script>
-</div>
+            ?>
+            <div class="paging"><?php echo $this->element('paginator'); ?></div>
+        </div><!--/right-->
+    </div><!--/row-->
+</div><!--/container-->

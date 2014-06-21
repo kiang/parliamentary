@@ -34,6 +34,8 @@
                 </div>
                 <nav class="collapse navbar-collapse" role="navigation">
                     <ul class="nav navbar-nav">
+                        <li><?php echo $this->Html->link('議員', '/parliamentarians'); ?></li>
+                        <li><?php echo $this->Html->link('議案', '/motions'); ?></li>
                         <?php if ($this->Session->read('Auth.User.id')): ?>
                             <li><?php echo $this->Html->link('Parliamentarians', '/admin/parliamentarians'); ?></li>
                             <li><?php echo $this->Html->link('Parties', '/admin/parties'); ?></li>
@@ -55,14 +57,12 @@
                 </nav>
             </div>
         </nav>
-
-
-
         <div id="content">
             <?php echo $this->Session->flash(); ?>
             <div id="viewContent"><?php echo $content_for_layout; ?></div>
         </div>
         <div id="footer" class="container">
+            --<br />
             <?php echo $this->Html->link('江明宗 . 政 . 路過', 'http://k.olc.tw/', array('target' => '_blank')); ?>
         </div>
         <?php

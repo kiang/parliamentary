@@ -13,8 +13,6 @@ class ParliamentariansController extends AppController {
         $foreignKeys = array(
             'Party' => 'Party_id',
         );
-
-
         $habtmKeys = array(
             'Motion' => 'Motion_id',
         );
@@ -50,14 +48,56 @@ class ParliamentariansController extends AppController {
         }
         $this->set('scope', $scope);
         $this->paginate['Parliamentarian']['limit'] = 20;
+        $this->paginate['Parliamentarian']['order'] = array('modified' => 'DESC');
+        $this->paginate['Parliamentarian']['fields'] = array(
+            'id', 'Party_id', 'name', 'district', 'links_council', 'image_url',
+        );
         $items = $this->paginate($this->Parliamentarian, $scope);
+        foreach ($items AS $key => $item) {
+            $items[$key]['Motion'] = $this->Parliamentarian->Motion->find('all', array(
+                'joins' => array(
+                    array(
+                        'table' => 'motions_parliamentarians',
+                        'alias' => 'MotionsParliamentarian',
+                        'type' => 'inner',
+                        'conditions' => array('MotionsParliamentarian.Motion_id = Motion.id'),
+                    ),
+                ),
+                'fields' => array(
+                    'Motion.id', 'Motion.summary', 'Motion.modified',
+                ),
+                'conditions' => array(
+                    'MotionsParliamentarian.Parliamentarian_id' => $item['Parliamentarian']['id'],
+                ),
+                'limit' => 5,
+                'order' => array(
+                    'Motion.modified' => 'DESC'
+                ),
+            ));
+        }
         $this->set('items', $items);
         $this->set('foreignId', $foreignId);
         $this->set('foreignModel', $foreignModel);
     }
 
     function view($id = null) {
-        if (!$id || !$this->data = $this->Parliamentarian->read(null, $id)) {
+        $item = $this->Parliamentarian->read(null, $id);
+        if (!empty($item)) {
+            $this->paginate['Motion']['joins'] = array(
+                array(
+                    'table' => 'motions_parliamentarians',
+                    'alias' => 'MotionsParliamentarian',
+                    'type' => 'inner',
+                    'conditions' => array('MotionsParliamentarian.Motion_id = Motion.id'),
+                ),
+            );
+            $this->paginate['Motion']['order'] = array('Motion.modified' => 'DESC');
+            $motions = $this->paginate($this->Parliamentarian->Motion, array(
+                'MotionsParliamentarian.Parliamentarian_id' => $id,
+            ));
+            $this->set('motions', $motions);
+            $this->set('item', $item);
+        } else {
             $this->Session->setFlash(__('Please do following links in the page', true));
             $this->redirect(array('action' => 'index'));
         }
