@@ -110,12 +110,8 @@ class ParliamentariansController extends AppController {
     }
     
     function stat() {
-        $this->set('items1', $this->Parliamentarian->find('all', array(
-            'order' => array('count_submits' => 'DESC'),
-        )));
-        $this->set('items2', $this->Parliamentarian->find('all', array(
-            'order' => array('count_petitions' => 'DESC'),
-        )));
+        $this->layout = 'blank';
+        $this->set('items', $this->Parliamentarian->find('all'));
     }
 
     function admin_index($foreignModel = null, $foreignId = 0, $op = null) {
