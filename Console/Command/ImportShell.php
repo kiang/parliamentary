@@ -57,11 +57,22 @@ class ImportShell extends AppShell {
             }
             $parliamentarians[$pDb['Parliamentarian']['district']][$pDb['Parliamentarian']['name']] = $pDb;
         }
-
+        
+        $jsonMotionFiles = array();
+        
         foreach (glob('/home/kiang/public_html/tncc/motions/*/*/*.json') AS $jsonMotionFile) {
+            $jsonMotionFiles[] = $jsonMotionFile;
+        }
+        
+        foreach (glob('/home/kiang/public_html/tncc/motions/misc/*.json') AS $jsonMotionFile) {
+            $jsonMotionFiles[] = $jsonMotionFile;
+        }
+        
+        foreach ($jsonMotionFiles AS $jsonMotionFile) {
             $jsonMotion = json_decode(file_get_contents($jsonMotionFile), true);
             $this->Parliamentarian->Motion->create();
             $this->Parliamentarian->Motion->save(array('Motion' => array(
+                    'id' => substr($jsonMotionFile, -41, 36),
                     'sequence' => $jsonMotion['議案屆次別'],
                     'type' => $jsonMotion['大會類別'],
                     'group_type' => $jsonMotion['審查會別'],
