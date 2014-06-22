@@ -1,133 +1,234 @@
-SET NAMES utf8;
+-- MySQL dump 10.13  Distrib 5.5.37, for debian-linux-gnu (x86_64)
+--
+-- Host: localhost    Database: kiang_parliamentary
+-- ------------------------------------------------------
+-- Server version	5.5.37-0ubuntu0.14.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `acos`
+--
 
 DROP TABLE IF EXISTS `acos`;
-CREATE TABLE IF NOT EXISTS `acos`(
-	`id` int(11) NOT NULL AUTO_INCREMENT, 
-	`parent_id` int(11), 
-	`model` varchar(64), 
-	`foreign_key` int(11), 
-	`alias` varchar(128), 
-	`lft` int(11), 
-	`rght` int(11), 
-	PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `acos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `parent_id` int(11) DEFAULT NULL,
+  `model` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `foreign_key` int(11) DEFAULT NULL,
+  `alias` varchar(128) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `lft` int(11) DEFAULT NULL,
+  `rght` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `aros`
+--
 
 DROP TABLE IF EXISTS `aros`;
-CREATE TABLE IF NOT EXISTS `aros`(
-	`id` int(11) NOT NULL AUTO_INCREMENT, 
-	`parent_id` int(11), 
-	`model` varchar(64), 
-	`foreign_key` int(11), 
-	`alias` varchar(128), 
-	`lft` int(11), 
-	`rght` int(11), 
-	PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `aros` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `parent_id` int(11) DEFAULT NULL,
+  `model` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `foreign_key` int(11) DEFAULT NULL,
+  `alias` varchar(128) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `lft` int(11) DEFAULT NULL,
+  `rght` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `aros_acos`
+--
 
 DROP TABLE IF EXISTS `aros_acos`;
-CREATE TABLE IF NOT EXISTS `aros_acos`(
-	`id` int(11) NOT NULL AUTO_INCREMENT, 
-	`aro_id` int(11), 
-	`aco_id` int(11), 
-	`_create` int(2) DEFAULT NULL, 
-	`_read` int(2) DEFAULT NULL, 
-	`_update` int(2) DEFAULT NULL, 
-	`_delete` int(2) DEFAULT NULL, 
-	PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `aros_acos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `aro_id` int(11) DEFAULT NULL,
+  `aco_id` int(11) DEFAULT NULL,
+  `_create` int(2) DEFAULT NULL,
+  `_read` int(2) DEFAULT NULL,
+  `_update` int(2) DEFAULT NULL,
+  `_delete` int(2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-DROP TABLE IF EXISTS `members`;
-CREATE TABLE IF NOT EXISTS `members`(
-	`id` int(11) NOT NULL AUTO_INCREMENT, 
-	`group_id` int(11), 
-	`username` varchar(64), 
-	`password` varchar(48), 
-	`user_status` varchar(1) DEFAULT 'N', 
-	`created` datetime, 
-	`modified` datetime, 
-	PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
-DROP TABLE IF EXISTS `groups`;
-CREATE TABLE IF NOT EXISTS `groups`(
-	`id` int(11) NOT NULL AUTO_INCREMENT, 
-	`parent_id` int(11), 
-	`name` varchar(64), 
-	PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+--
+-- Table structure for table `group_permissions`
+--
 
 DROP TABLE IF EXISTS `group_permissions`;
-CREATE TABLE IF NOT EXISTS `group_permissions`(
-	`id` int(11) NOT NULL AUTO_INCREMENT, 
-	`parent_id` int(11), 
-	`order` int(11), 
-	`name` varchar(64), 
-	`description` varchar(255) DEFAULT NULL, 
-	`acos` varchar(255), 
-	PRIMARY KEY  (`id`)
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `group_permissions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `parent_id` int(11) DEFAULT NULL,
+  `order` int(11) DEFAULT NULL,
+  `name` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `description` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `acos` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-DROP TABLE IF EXISTS `parliamentarians`;
-CREATE TABLE IF NOT EXISTS `parliamentarians`(
-	`id` int(11) NOT NULL AUTO_INCREMENT, 
-	`Party_id` int(11), 
-	`name` varchar(255), 
-	`district` varchar(255) DEFAULT NULL, 
-	`contacts_phone` varchar(255) DEFAULT NULL, 
-	`contacts_fax` varchar(255) DEFAULT NULL, 
-	`contacts_email` varchar(255) DEFAULT NULL, 
-	`contacts_address` varchar(255) DEFAULT NULL, 
-	`links_council` varchar(255) DEFAULT NULL, 
-	`gender` varchar(255) DEFAULT NULL, 
-	`image_url` varchar(255) DEFAULT NULL, 
-	`experience` text DEFAULT NULL, 
-	`platform` text DEFAULT NULL, 
-	`birth` date DEFAULT NULL, 
-	`party` varchar(255) DEFAULT NULL, 
-	`constituency` varchar(255) DEFAULT NULL, 
-	`education` text DEFAULT NULL, 
-	`group` varchar(255) DEFAULT NULL, 
-	`ad` int(11) DEFAULT NULL, 
-	PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+--
+-- Table structure for table `groups`
+--
 
-DROP TABLE IF EXISTS `motions_parliamentarians`;
-CREATE TABLE IF NOT EXISTS `motions_parliamentarians`(
-	`id` int(11) NOT NULL AUTO_INCREMENT, 
-	`Parliamentarian_id` int(11), 
-	`Motion_id` int(11), 
-	PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+DROP TABLE IF EXISTS `groups`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `groups` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `parent_id` int(11) DEFAULT NULL,
+  `name` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-DROP TABLE IF EXISTS `parties`;
-CREATE TABLE IF NOT EXISTS `parties`(
-	`id` int(11) NOT NULL AUTO_INCREMENT, 
-	`name` varchar(255), 
-	PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+--
+-- Table structure for table `members`
+--
+
+DROP TABLE IF EXISTS `members`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `members` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `group_id` int(11) DEFAULT NULL,
+  `username` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `password` varchar(48) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `user_status` varchar(1) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `motions`
+--
 
 DROP TABLE IF EXISTS `motions`;
-CREATE TABLE IF NOT EXISTS `motions`(
-	`id` int(11) NOT NULL AUTO_INCREMENT, 
-	`sequence` varchar(255) DEFAULT NULL, 
-	`type` varchar(255) DEFAULT NULL, 
-	`group_type` varchar(255) DEFAULT NULL, 
-	`number` varchar(255) DEFAULT NULL, 
-	`source` varchar(255) DEFAULT NULL, 
-	`requested_date` date DEFAULT NULL, 
-	`requested_number` varchar(255) DEFAULT NULL, 
-	`requester` text DEFAULT NULL, 
-	`petition_people` text DEFAULT NULL, 
-	`summary` text DEFAULT NULL, 
-	`description` text DEFAULT NULL, 
-	`rules` varchar(255) DEFAULT NULL, 
-	`comments` varchar(255) DEFAULT NULL, 
-	`result` text DEFAULT NULL, 
-	`status` varchar(255) DEFAULT NULL, 
-	`result_date` date DEFAULT NULL, 
-	`posting_date` date DEFAULT NULL, 
-	`posting_number` varchar(255) DEFAULT NULL, 
-	`attachments` varchar(255) DEFAULT NULL, 
-	PRIMARY KEY  (`id`)
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `motions` (
+  `id` binary(36) NOT NULL,
+  `sequence` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `group_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `number` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `source` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `requested_date` date DEFAULT NULL,
+  `requested_number` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `requester` text COLLATE utf8_unicode_ci,
+  `petition_people` text COLLATE utf8_unicode_ci,
+  `summary` text COLLATE utf8_unicode_ci,
+  `description` text COLLATE utf8_unicode_ci,
+  `rules` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `comments` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `result` text COLLATE utf8_unicode_ci,
+  `status` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `result_date` date DEFAULT NULL,
+  `posting_date` date DEFAULT NULL,
+  `posting_number` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `attachments` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
+--
+-- Table structure for table `motions_parliamentarians`
+--
+
+DROP TABLE IF EXISTS `motions_parliamentarians`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `motions_parliamentarians` (
+  `id` binary(36) NOT NULL,
+  `Parliamentarian_id` binary(36) NOT NULL,
+  `Motion_id` binary(36) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `parliamentarians`
+--
+
+DROP TABLE IF EXISTS `parliamentarians`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `parliamentarians` (
+  `id` binary(36) NOT NULL,
+  `Party_id` int(11) DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `district` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `contacts_phone` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `contacts_fax` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `contacts_email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `contacts_address` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `links_council` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `gender` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `image_url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `experience` text COLLATE utf8_unicode_ci,
+  `platform` text COLLATE utf8_unicode_ci,
+  `birth` date DEFAULT NULL,
+  `party` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `constituency` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `education` text COLLATE utf8_unicode_ci,
+  `group` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ad` int(11) DEFAULT NULL,
+  `count_submits` int(11) NOT NULL,
+  `count_petitions` int(11) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `parties`
+--
+
+DROP TABLE IF EXISTS `parties`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `parties` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2014-06-22 11:35:11
