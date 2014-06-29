@@ -27,6 +27,8 @@ foreach ($items AS $item) {
         )),
         'value' => $item['Parliamentarian']['count_submits'] + $item['Parliamentarian']['count_petitions'],
         'color' => $color,
+        'count_submits' => $item['Parliamentarian']['count_submits'],
+        'count_petitions' => $item['Parliamentarian']['count_petitions'],
     );
 }
 echo json_encode($data);
