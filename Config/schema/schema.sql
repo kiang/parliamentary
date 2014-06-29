@@ -169,6 +169,7 @@ CREATE TABLE `motions_parliamentarians` (
   `id` binary(36) NOT NULL,
   `Parliamentarian_id` binary(36) NOT NULL,
   `Motion_id` binary(36) NOT NULL,
+  `type` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -231,4 +232,4 @@ CREATE TABLE `parties` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-06-22 11:35:11
+-- Dump completed on 2014-06-29 23:48:12
