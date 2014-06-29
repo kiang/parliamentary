@@ -58,6 +58,7 @@ class MotionsController extends AppController {
         $this->set('items', $items);
         $this->set('foreignId', $foreignId);
         $this->set('foreignModel', $foreignModel);
+        $this->set('url', array($foreignModel, $foreignId));
     }
 
     function view($id = null) {
