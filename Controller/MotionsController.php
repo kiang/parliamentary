@@ -64,9 +64,14 @@ class MotionsController extends AppController {
     function view($id = null) {
         $item = $this->Motion->find('first', array(
             'conditions' => array('Motion.id' => $id),
-            'contain' => array('Parliamentarian'),
+            'contain' => array(
+                'Parliamentarian' => array(
+                    'fields' => array('id', 'image_url', 'name', 'contacts_phone', 'district')
+                )
+            ),
         ));
         if(!empty($item)) {
+            $item['Parliamentarian'] = Set::combine($item['Parliamentarian'], '{n}.id', '{n}', '{n}.MotionsParliamentarian.type');
             $this->set('item', $item);
         } else {
             $this->Session->setFlash(__('Please do following links in the page', true));

@@ -12,24 +12,49 @@
     <div class="row">
         <!--left-->
         <div class="col-md-3" id="leftCol">
+
             <?php
-            foreach ($item['Parliamentarian'] AS $p) {
-                ?>
-                <div class="well well-lg"> 
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <img src="<?php echo $p['image_url']; ?>" style="height: 100px;">
-                        </div>
-                        <div class="col-sm-8">
-                            <ul>
-                                <li><?php echo $this->Html->link($p['name'], '/parliamentarians/view/' . $p['id']); ?></li>
-                                <li><?php echo $p['contacts_phone']; ?></li>
-                                <li><?php echo $p['district']; ?></li>
-                            </ul>
+            if (!empty($item['Parliamentarian']['requester'])) {
+                echo '提案人：';
+                foreach ($item['Parliamentarian']['requester'] AS $p) {
+                    ?>
+                    <div class="well well-lg"> 
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <img src="<?php echo $p['image_url']; ?>" style="height: 100px;">
+                            </div>
+                            <div class="col-sm-8">
+                                <ul>
+                                    <li><?php echo $this->Html->link($p['name'], '/parliamentarians/view/' . $p['id']); ?></li>
+                                    <li><?php echo $p['contacts_phone']; ?></li>
+                                    <li><?php echo $p['district']; ?></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <?php
+                    <?php
+                }
+            }
+            if (!empty($item['Parliamentarian']['petition'])) {
+                echo '連署人：';
+                foreach ($item['Parliamentarian']['petition'] AS $p) {
+                    ?>
+                    <div class="well well-lg"> 
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <img src="<?php echo $p['image_url']; ?>" style="height: 100px;">
+                            </div>
+                            <div class="col-sm-8">
+                                <ul>
+                                    <li><?php echo $this->Html->link($p['name'], '/parliamentarians/view/' . $p['id']); ?></li>
+                                    <li><?php echo $p['contacts_phone']; ?></li>
+                                    <li><?php echo $p['district']; ?></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                }
             }
             ?>
         </div><!--/left-->
