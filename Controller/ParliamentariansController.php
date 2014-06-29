@@ -85,15 +85,28 @@ class ParliamentariansController extends AppController {
         $this->set('foreignModel', $foreignModel);
     }
 
-    function view($id = null) {
+    function view($id = null, $motionType = 'all') {
         $item = $this->Parliamentarian->read(null, $id);
         if (!empty($item)) {
+            $motionConditions = array(
+                'MotionsParliamentarian.Motion_id = Motion.id',
+            );
+            switch($motionType) {
+                case 'requester':
+                    $motionConditions['MotionsParliamentarian.type'] = 'requester';
+                    break;
+                case 'petition':
+                    $motionConditions['MotionsParliamentarian.type'] = 'petition';
+                    break;
+                default:
+                    $motionType = 'all';
+            }
             $this->paginate['Motion']['joins'] = array(
                 array(
                     'table' => 'motions_parliamentarians',
                     'alias' => 'MotionsParliamentarian',
                     'type' => 'inner',
-                    'conditions' => array('MotionsParliamentarian.Motion_id = Motion.id'),
+                    'conditions' => $motionConditions,
                 ),
             );
             $this->paginate['Motion']['order'] = array('Motion.modified' => 'DESC');
@@ -102,7 +115,8 @@ class ParliamentariansController extends AppController {
             ));
             $this->set('motions', $motions);
             $this->set('item', $item);
-            $this->set('url', array($id));
+            $this->set('url', array($id, $motionType));
+            $this->set('motionType', $motionType);
         } else {
             $this->Session->setFlash(__('Please do following links in the page', true));
             $this->redirect(array('action' => 'index'));
