@@ -31,7 +31,7 @@ class MotionShell extends AppShell {
         $parliamentarians = $this->Parliamentarian->find('list');
         foreach ($this->motionIdStack AS $motionId => $motionSummary) {
             $links = $this->Parliamentarian->MotionsParliamentarian->find('all', array(
-                'conditions' => array('Motion_id' => $motion['Motion']['id']),
+                'conditions' => array('Motion_id' => $motionId),
             ));
             $links = Set::combine($links, '{n}.MotionsParliamentarian.Parliamentarian_id', '{n}.MotionsParliamentarian');
             $toMatchString1 = is_array($motionSummary['detail']['提案單位/人']) ? implode(",", $motionSummary['detail']['提案單位/人']) : $motionSummary['detail']['提案單位/人'];
@@ -42,7 +42,7 @@ class MotionShell extends AppShell {
                         $this->Parliamentarian->MotionsParliamentarian->create();
                         $this->Parliamentarian->MotionsParliamentarian->save(array('MotionsParliamentarian' => array(
                                 'Parliamentarian_id' => $parliamentarianId,
-                                'Motion_id' => $motion['Motion']['id'],
+                                'Motion_id' => $motionId,
                                 'type' => 'requester',
                         )));
                     } elseif ($links[$parliamentarianId]['type'] != 'requester') {
@@ -56,7 +56,7 @@ class MotionShell extends AppShell {
                         $this->Parliamentarian->MotionsParliamentarian->create();
                         $this->Parliamentarian->MotionsParliamentarian->save(array('MotionsParliamentarian' => array(
                                 'Parliamentarian_id' => $parliamentarianId,
-                                'Motion_id' => $motion['Motion']['id'],
+                                'Motion_id' => $motionId,
                                 'type' => 'petition',
                         )));
                     } elseif ($links[$parliamentarianId]['type'] != 'petition') {
