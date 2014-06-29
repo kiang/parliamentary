@@ -70,7 +70,14 @@ class ImportShell extends AppShell {
         
         foreach ($jsonMotionFiles AS $jsonMotionFile) {
             $jsonMotion = json_decode(file_get_contents($jsonMotionFile), true);
-            $this->Parliamentarian->Motion->create();
+            $motionId = substr($jsonMotionFile, -41, 36);
+            if($this->Parliamentarian->Motion->find('count', array(
+                'conditions' => array('id' => $motionId),
+            )) === 0) {
+                $this->Parliamentarian->Motion->create();
+            } else {
+                $this->Parliamentarian->Motion->id = $motionId;
+            }
             $this->Parliamentarian->Motion->save(array('Motion' => array(
                     'id' => substr($jsonMotionFile, -41, 36),
                     'sequence' => $jsonMotion['議案屆次別'],
