@@ -5,7 +5,9 @@ class MatchShell extends AppShell {
     public $uses = array('Parliamentarian');
 
     public function main() {
-        $parliamentarians = $this->Parliamentarian->find('list');
+        $parliamentarians = $this->Parliamentarian->find('list', array(
+            'fields' => array('id', 'name'),
+        ));
         $motions = $this->Parliamentarian->Motion->find('all');
         foreach ($motions AS $motion) {
             $links = $this->Parliamentarian->MotionsParliamentarian->find('all', array(

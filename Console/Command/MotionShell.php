@@ -22,8 +22,8 @@ class MotionShell extends AppShell {
     public function updateParliamentarianCounter() {
         $parliamentarians = $this->Parliamentarian->find('list');
         foreach ($parliamentarians AS $parliamentarianId => $parliamentarian) {
-            $this->Parliamentarian->query("UPDATE parliamentarians SET count_submits = (SELECT COUNT(*) FROM motions WHERE requester LIKE '%{$parliamentarian}%') WHERE id = '{$parliamentarianId}'");
-            $this->Parliamentarian->query("UPDATE parliamentarians SET count_petitions = (SELECT COUNT(*) FROM motions WHERE petition_people LIKE '%{$parliamentarian}%') WHERE id = '{$parliamentarianId}'");
+            $this->Parliamentarian->query("UPDATE parliamentarians SET count_submits = (SELECT COUNT(*) FROM motions_parliamentarians WHERE Parliamentarian_id = '{$parliamentarianId}' AND type = 'requester') WHERE id = '{$parliamentarianId}'");
+            $this->Parliamentarian->query("UPDATE parliamentarians SET count_petitions = (SELECT COUNT(*) FROM motions_parliamentarians WHERE Parliamentarian_id = '{$parliamentarianId}' AND type = 'petition') WHERE id = '{$parliamentarianId}'");
         }
     }
 
@@ -37,7 +37,7 @@ class MotionShell extends AppShell {
             $toMatchString1 = is_array($motionSummary['detail']['提案單位/人']) ? implode(",", $motionSummary['detail']['提案單位/人']) : $motionSummary['detail']['提案單位/人'];
             $toMatchString2 = is_array($motionSummary['detail']['連署人']) ? implode(",", $motionSummary['detail']['連署人']) : $motionSummary['detail']['連署人'];
             foreach ($parliamentarians AS $parliamentarianId => $parliamentarian) {
-                if (false !== strpos($motion['Motion']['requester'], $parliamentarian)) {
+                if (false !== strpos($toMatchString1, $parliamentarian)) {
                     if (!isset($links[$parliamentarianId])) {
                         $this->Parliamentarian->MotionsParliamentarian->create();
                         $this->Parliamentarian->MotionsParliamentarian->save(array('MotionsParliamentarian' => array(
@@ -51,7 +51,7 @@ class MotionShell extends AppShell {
                             'type' => 'requester',
                         ));
                     }
-                } elseif (false !== strpos($motion['Motion']['petition_people'], $parliamentarian)) {
+                } elseif (false !== strpos($toMatchString2, $parliamentarian)) {
                     if (!isset($links[$parliamentarianId])) {
                         $this->Parliamentarian->MotionsParliamentarian->create();
                         $this->Parliamentarian->MotionsParliamentarian->save(array('MotionsParliamentarian' => array(
