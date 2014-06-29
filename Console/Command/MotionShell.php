@@ -207,7 +207,8 @@ class MotionShell extends AppShell {
                     switch ($k) {
                         case 0:
                             //example: 1A1F7251-3CD8-4AE6-BB97-6C3A021D9351
-                            $cols[$k] = substr(explode('mainid={', $col)[1], 0, 36);
+                            $tmpString = explode('mainid={', $col);
+                            $cols[$k] = substr($tmpString[1], 0, 36);
                             break;
                         default:
                             $cols[$k] = trim(strip_tags($col));
