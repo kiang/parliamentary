@@ -36,7 +36,13 @@
                         'div' => 'form-group',
                         'class' => 'form-control',
                     ));
-                    ?><button type="submit" class="btn btn-default">送出</button><?php
+                    ?>
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-primary">送出</button>
+                        <button type="button" class="btn btn-default btn-reset-keyword">重設</button>
+                    </div>
+
+                    <?php
                     echo $this->Form->end();
                     ?>
                 </div>
@@ -86,6 +92,10 @@
         $(function() {
             $('input#MotionKeyword').click(function() {
                 $(this).select();
+            });
+            $('button.btn-reset-keyword').click(function() {
+                $('input#MotionKeyword').val('');
+                $('form#MotionIndexForm').submit();
             });
         });
     </script>
