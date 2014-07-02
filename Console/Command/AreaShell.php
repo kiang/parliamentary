@@ -7,7 +7,9 @@ class AreaShell extends AppShell {
     public function main() {
         $parliamentarians = $this->Parliamentarian->find('all', array(
             'fields' => array('id', 'district'),
-            'contain' => array('Area'),
+            'contain' => array('Area' => array(
+                'fields' => array('id'),
+            )),
         ));
         $areas = $this->Parliamentarian->Area->find('list', array(
             'fields' => array('name', 'id'),
@@ -15,8 +17,10 @@ class AreaShell extends AppShell {
         ));
         foreach($parliamentarians AS $parliamentarian) {
             $pAreas = explode('.', $parliamentarian['Parliamentarian']['district']);
-            $aLinks = Set::combine($parliamentarian['Area'], '{n}.Area_id', '{n}');
+            $aLinks = Set::combine($parliamentarian['Area'], '{n}.id', '{n}');
             foreach($pAreas AS $pArea) {
+                $pArea = trim($pArea);
+                if(empty($pArea)) continue;
                 if($pArea !== '平地原住民' && mb_substr($pArea, -1, 1, 'utf-8') !== '區') {
                     $pArea .= '區';
                 }
