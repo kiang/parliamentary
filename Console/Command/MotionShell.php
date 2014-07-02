@@ -12,7 +12,7 @@ class MotionShell extends AppShell {
     public function main() {
         $this->pathInit();
         $this->getMotionIdStack();
-        //$this->checkMotionIdStack();
+        $this->checkMotionIdStack();
         $this->processMotions();
         $this->importMotions();
         $this->matchParliamentarian();
