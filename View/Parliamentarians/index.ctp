@@ -1,4 +1,16 @@
 <div class="container">
+    <div class="row">
+        <?php
+        foreach ($areas AS $area) {
+            if($foreignId == $area['Area']['id']) {
+                $btnClass = 'btn-primary';
+            } else {
+                $btnClass = 'btn-default';
+            }
+            echo $this->Html->link($area['Area']['name'], '/parliamentarians/index/Area/' . $area['Area']['id'], array('class' => 'btn ' . $btnClass));
+        }
+        ?>
+    </div>
     <div class="paging"><?php echo $this->element('paginator'); ?></div>
     <?php
     foreach ($items as $item) {
@@ -14,7 +26,7 @@
                     <?php
                     foreach ($item['Motion'] AS $motion) {
                         ?><li><?php
-                        echo substr($motion['Motion']['modified'], 0, 10) . ' ';
+                            echo substr($motion['Motion']['modified'], 0, 10) . ' ';
                             echo $this->Html->link($motion['Motion']['summary'], '/motions/view/' . $motion['Motion']['id']);
                             ?></li><?php
                     }
