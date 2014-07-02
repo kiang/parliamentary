@@ -22,8 +22,26 @@
                     ?></div>
             </div>
             <div class="row">
-                <div class="col-md-2">排序：</div>
-                <div class="col-md-10">
+                <div class="col-md-2">搜尋：</div>
+                <div class="col-md-6">
+                    <?php
+                    echo $this->Form->create('Motion', array(
+                        'url' => $url,
+                        'class' => 'form-inline',
+                    ));
+                    echo $this->Form->input('keyword', array(
+                        'type' => 'text',
+                        'value' => $keyword,
+                        'label' => false,
+                        'div' => 'form-group',
+                        'class' => 'form-control',
+                    ));
+                    ?><button type="submit" class="btn btn-default">送出</button><?php
+                    echo $this->Form->end();
+                    ?>
+                </div>
+                <div class="col-md-1">排序：</div>
+                <div class="col-md-3">
                     <div class="btn-group">
                         <?php
                         echo $this->Paginator->sort('Motion.requested_date', '來文日期', array('url' => $url, 'class' => 'btn btn-default'));
@@ -64,4 +82,11 @@
             <div class="paging"><?php echo $this->element('paginator'); ?></div>
         </div><!--/right-->
     </div><!--/row-->
+    <script>
+        $(function() {
+            $('input#MotionKeyword').click(function() {
+                $(this).select();
+            });
+        });
+    </script>
 </div><!--/container-->

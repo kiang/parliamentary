@@ -15,7 +15,6 @@ class MotionsController extends AppController {
         $foreignId = intval($foreignId);
         $foreignKeys = array();
 
-
         $habtmKeys = array(
             'Parliamentarian' => 'Parliamentarian_id',
             'Area' => 'Area_id',
@@ -34,12 +33,6 @@ class MotionsController extends AppController {
                         'type' => 'inner',
                         'conditions' => array('AreasMotion.Motion_id = Motion.id'),
                     ),
-//                    1 => array(
-//                        'table' => 'areas',
-//                        'alias' => 'Area',
-//                        'type' => 'inner',
-//                        'conditions' => array('AreasMotion.Area_id = Area.id'),
-//                    ),
                 ),
                 'Parliamentarian' => array(
                     0 => array(
@@ -64,6 +57,22 @@ class MotionsController extends AppController {
         } else {
             $foreignModel = '';
         }
+        
+        if(isset($this->request->data['Motion']['keyword'])) {
+            $this->Session->write('Motions.index.keyword', $this->request->data['Motion']['keyword']);
+        }
+        $keyword = $this->Session->read('Motions.index.keyword');
+        if(!empty($keyword)) {
+            $scope[] = array(
+                array('OR' => array(
+                    'Motion.requester LIKE' => "%{$keyword}%",
+                    'Motion.petition_people LIKE' => "%{$keyword}%",
+                    'Motion.summary LIKE' => "%{$keyword}%",
+                    'Motion.description LIKE' => "%{$keyword}%",
+                )),
+            );
+        }
+        
         $this->set('scope', $scope);
         $this->paginate['Motion']['limit'] = 20;
         $this->paginate['Motion']['order'] = array(
@@ -74,6 +83,7 @@ class MotionsController extends AppController {
         $this->set('areas', $this->Motion->Area->find('all', array(
                     'fields' => array('id', 'name'),
         )));
+        $this->set('keyword', $keyword);
         $this->set('foreignId', $foreignId);
         $this->set('foreignModel', $foreignModel);
         $this->set('url', array($foreignModel, $foreignId));
