@@ -43,6 +43,13 @@ class Area extends AppModel {
             ),
         ),
     );
+    public $hasMany = array(
+        'AreasMotion' => array(
+            'foreignKey' => 'Area_id',
+            'dependent' => false,
+            'className' => 'AreasMotion',
+        ),
+    );
     public $hasAndBelongsToMany = array(
         'Parliamentarian' => array(
             'joinTable' => 'areas_parliamentarians',

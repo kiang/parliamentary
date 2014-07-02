@@ -5,7 +5,7 @@ class MotionsController extends AppController {
     public $name = 'Motions';
     public $paginate = array();
     public $helpers = array();
-    
+
     function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allowedActions = array('view', 'index');
@@ -18,6 +18,7 @@ class MotionsController extends AppController {
 
         $habtmKeys = array(
             'Parliamentarian' => 'Parliamentarian_id',
+            'Area' => 'Area_id',
         );
         $foreignKeys = array_merge($habtmKeys, $foreignKeys);
 
@@ -26,6 +27,20 @@ class MotionsController extends AppController {
             $scope['Motion.' . $foreignKeys[$foreignModel]] = $foreignId;
 
             $joins = array(
+                'Area' => array(
+                    0 => array(
+                        'table' => 'areas_motions',
+                        'alias' => 'AreasMotion',
+                        'type' => 'inner',
+                        'conditions' => array('AreasMotion.Motion_id = Motion.id'),
+                    ),
+//                    1 => array(
+//                        'table' => 'areas',
+//                        'alias' => 'Area',
+//                        'type' => 'inner',
+//                        'conditions' => array('AreasMotion.Area_id = Area.id'),
+//                    ),
+                ),
                 'Parliamentarian' => array(
                     0 => array(
                         'table' => 'motions_parliamentarians',
@@ -56,6 +71,9 @@ class MotionsController extends AppController {
         );
         $items = $this->paginate($this->Motion, $scope);
         $this->set('items', $items);
+        $this->set('areas', $this->Motion->Area->find('all', array(
+                    'fields' => array('id', 'name'),
+        )));
         $this->set('foreignId', $foreignId);
         $this->set('foreignModel', $foreignModel);
         $this->set('url', array($foreignModel, $foreignId));
@@ -70,7 +88,7 @@ class MotionsController extends AppController {
                 )
             ),
         ));
-        if(!empty($item)) {
+        if (!empty($item)) {
             $item['Parliamentarian'] = Set::combine($item['Parliamentarian'], '{n}.id', '{n}', '{n}.MotionsParliamentarian.type');
             $this->set('item', $item);
         } else {

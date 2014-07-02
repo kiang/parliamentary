@@ -2,6 +2,18 @@
     <div class="row">
         <!--right-->
         <div class="col-md-12">
+            <div class="row">
+                提案人區域：<?php
+                foreach ($areas AS $area) {
+                    if ($foreignId == $area['Area']['id']) {
+                        $btnClass = 'btn-primary';
+                    } else {
+                        $btnClass = 'btn-default';
+                    }
+                    echo $this->Html->link($area['Area']['name'], '/motions/index/Area/' . $area['Area']['id'], array('class' => 'btn ' . $btnClass));
+                }
+                ?>
+            </div>
             排序：
             <div class="btn-group">
                 <?php
@@ -27,7 +39,7 @@
                             <div class="panel-body">
                                 提案人/單位： <?php echo $item['Motion']['requester']; ?>
                                 <?php
-                                if(!empty($item['Motion']['petition_people'])) {
+                                if (!empty($item['Motion']['petition_people'])) {
                                     echo '/ 連署人： ' . $item['Motion']['petition_people'];
                                 }
                                 ?>

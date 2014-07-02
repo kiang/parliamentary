@@ -6,6 +6,12 @@ class Motion extends AppModel {
     var $actsAs = array(
     );
     var $hasAndBelongsToMany = array(
+        'Area' => array(
+            'joinTable' => 'areas_motions',
+            'foreignKey' => 'Motion_id',
+            'associationForeignKey' => 'Area_id',
+            'className' => 'Area',
+        ),
         'Parliamentarian' => array(
             'joinTable' => 'motions_parliamentarians',
             'foreignKey' => 'Motion_id',
@@ -13,9 +19,5 @@ class Motion extends AppModel {
             'className' => 'Parliamentarian',
         ),
     );
-
-    function afterSave($created, $options = array()) {
-        
-    }
 
 }
