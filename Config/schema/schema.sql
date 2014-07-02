@@ -52,7 +52,22 @@ CREATE TABLE `areas` (
   KEY `parent_id` (`parent_id`),
   KEY `lft` (`lft`),
   KEY `rght` (`rght`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `areas_motions`
+--
+
+DROP TABLE IF EXISTS `areas_motions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `areas_motions` (
+  `id` binary(36) NOT NULL,
+  `Area_id` int(11) NOT NULL,
+  `Motion_id` binary(36) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -268,4 +283,4 @@ CREATE TABLE `parties` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-07-03  0:48:11
+-- Dump completed on 2014-07-03  2:58:10
