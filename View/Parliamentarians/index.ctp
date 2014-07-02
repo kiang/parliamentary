@@ -1,8 +1,14 @@
 <div class="container">
     <div class="row">
         <?php
+        if (empty($foreignId)) {
+            $btnClass = 'btn-primary';
+        } else {
+            $btnClass = 'btn-default';
+        }
+        echo $this->Html->link('不分區', '/parliamentarians/index', array('class' => 'btn ' . $btnClass));
         foreach ($areas AS $area) {
-            if($foreignId == $area['Area']['id']) {
+            if ($foreignId == $area['Area']['id']) {
                 $btnClass = 'btn-primary';
             } else {
                 $btnClass = 'btn-default';

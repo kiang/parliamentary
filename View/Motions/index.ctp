@@ -3,24 +3,35 @@
         <!--right-->
         <div class="col-md-12">
             <div class="row">
-                提案人區域：<?php
-                foreach ($areas AS $area) {
-                    if ($foreignId == $area['Area']['id']) {
+                <div class="col-md-2">提案人區域：</div>
+                <div class="col-md-10"><?php
+                    if (empty($foreignId)) {
                         $btnClass = 'btn-primary';
                     } else {
                         $btnClass = 'btn-default';
                     }
-                    echo $this->Html->link($area['Area']['name'], '/motions/index/Area/' . $area['Area']['id'], array('class' => 'btn ' . $btnClass));
-                }
-                ?>
+                    echo $this->Html->link('不分區', '/motions/index', array('class' => 'btn ' . $btnClass));
+                    foreach ($areas AS $area) {
+                        if ($foreignId == $area['Area']['id']) {
+                            $btnClass = 'btn-primary';
+                        } else {
+                            $btnClass = 'btn-default';
+                        }
+                        echo $this->Html->link($area['Area']['name'], '/motions/index/Area/' . $area['Area']['id'], array('class' => 'btn ' . $btnClass));
+                    }
+                    ?></div>
             </div>
-            排序：
-            <div class="btn-group">
-                <?php
-                echo $this->Paginator->sort('Motion.requested_date', '來文日期', array('url' => $url, 'class' => 'btn btn-default'));
-                echo $this->Paginator->sort('Motion.result_date', '決議日期', array('url' => $url, 'class' => 'btn btn-default'));
-                echo $this->Paginator->sort('Motion.posting_date', '發文日期', array('url' => $url, 'class' => 'btn btn-default'));
-                ?>
+            <div class="row">
+                <div class="col-md-2">排序：</div>
+                <div class="col-md-10">
+                    <div class="btn-group">
+                        <?php
+                        echo $this->Paginator->sort('Motion.requested_date', '來文日期', array('url' => $url, 'class' => 'btn btn-default'));
+                        echo $this->Paginator->sort('Motion.result_date', '決議日期', array('url' => $url, 'class' => 'btn btn-default'));
+                        echo $this->Paginator->sort('Motion.posting_date', '發文日期', array('url' => $url, 'class' => 'btn btn-default'));
+                        ?>
+                    </div>
+                </div>
             </div>
             <div class="paging"><?php echo $this->element('paginator'); ?></div>
             <?php
