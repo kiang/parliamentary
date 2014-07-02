@@ -32,7 +32,7 @@
                     <?php
                     foreach ($item['Motion'] AS $motion) {
                         ?><li><?php
-                            echo substr($motion['Motion']['modified'], 0, 10) . ' ';
+                            echo $motion['Motion']['result_date'] . ' ';
                             echo $this->Html->link($motion['Motion']['summary'], '/motions/view/' . $motion['Motion']['id']);
                             ?></li><?php
                     }

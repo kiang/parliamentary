@@ -5,7 +5,7 @@ class ParliamentariansController extends AppController {
     public $name = 'Parliamentarians';
     public $paginate = array();
     public $helpers = array();
-    
+
     function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allowedActions = array('view', 'index', 'stat');
@@ -84,20 +84,20 @@ class ParliamentariansController extends AppController {
                     ),
                 ),
                 'fields' => array(
-                    'Motion.id', 'Motion.summary', 'Motion.modified',
+                    'Motion.id', 'Motion.summary', 'Motion.result_date',
                 ),
                 'conditions' => array(
                     'MotionsParliamentarian.Parliamentarian_id' => $item['Parliamentarian']['id'],
                 ),
                 'limit' => 5,
                 'order' => array(
-                    'Motion.modified' => 'DESC'
+                    'Motion.result_date' => 'DESC'
                 ),
             ));
         }
         $this->set('items', $items);
         $this->set('areas', $this->Parliamentarian->Area->find('all', array(
-            'fields' => array('id', 'name'),
+                    'fields' => array('id', 'name'),
         )));
         $this->set('foreignId', $foreignId);
         $this->set('foreignModel', $foreignModel);
@@ -110,7 +110,7 @@ class ParliamentariansController extends AppController {
             $motionConditions = array(
                 'MotionsParliamentarian.Motion_id = Motion.id',
             );
-            switch($motionType) {
+            switch ($motionType) {
                 case 'requester':
                     $motionConditions['MotionsParliamentarian.type'] = 'requester';
                     break;
@@ -128,7 +128,7 @@ class ParliamentariansController extends AppController {
                     'conditions' => $motionConditions,
                 ),
             );
-            $this->paginate['Motion']['order'] = array('Motion.modified' => 'DESC');
+            $this->paginate['Motion']['order'] = array('Motion.result_date' => 'DESC');
             $motions = $this->paginate($this->Parliamentarian->Motion, array(
                 'MotionsParliamentarian.Parliamentarian_id' => $id,
             ));
@@ -141,7 +141,7 @@ class ParliamentariansController extends AppController {
             $this->redirect(array('action' => 'index'));
         }
     }
-    
+
     function stat() {
         $this->layout = 'blank';
         $this->set('items', $this->Parliamentarian->find('all'));

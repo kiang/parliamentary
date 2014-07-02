@@ -67,7 +67,7 @@ class MotionsController extends AppController {
         $this->set('scope', $scope);
         $this->paginate['Motion']['limit'] = 20;
         $this->paginate['Motion']['order'] = array(
-            'Motion.modified' => 'DESC',
+            'Motion.result_date' => 'DESC',
         );
         $items = $this->paginate($this->Motion, $scope);
         $this->set('items', $items);
