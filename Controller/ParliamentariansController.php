@@ -120,6 +120,24 @@ class ParliamentariansController extends AppController {
                 default:
                     $motionType = 'all';
             }
+            $scope = array(
+                'MotionsParliamentarian.Parliamentarian_id' => $id,
+            );
+            
+            if (isset($this->request->data['Motion']['keyword'])) {
+                $this->Session->write('Parliamentarians.view.keyword', $this->request->data['Motion']['keyword']);
+            }
+            $keyword = $this->Session->read('Parliamentarians.view.keyword');
+            if (!empty($keyword)) {
+                $scope[] = array(
+                    array('OR' => array(
+                            'Motion.requester LIKE' => "%{$keyword}%",
+                            'Motion.petition_people LIKE' => "%{$keyword}%",
+                            'Motion.summary LIKE' => "%{$keyword}%",
+                            'Motion.description LIKE' => "%{$keyword}%",
+                        )),
+                );
+            }
             $this->paginate['Motion']['joins'] = array(
                 array(
                     'table' => 'motions_parliamentarians',
@@ -129,13 +147,12 @@ class ParliamentariansController extends AppController {
                 ),
             );
             $this->paginate['Motion']['order'] = array('Motion.result_date' => 'DESC');
-            $motions = $this->paginate($this->Parliamentarian->Motion, array(
-                'MotionsParliamentarian.Parliamentarian_id' => $id,
-            ));
+            $motions = $this->paginate($this->Parliamentarian->Motion, $scope);
             $this->set('motions', $motions);
             $this->set('item', $item);
-            $this->set('url', array($id, $motionType));
+            $this->set('url', array('controller' => 'parliamentarians', $id, $motionType));
             $this->set('motionType', $motionType);
+            $this->set('keyword', $keyword);
         } else {
             $this->Session->setFlash(__('Please do following links in the page', true));
             $this->redirect(array('action' => 'index'));

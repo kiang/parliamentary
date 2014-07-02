@@ -42,7 +42,7 @@
 
         <!--right-->
         <div class="col-md-9">
-            <div class="btn-group">
+            <div class="btn-group col-md-5">
                 <?php
                 $countAll = $item['Parliamentarian']['count_submits'] + $item['Parliamentarian']['count_petitions'];
                 echo $this->Html->link("全部({$countAll})", array('action' => 'view', $item['Parliamentarian']['id'], 'all'), array(
@@ -56,15 +56,39 @@
                 ));
                 ?>
             </div>
-            | 排序：
-            <div class="btn-group">
+            <div class="col-md-5 pull-right">
                 <?php
-                echo $this->Paginator->sort('Motion.requested_date', '來文日期', array('url' => $url, 'class' => 'btn btn-default'));
-                echo $this->Paginator->sort('Motion.result_date', '決議日期', array('url' => $url, 'class' => 'btn btn-default'));
-                echo $this->Paginator->sort('Motion.posting_date', '發文日期', array('url' => $url, 'class' => 'btn btn-default'));
+                echo $this->Form->create('Motion', array(
+                    'url' => $url,
+                    'class' => 'form-inline',
+                ));
+                echo $this->Form->input('keyword', array(
+                    'type' => 'text',
+                    'value' => $keyword,
+                    'label' => false,
+                    'div' => 'form-group',
+                    'class' => 'form-control',
+                ));
                 ?>
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">搜尋</button>
+                    <button type="button" class="btn btn-default btn-reset-keyword">重設</button>
+                </div>
+                <?php
+                echo $this->Form->end();
+                ?>    
             </div>
-            <hr />
+            <div class="col-md-5 pull-right">
+                排序：
+                <div class="btn-group">
+                    <?php
+                    echo $this->Paginator->sort('Motion.requested_date', '來文日期', array('url' => $url, 'class' => 'btn btn-default'));
+                    echo $this->Paginator->sort('Motion.result_date', '決議日期', array('url' => $url, 'class' => 'btn btn-default'));
+                    echo $this->Paginator->sort('Motion.posting_date', '發文日期', array('url' => $url, 'class' => 'btn btn-default'));
+                    ?>
+                </div>
+            </div>
+            <div class="clearfix"></div>
             <div class="paging"><?php echo $this->element('paginator'); ?></div>
             <?php
             foreach ($motions AS $motion) {
@@ -89,4 +113,15 @@
             <div class="paging"><?php echo $this->element('paginator'); ?></div>
         </div><!--/right-->
     </div><!--/row-->
+    <script>
+        $(function() {
+            $('input#MotionKeyword').click(function() {
+                $(this).select();
+            });
+            $('button.btn-reset-keyword').click(function() {
+                $('input#MotionKeyword').val('');
+                $('form#MotionViewForm').submit();
+            });
+        });
+    </script>
 </div><!--/container-->
