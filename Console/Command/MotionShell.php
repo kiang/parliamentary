@@ -17,6 +17,40 @@ class MotionShell extends AppShell {
         $this->importMotions();
         $this->matchParliamentarian();
         $this->updateParliamentarianCounter();
+        $this->matchArea();
+    }
+
+    public function matchArea() {
+        foreach ($this->motionIdStack AS $motionId => $motionSummary) {
+            $parliamentarians = $this->Parliamentarian->MotionsParliamentarian->find('list', array(
+                'fields' => array('Parliamentarian_id', 'Parliamentarian_id'),
+                'conditions' => array(
+                    'Motion_id' => $motionId,
+                    'type' => 'requester',
+                ),
+            ));
+            $pAreas = $this->Parliamentarian->AreasParliamentarian->find('list', array(
+                'fields' => array('Area_id', 'Area_id'),
+                'conditions' => array(
+                    'Parliamentarian_id' => $parliamentarians,
+                ),
+            ));
+            $mAreas = $this->Parliamentarian->Area->AreasMotion->find('list', array(
+                'fields' => array('Area_id', 'Area_id'),
+                'conditions' => array(
+                    'Motion_id' => $motionId,
+                ),
+            ));
+            foreach ($pAreas AS $pArea) {
+                if (!isset($mAreas[$pArea])) {
+                    $this->Parliamentarian->Area->AreasMotion->create();
+                    $this->Parliamentarian->Area->AreasMotion->save(array('AreasMotion' => array(
+                            'Area_id' => $pArea,
+                            'Motion_id' => $motionId,
+                    )));
+                }
+            }
+        }
     }
 
     public function updateParliamentarianCounter() {
