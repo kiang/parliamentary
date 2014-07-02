@@ -27,6 +27,12 @@ class Parliamentarian extends AppModel {
         ),
     );
     var $hasAndBelongsToMany = array(
+        'Area' => array(
+            'joinTable' => 'areas_parliamentarians',
+            'foreignKey' => 'Parliamentarian_id',
+            'associationForeignKey' => 'Area_id',
+            'className' => 'Area',
+        ),
         'Motion' => array(
             'joinTable' => 'motions_parliamentarians',
             'foreignKey' => 'Parliamentarian_id',

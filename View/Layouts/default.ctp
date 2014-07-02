@@ -41,6 +41,7 @@
                             <li><?php echo $this->Html->link('Parliamentarians', '/admin/parliamentarians'); ?></li>
                             <li><?php echo $this->Html->link('Parties', '/admin/parties'); ?></li>
                             <li><?php echo $this->Html->link('Motions', '/admin/motions'); ?></li>
+                            <li><?php echo $this->Html->link('Areas', '/admin/areas'); ?></li>
                             <li><?php echo $this->Html->link('Members', '/admin/members'); ?></li>
                             <li><?php echo $this->Html->link('Groups', '/admin/groups'); ?></li>
                             <li><?php echo $this->Html->link('Logout', '/members/logout'); ?></li>

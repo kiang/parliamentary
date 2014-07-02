@@ -43,6 +43,14 @@ class Area extends AppModel {
             ),
         ),
     );
+    public $hasAndBelongsToMany = array(
+        'Parliamentarian' => array(
+            'joinTable' => 'areas_parliamentarians',
+            'foreignKey' => 'Area_id',
+            'associationForeignKey' => 'Parliamentarian_id',
+            'className' => 'Parliamentarian',
+        ),
+    );
 
     function getParents($areaId) {
         $parents = $this->getPath($areaId, array('id', 'name'));

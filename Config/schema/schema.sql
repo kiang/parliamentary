@@ -56,6 +56,21 @@ CREATE TABLE `areas` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `areas_parliamentarians`
+--
+
+DROP TABLE IF EXISTS `areas_parliamentarians`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `areas_parliamentarians` (
+  `id` binary(36) NOT NULL,
+  `Parliamentarian_id` binary(36) NOT NULL,
+  `Area_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `aros`
 --
 
@@ -253,4 +268,4 @@ CREATE TABLE `parties` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-07-03  0:30:57
+-- Dump completed on 2014-07-03  0:48:11
