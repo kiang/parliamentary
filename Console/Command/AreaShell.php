@@ -24,7 +24,7 @@ class AreaShell extends AppShell {
                 $pArea = trim($pArea);
                 if (empty($pArea))
                     continue;
-                if ($pArea !== '平地原住民' && mb_substr($pArea, -1, 1, 'utf-8') !== '區') {
+                if ($pArea !== '平地原住民' && $pArea !== '山地原住民' && mb_substr($pArea, -1, 1, 'utf-8') !== '區') {
                     $pArea .= '區';
                 }
                 if (!isset($areas[$pArea])) {
