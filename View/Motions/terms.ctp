@@ -8,6 +8,7 @@ $smallest = $terms[key($terms)]['Term']['count'];
 $levelStage = ($largest - $smallest) / 20;
 foreach ($terms AS $term) {
     $termsJson[] = array(
+        'id' => $term['Term']['id'],
         'text' => $term['Term']['name'],
         'size' => intval($term['Term']['count'] / $levelStage) * 12,
     );
@@ -48,6 +49,10 @@ foreach ($terms AS $term) {
                     .attr("text-anchor", "middle")
                     .attr("transform", function(d) {
                         return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+                    })
+                    .append("a")
+                    .attr("xlink:href", function(d) {
+                        return "<?php echo $this->Html->url('/motions/index/Term/'); ?>" + d.id
                     })
                     .text(function(d) {
                         return d.text;
