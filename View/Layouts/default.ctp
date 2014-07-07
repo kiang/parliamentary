@@ -37,11 +37,13 @@
                     <ul class="nav navbar-nav">
                         <li><?php echo $this->Html->link('議員', '/parliamentarians'); ?></li>
                         <li><?php echo $this->Html->link('議案', '/motions'); ?></li>
+                        <li><?php echo $this->Html->link('議案標籤雲', '/motions/terms'); ?></li>
                         <?php if ($this->Session->read('Auth.User.id')): ?>
                             <li><?php echo $this->Html->link('Parliamentarians', '/admin/parliamentarians'); ?></li>
                             <li><?php echo $this->Html->link('Parties', '/admin/parties'); ?></li>
                             <li><?php echo $this->Html->link('Motions', '/admin/motions'); ?></li>
                             <li><?php echo $this->Html->link('Areas', '/admin/areas'); ?></li>
+                            <li><?php echo $this->Html->link('Terms', '/admin/terms'); ?></li>
                             <li><?php echo $this->Html->link('Members', '/admin/members'); ?></li>
                             <li><?php echo $this->Html->link('Groups', '/admin/groups'); ?></li>
                             <li><?php echo $this->Html->link('Logout', '/members/logout'); ?></li>
