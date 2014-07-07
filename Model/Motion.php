@@ -18,6 +18,12 @@ class Motion extends AppModel {
             'associationForeignKey' => 'Parliamentarian_id',
             'className' => 'Parliamentarian',
         ),
+        'Term' => array(
+            'joinTable' => 'motions_terms',
+            'foreignKey' => 'Motion_id',
+            'associationForeignKey' => 'Term_id',
+            'className' => 'Term',
+        ),
     );
 
 }

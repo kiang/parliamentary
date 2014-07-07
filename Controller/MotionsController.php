@@ -18,6 +18,7 @@ class MotionsController extends AppController {
         $habtmKeys = array(
             'Parliamentarian' => 'Parliamentarian_id',
             'Area' => 'Area_id',
+            'Term' => 'Term_id',
         );
         $foreignKeys = array_merge($habtmKeys, $foreignKeys);
 
@@ -32,6 +33,14 @@ class MotionsController extends AppController {
                         'alias' => 'AreasMotion',
                         'type' => 'inner',
                         'conditions' => array('AreasMotion.Motion_id = Motion.id'),
+                    ),
+                ),
+                'Term' => array(
+                    0 => array(
+                        'table' => 'motions_terms',
+                        'alias' => 'MotionsTerm',
+                        'type' => 'inner',
+                        'conditions' => array('MotionsTerm.Motion_id = Motion.id'),
                     ),
                 ),
                 'Parliamentarian' => array(
