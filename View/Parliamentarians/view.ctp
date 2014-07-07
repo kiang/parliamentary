@@ -22,6 +22,7 @@
                                 <li>選區：<?php echo $item['Parliamentarian']['constituency']; ?></li>
                                 <li>生日：<?php echo $item['Parliamentarian']['birth']; ?></li>
                                 <li>性別：<?php echo $item['Parliamentarian']['gender']; ?></li>
+                                <li><?php echo $this->Html->link('議會網頁', $item['Parliamentarian']['links_council'], array('target' => '_blank')); ?></li>
                             </ul>
                         </div>
                     </div>
