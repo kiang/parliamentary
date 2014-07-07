@@ -8,7 +8,7 @@ class MotionsController extends AppController {
 
     function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allowedActions = array('view', 'index');
+        $this->Auth->allowedActions = array('view', 'index', 'terms');
     }
 
     function index($foreignModel = null, $foreignId = 0) {
@@ -65,22 +65,22 @@ class MotionsController extends AppController {
         } else {
             $foreignModel = '';
         }
-        
-        if(isset($this->request->data['Motion']['keyword'])) {
+
+        if (isset($this->request->data['Motion']['keyword'])) {
             $this->Session->write('Motions.index.keyword', $this->request->data['Motion']['keyword']);
         }
         $keyword = $this->Session->read('Motions.index.keyword');
-        if(!empty($keyword)) {
+        if (!empty($keyword)) {
             $scope[] = array(
                 array('OR' => array(
-                    'Motion.requester LIKE' => "%{$keyword}%",
-                    'Motion.petition_people LIKE' => "%{$keyword}%",
-                    'Motion.summary LIKE' => "%{$keyword}%",
-                    'Motion.description LIKE' => "%{$keyword}%",
-                )),
+                        'Motion.requester LIKE' => "%{$keyword}%",
+                        'Motion.petition_people LIKE' => "%{$keyword}%",
+                        'Motion.summary LIKE' => "%{$keyword}%",
+                        'Motion.description LIKE' => "%{$keyword}%",
+                    )),
             );
         }
-        
+
         $this->set('scope', $scope);
         $this->paginate['Motion']['limit'] = 20;
         $this->paginate['Motion']['order'] = array(
@@ -113,6 +113,19 @@ class MotionsController extends AppController {
             $this->Session->setFlash(__('Please do following links in the page', true));
             $this->redirect(array('action' => 'index'));
         }
+    }
+
+    function terms() {
+        $terms = $this->Motion->Term->find('all', array(
+            'conditions' => array(
+                'Term.is_active' => '1',
+            ),
+            'limit' => 100,
+            'order' => array(
+                'Term.count' => 'DESC'
+            ),
+        ));
+        $this->set('terms', $terms);
     }
 
     function admin_index($foreignModel = null, $foreignId = 0, $op = null) {
