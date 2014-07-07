@@ -9,8 +9,12 @@ class ScwsShell extends AppShell {
         $motions = $this->Parliamentarian->Motion->find('all');
         $terms = $this->Parliamentarian->Motion->Term->find('all');
         $terms = Set::combine($terms, '{n}.Term.name', '{n}.Term');
+        $motionsCount = count($motions);
+        $motionsCurrent = 0;
 
         foreach ($motions AS $motion) {
+            ++$motionsCurrent;
+            $this->out("processing motion {$motionsCurrent} / {$motionsCount}");
             $cws = scws_new();
             $cws->set_charset('utf8');
 
@@ -22,20 +26,18 @@ class ScwsShell extends AppShell {
             )));
 
             $list = $cws->get_words('~v');
-            $terms = array();
-
             foreach ($list as $tmp) {
                 if (strlen($tmp['word']) > 3) {
                     if (!isset($terms[$tmp['word']])) {
                         $this->Parliamentarian->Motion->Term->create();
                         if ($this->Parliamentarian->Motion->Term->save(array('Term' => array(
                                         'name' => $tmp['word'],
-                                        'count' => '1',
+                                        'count' => 0,
                             )))) {
                             $terms[$tmp['word']] = array(
                                 'id' => $this->Parliamentarian->Motion->Term->getInsertID(),
                                 'name' => $tmp['word'],
-                                'count' => 1,
+                                'count' => 0,
                             );
                         }
                     }
@@ -48,13 +50,13 @@ class ScwsShell extends AppShell {
                     }
                 }
             }
+        }
 
-            foreach ($terms AS $term) {
-                $this->Parliamentarian->Motion->Term->id = $term['id'];
-                $this->Parliamentarian->Motion->Term->save(array('Term' => array(
-                        'count' => $term['count'],
-                )));
-            }
+        foreach ($terms AS $term) {
+            $this->Parliamentarian->Motion->Term->id = $term['id'];
+            $this->Parliamentarian->Motion->Term->save(array('Term' => array(
+                    'count' => $term['count'],
+            )));
         }
 
         return;

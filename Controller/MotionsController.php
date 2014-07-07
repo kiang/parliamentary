@@ -12,7 +12,6 @@ class MotionsController extends AppController {
     }
 
     function index($foreignModel = null, $foreignId = 0) {
-        $foreignId = intval($foreignId);
         $foreignKeys = array();
 
         $habtmKeys = array(
