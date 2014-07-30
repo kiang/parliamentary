@@ -3,6 +3,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h1><?php echo $item['Motion']['summary']; ?></h1>
+                <?php echo $this->Html->link('資料來源', 'http://www.tncc.gov.tw/motions/page.asp?mainid=' . $item['Motion']['id'], array('class' => 'pull-right btn btn-default', 'target' => '_blank')); ?>
             </div>
         </div> 
     </div><!--/container-->
