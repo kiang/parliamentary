@@ -207,10 +207,11 @@ class MotionShell extends AppShell {
     public function getMotionIdStack() {
         $finalPage = 142;
         $finalPageUpdated = false;
+        $today = date('Y-m-d');
 
         for ($i = 1; $i <= $finalPage; $i++) {
             $url = 'http://www.tncc.gov.tw/motions/default1.asp?status=^&menu1=A00000&topage=' . $i;
-            $cacheFile = $this->listFolder . '/' . md5($url);
+            $cacheFile = $this->listFolder . '/' . md5($url . $today);
             if (!file_exists($cacheFile)) {
                 file_put_contents($cacheFile, file_get_contents($url));
             }
