@@ -134,17 +134,6 @@ class MotionRefreshShell extends AppShell {
 
     public function processMotions() {
         $this->motionIdStack = $this->Parliamentarian->Motion->find('list', array(
-            'conditions' => array(
-                'OR' => array(
-                    'Motion.result_date IS NULL',
-                    'Motion.comments IS NULL',
-                    'Motion.result IS NULL',
-                    'Motion.status IS NULL',
-                    'Motion.comments' => '',
-                    'Motion.result' => '',
-                    'Motion.status' => '',
-                ),
-            ),
             'fields' => array('id', 'id'),
         ));
         $countTotal = count($this->motionIdStack);
