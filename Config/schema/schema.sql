@@ -198,7 +198,7 @@ CREATE TABLE `motions` (
   `rules` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `comments` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `result` text COLLATE utf8_unicode_ci,
-  `status` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `status` text COLLATE utf8_unicode_ci,
   `result_date` date DEFAULT NULL,
   `posting_date` date DEFAULT NULL,
   `posting_number` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -314,4 +314,4 @@ CREATE TABLE `terms` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-07-08  0:58:12
+-- Dump completed on 2014-07-30 23:51:25
