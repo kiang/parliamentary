@@ -2,13 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
     <head>
         <?php echo $this->Html->charset(); ?>
-        <title>
-            議員觀測中心::
-            <?php echo $title_for_layout; ?>
-        </title>
+        <title><?php echo $title_for_layout; ?> @ 台南市議員觀測中心</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <?php
         echo $this->Html->meta('icon');
+        echo $this->Html->meta(array('property' => 'og:image', 'content' => isset($img_for_layout) ? $img_for_layout : $this->Html->url('/img/og_image.png', true)));
+        echo $this->Html->meta('description', isset($desc_for_layout) ? $desc_for_layout : '台南市議員觀測中心蒐集與整理議會與議員的相關資訊，透過更直覺的方式去呈現結果，讓大家可以更快找到想要了解的資訊');
         echo $this->Html->css('jquery-ui');
         echo $this->Html->css('bootstrap');
         echo $this->Html->css('default');

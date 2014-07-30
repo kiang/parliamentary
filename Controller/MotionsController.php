@@ -86,15 +86,25 @@ class MotionsController extends AppController {
         $this->paginate['Motion']['order'] = array(
             'Motion.result_date' => 'DESC',
         );
+        $areas = $this->Motion->Area->find('all', array(
+            'fields' => array('id', 'name'),
+        ));
+        $areas = Set::combine($areas, '{n}.Area.id', '{n}');
         $items = $this->paginate($this->Motion, $scope);
         $this->set('items', $items);
-        $this->set('areas', $this->Motion->Area->find('all', array(
-                    'fields' => array('id', 'name'),
-        )));
+        $this->set('areas', $areas);
         $this->set('keyword', $keyword);
         $this->set('foreignId', $foreignId);
         $this->set('foreignModel', $foreignModel);
         $this->set('url', array($foreignModel, $foreignId));
+        if($foreignModel === 'Area' && !empty($foreignId)) {
+            $title_for_layout = $desc_for_layout = '台南市' . $areas[$foreignId]['Area']['name'] . '議案';
+        } else {
+            $title_for_layout = $desc_for_layout = '台南市議案：';
+        }
+        $desc_for_layout .= implode(' | ', Set::extract('{n}.Motion.summary', $items));
+        $this->set('title_for_layout', $title_for_layout . '一覽');
+        $this->set('desc_for_layout', $desc_for_layout);
     }
 
     function view($id = null) {
@@ -109,6 +119,12 @@ class MotionsController extends AppController {
         if (!empty($item)) {
             $item['Parliamentarian'] = Set::combine($item['Parliamentarian'], '{n}.id', '{n}', '{n}.MotionsParliamentarian.type');
             $this->set('item', $item);
+            $ogTitle = mb_substr($item['Motion']['summary'], 0, 50, 'utf-8');
+            if($ogTitle !== $item['Motion']['summary']) {
+                $ogTitle .= '...';
+            }
+            $this->set('title_for_layout', '議案：' . $ogTitle);
+            $this->set('desc_for_layout', $item['Motion']['summary']);
         } else {
             $this->Session->setFlash(__('Please do following links in the page', true));
             $this->redirect(array('action' => 'index'));

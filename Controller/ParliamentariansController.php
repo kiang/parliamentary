@@ -95,13 +95,24 @@ class ParliamentariansController extends AppController {
                 ),
             ));
         }
+        $areas = $this->Parliamentarian->Area->find('all', array(
+            'fields' => array('id', 'name'),
+        ));
+        $areas = Set::combine($areas, '{n}.Area.id', '{n}');
         $this->set('items', $items);
-        $this->set('areas', $this->Parliamentarian->Area->find('all', array(
-                    'fields' => array('id', 'name'),
-        )));
+        $this->set('areas', $areas);
         $this->set('foreignId', $foreignId);
         $this->set('foreignModel', $foreignModel);
         $this->set('url', array($foreignModel, $foreignId));
+        
+        if($foreignModel === 'Area' && !empty($foreignId)) {
+            $title_for_layout = $desc_for_layout = '台南市' . $areas[$foreignId]['Area']['name'] . '議員';
+        } else {
+            $title_for_layout = $desc_for_layout = '台南市議員';
+        }
+        $desc_for_layout .= implode(',', Set::extract('{n}.Parliamentarian.name', $items));
+        $this->set('title_for_layout', $title_for_layout . '一覽');
+        $this->set('desc_for_layout', $desc_for_layout);
     }
 
     function view($id = null, $motionType = 'all') {
@@ -123,7 +134,7 @@ class ParliamentariansController extends AppController {
             $scope = array(
                 'MotionsParliamentarian.Parliamentarian_id' => $id,
             );
-            
+
             if (isset($this->request->data['Motion']['keyword'])) {
                 $this->Session->write('Parliamentarians.view.keyword', $this->request->data['Motion']['keyword']);
             }
@@ -153,6 +164,16 @@ class ParliamentariansController extends AppController {
             $this->set('url', array('controller' => 'parliamentarians', $id, $motionType));
             $this->set('motionType', $motionType);
             $this->set('keyword', $keyword);
+            $this->set('title_for_layout', '台南市' . $item['Parliamentarian']['district'] . $item['Parliamentarian']['name']);
+            if (!empty($item['Parliamentarian']['image_url'])) {
+                $this->set('img_for_layout', $item['Parliamentarian']['image_url']);
+            }
+            $this->set('desc_for_layout', implode(',', array(
+                $item['Parliamentarian']['name'],
+                $item['Parliamentarian']['district'],
+                $item['Parliamentarian']['platform'],
+                $item['Parliamentarian']['party'],
+            )));
         } else {
             $this->Session->setFlash(__('Please do following links in the page', true));
             $this->redirect(array('action' => 'index'));
