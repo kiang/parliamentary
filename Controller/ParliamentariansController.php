@@ -110,7 +110,9 @@ class ParliamentariansController extends AppController {
         } else {
             $title_for_layout = $desc_for_layout = '台南市議員';
         }
-        $desc_for_layout .= implode(',', Set::extract('{n}.Parliamentarian.name', $items));
+        if(!empty($items)) {
+            $desc_for_layout .= implode(',', Set::extract('{n}.Parliamentarian.name', $items));
+        }
         $this->set('title_for_layout', $title_for_layout . '一覽');
         $this->set('desc_for_layout', $desc_for_layout);
     }

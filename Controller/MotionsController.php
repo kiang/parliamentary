@@ -102,7 +102,9 @@ class MotionsController extends AppController {
         } else {
             $title_for_layout = $desc_for_layout = '台南市議案：';
         }
-        $desc_for_layout .= implode(' | ', Set::extract('{n}.Motion.summary', $items));
+        if(!empty($items)) {
+            $desc_for_layout .= implode(' | ', Set::extract('{n}.Motion.summary', $items));
+        }
         $this->set('title_for_layout', $title_for_layout . '一覽');
         $this->set('desc_for_layout', $desc_for_layout);
     }
