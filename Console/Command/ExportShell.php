@@ -15,7 +15,7 @@ class ExportShell extends AppShell {
             $bills[] = array(
                 'category' => $motion['Motion']['group_type'],
                 'bill_no' => $motion['Motion']['number'],
-                'remark' => $motion['Motion']['description'],
+                'description' => $motion['Motion']['description'],
                 'proposed_by' => explode(',', $motion['Motion']['requester']),
                 'election_year' => '2010',
                 'abstract' => $motion['Motion']['summary'],
