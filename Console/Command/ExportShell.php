@@ -12,11 +12,28 @@ class ExportShell extends AppShell {
         $motions = $this->Motion->find('all');
         $bills = array();
         foreach ($motions AS $motion) {
+            $motion['Motion']['requester'] = str_replace(array('、', ' ', ',,'), array(',', ',', ','), $motion['Motion']['requester']);
+            $motion['Motion']['requester'] = explode(',', $motion['Motion']['requester']);
+            foreach ($motion['Motion']['requester'] AS $k => $v) {
+                if (empty(trim($v))) {
+                    unset($motion['Motion']['requester'][$k]);
+                }
+            }
+            $motion['Motion']['requester'] = array_values($motion['Motion']['requester']);
+            $motion['Motion']['petition_people'] = str_replace(array('、', ' ', ',,'), array(',', ',', ','), $motion['Motion']['petition_people']);
+            $motion['Motion']['petition_people'] = explode(',', $motion['Motion']['petition_people']);
+            foreach ($motion['Motion']['petition_people'] AS $k => $v) {
+                if (empty(trim($v))) {
+                    unset($motion['Motion']['petition_people'][$k]);
+                }
+            }
+            $motion['Motion']['petition_people'] = array_values($motion['Motion']['petition_people']);
             $bills[] = array(
                 'category' => $motion['Motion']['group_type'],
                 'bill_no' => $motion['Motion']['number'],
                 'description' => $motion['Motion']['description'],
-                'proposed_by' => explode(',', $motion['Motion']['requester']),
+                'proposed_by' => $motion['Motion']['requester'],
+                'petitioned_by' => $motion['Motion']['petition_people'],
                 'election_year' => '2010',
                 'abstract' => $motion['Motion']['summary'],
                 'links' => 'http://www.tncc.gov.tw/motions/page.asp?mainid=' . $motion['Motion']['id'],
