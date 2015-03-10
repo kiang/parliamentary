@@ -58,10 +58,10 @@ class GrantsController extends AppController {
         if (!empty($keyword)) {
             $scope[] = array(
                 array('OR' => array(
-                        'Grant.requester LIKE' => "%{$keyword}%",
-                        'Grant.petition_people LIKE' => "%{$keyword}%",
-                        'Grant.summary LIKE' => "%{$keyword}%",
-                        'Grant.description LIKE' => "%{$keyword}%",
+                        'Grant.title LIKE' => "%{$keyword}%",
+                        'Grant.vendors LIKE' => "%{$keyword}%",
+                        'Grant.parliamentarians LIKE' => "%{$keyword}%",
+                        'Grant.area LIKE' => "%{$keyword}%",
                     )),
             );
         }
@@ -69,7 +69,7 @@ class GrantsController extends AppController {
         $this->set('scope', $scope);
         $this->paginate['Grant']['limit'] = 20;
         $this->paginate['Grant']['order'] = array(
-            'Grant.result_date' => 'DESC',
+            'Grant.year' => 'DESC',
         );
         $areas = $this->Grant->Area->find('all', array(
             'fields' => array('id', 'name'),
