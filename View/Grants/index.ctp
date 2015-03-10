@@ -99,7 +99,7 @@
             $('form#GrantIndexForm').submit(function() {
                 var k = $('input#GrantKeyword').val();
                 if(k !== '') {
-                    location.href = '<?php echo $this->Html->url('/grants/index/k'); ?>/' + $('input#GrantKeyword').val();
+                    location.href = '<?php echo $this->Html->url('/grants/index/k'); ?>/' + encodeURIComponent($('input#GrantKeyword').val());
                 } else {
                     alert('請輸入要搜尋的文字');
                 }
