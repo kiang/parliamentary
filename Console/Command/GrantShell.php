@@ -66,10 +66,11 @@ class GrantShell extends AppShell {
                     $line[4] = preg_replace('/[^0-9]/', '', $line[4]);
                     $this->Grant->create();
                     if ($this->Grant->save(array('Grant' => array(
+                                    'year' => '2014',
                                     'title' => $line[1],
                                     'area' => implode(',', $line[2]),
-                                    'amount_suggested' => $line[3],
-                                    'amount_approved' => $line[4],
+                                    'amount_suggested' => $line[3] . '000',
+                                    'amount_approved' => $line[4] . '000',
                                     'account' => $line[5],
                                     'department' => $line[6],
                                     'type' => $line[7],
