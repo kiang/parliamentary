@@ -1,5 +1,7 @@
 <?php
 
+App::uses('Sanitize', 'Utility');
+
 class ParliamentariansController extends AppController {
 
     public $name = 'Parliamentarians';
@@ -138,7 +140,7 @@ class ParliamentariansController extends AppController {
             );
 
             if (isset($this->request->data['Motion']['keyword'])) {
-                $this->Session->write('Parliamentarians.view.keyword', $this->request->data['Motion']['keyword']);
+                $this->Session->write('Parliamentarians.view.keyword', Sanitize::clean($this->request->data['Motion']['keyword']));
             }
             $keyword = $this->Session->read('Parliamentarians.view.keyword');
             if (!empty($keyword)) {

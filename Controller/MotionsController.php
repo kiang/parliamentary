@@ -1,5 +1,7 @@
 <?php
 
+App::uses('Sanitize', 'Utility');
+
 class MotionsController extends AppController {
 
     public $name = 'Motions';
@@ -67,7 +69,7 @@ class MotionsController extends AppController {
         }
 
         if (isset($this->request->data['Motion']['keyword'])) {
-            $this->Session->write('Motions.index.keyword', $this->request->data['Motion']['keyword']);
+            $this->Session->write('Motions.index.keyword', Sanitize::clean($this->request->data['Motion']['keyword']));
         }
         $keyword = $this->Session->read('Motions.index.keyword');
         if (!empty($keyword)) {
