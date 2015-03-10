@@ -147,6 +147,7 @@ DROP TABLE IF EXISTS `grants`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `grants` (
   `id` binary(36) NOT NULL,
+  `year` year(4) NOT NULL,
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `area` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `amount_suggested` int(11) unsigned NOT NULL,
@@ -368,4 +369,4 @@ CREATE TABLE `terms` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-03-10 17:16:28
+-- Dump completed on 2015-03-10 18:02:05
