@@ -1,5 +1,7 @@
 <?php
 
+App::uses('Sanitize', 'Utility');
+
 class GrantsController extends AppController {
 
     public $name = 'Grants';
@@ -21,6 +23,7 @@ class GrantsController extends AppController {
         $foreignKeys = array_merge($habtmKeys, $foreignKeys);
 
         $scope = array();
+        $keyword = '';
         if (array_key_exists($foreignModel, $foreignKeys) && $foreignId > 0) {
             $scope['Grant.' . $foreignKeys[$foreignModel]] = $foreignId;
 
@@ -47,14 +50,11 @@ class GrantsController extends AppController {
                 $scope[$joins[$foreignModel][0]['alias'] . '.' . $foreignKeys[$foreignModel]] = $foreignId;
                 $this->paginate['Grant']['joins'] = $joins[$foreignModel];
             }
+        } elseif ($foreignModel === 'k') {
+            $keyword = Sanitize::clean($foreignId);
         } else {
             $foreignModel = '';
         }
-
-        if (isset($this->request->data['Grant']['keyword'])) {
-            $this->Session->write('Grants.index.keyword', $this->request->data['Grant']['keyword']);
-        }
-        $keyword = $this->Session->read('Grants.index.keyword');
         if (!empty($keyword)) {
             $scope[] = array(
                 array('OR' => array(

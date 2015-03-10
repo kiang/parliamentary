@@ -94,8 +94,16 @@
                 $(this).select();
             });
             $('button.btn-reset-keyword').click(function () {
-                $('input#GrantKeyword').val('');
-                $('form#GrantIndexForm').submit();
+                location.href = '<?php echo $this->Html->url('/grants'); ?>';
+            });
+            $('form#GrantIndexForm').submit(function() {
+                var k = $('input#GrantKeyword').val();
+                if(k !== '') {
+                    location.href = '<?php echo $this->Html->url('/grants/index/k'); ?>/' + $('input#GrantKeyword').val();
+                } else {
+                    alert('請輸入要搜尋的文字');
+                }
+                return false;
             });
         });
     </script>
