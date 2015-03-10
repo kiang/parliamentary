@@ -43,7 +43,7 @@
 
         <!--right-->
         <div class="col-md-9">
-            <div class="btn-group col-md-5">
+            <div class="btn-group col-md-6">
                 <?php
                 $countAll = $item['Parliamentarian']['count_submits'] + $item['Parliamentarian']['count_petitions'];
                 echo $this->Html->link("全部({$countAll})", array('action' => 'view', $item['Parliamentarian']['id'], 'all'), array(
@@ -54,6 +54,9 @@
                 ));
                 echo $this->Html->link("連署({$item['Parliamentarian']['count_petitions']})", array('action' => 'view', $item['Parliamentarian']['id'], 'petition'), array(
                     'class' => 'btn ' . (($motionType === 'petition') ? 'btn-primary' : 'btn-default'),
+                ));
+                echo $this->Html->link('建議事項', array('controller' => 'grants', 'action' => 'index', 'Parliamentarian', $item['Parliamentarian']['id']), array(
+                    'class' => 'btn btn-default',
                 ));
                 ?>
             </div>

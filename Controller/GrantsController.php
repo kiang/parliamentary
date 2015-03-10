@@ -40,12 +40,6 @@ class GrantsController extends AppController {
                         'type' => 'inner',
                         'conditions' => array('GrantsParliamentarian.Grant_id = Grant.id'),
                     ),
-                    1 => array(
-                        'table' => 'parliamentarians',
-                        'alias' => 'Parliamentarian',
-                        'type' => 'inner',
-                        'conditions' => array('GrantsParliamentarian.Parliamentarian_id = Parliamentarian.id'),
-                    ),
                 ),
             );
             if (array_key_exists($foreignModel, $habtmKeys)) {
