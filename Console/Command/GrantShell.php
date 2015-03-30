@@ -5,6 +5,50 @@ class GrantShell extends AppShell {
     public $uses = array('Grant');
 
     public function main() {
+        $this->import();
+    }
+
+    public function report() {
+        /*
+         * 計算個別議員的建議款排名
+         */
+        $this->Grant->query('SELECT p.name, SUM(g.amount_approved) AS s FROM `grants` g
+inner join grants_parliamentarians AS gp ON gp.Grant_id = g.id
+inner join parliamentarians AS p ON p.id = gp.Parliamentarian_id
+group by gp.Parliamentarian_id
+order by s ASC;');
+        /*
+         * 計算政黨建議款排名
+         */
+        $this->Grant->query('SELECT p.party, SUM(g.amount_approved) AS s FROM `grants` g
+inner join grants_parliamentarians AS gp ON gp.Grant_id = g.id
+inner join parliamentarians AS p ON p.id = gp.Parliamentarian_id
+group by p.party
+order by s DESC;');
+        /*
+         * 計算以廠商排列的建議款加總
+         */
+        $this->Grant->query('SELECT g.vendors, SUM(g.amount_approved) AS s FROM `grants` g
+group by g.vendors
+order by s DESC;');
+        /*
+         * 計算刪減數字加總
+         */
+        $this->Grant->query('SELECT p.name, SUM(g.amount_suggested) - SUM(g.amount_approved) AS s
+FROM `grants` g
+inner join grants_parliamentarians AS gp ON gp.Grant_id = g.id
+inner join parliamentarians AS p ON p.id = gp.Parliamentarian_id
+group by gp.Parliamentarian_id
+ORDER BY `s`  DESC');
+        /*
+         * 計算區域分配情況
+         */
+        $this->Grant->query('SELECT g.area, SUM(g.amount_approved) AS s FROM `grants` g
+group by g.area
+order by s DESC;');
+    }
+
+    public function import() {
         $parliamentarians = $this->Grant->Parliamentarian->find('list', array(
             'fields' => array('name', 'id'),
         ));
