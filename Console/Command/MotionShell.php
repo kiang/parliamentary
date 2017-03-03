@@ -54,7 +54,9 @@ class MotionShell extends AppShell {
     }
 
     public function updateParliamentarianCounter() {
-        $parliamentarians = $this->Parliamentarian->find('list');
+        $parliamentarians = $this->Parliamentarian->find('list', array(
+            'conditions' => array('ad' => '2'),
+        ));
         foreach ($parliamentarians AS $parliamentarianId => $parliamentarian) {
             $this->Parliamentarian->query("UPDATE parliamentarians SET count_submits = (SELECT COUNT(*) FROM motions_parliamentarians WHERE Parliamentarian_id = '{$parliamentarianId}' AND type = 'requester') WHERE id = '{$parliamentarianId}'");
             $this->Parliamentarian->query("UPDATE parliamentarians SET count_petitions = (SELECT COUNT(*) FROM motions_parliamentarians WHERE Parliamentarian_id = '{$parliamentarianId}' AND type = 'petition') WHERE id = '{$parliamentarianId}'");
@@ -62,7 +64,9 @@ class MotionShell extends AppShell {
     }
 
     public function matchParliamentarian() {
-        $parliamentarians = $this->Parliamentarian->find('list');
+        $parliamentarians = $this->Parliamentarian->find('list', array(
+            'conditions' => array('ad' => '2'),
+        ));
         foreach ($this->motionIdStack AS $motionId => $motionSummary) {
             $links = $this->Parliamentarian->MotionsParliamentarian->find('all', array(
                 'conditions' => array('Motion_id' => $motionId),
@@ -205,12 +209,12 @@ class MotionShell extends AppShell {
     }
 
     public function getMotionIdStack() {
-        $finalPage = 142;
+        $finalPage = 64;
         $finalPageUpdated = false;
         $today = date('Y-m-d');
 
         for ($i = 1; $i <= $finalPage; $i++) {
-            $url = 'http://www.tncc.gov.tw/motions/default1.asp?status=^&menu1=A00000&topage=' . $i;
+            $url = 'http://www.tncc.gov.tw/motions/default1.asp?status=^&menu1=A10000&topage=' . $i;
             $cacheFile = $this->listFolder . '/' . md5($url . $today);
             if (!file_exists($cacheFile)) {
                 file_put_contents($cacheFile, file_get_contents($url));
