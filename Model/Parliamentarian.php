@@ -5,8 +5,8 @@ class Parliamentarian extends AppModel {
     var $name = 'Parliamentarian';
     var $validate = array(
         'name' => array(
-            'notEmpty' => array(
-                'rule' => 'notEmpty',
+            'notBlank' => array(
+                'rule' => 'notBlank',
                 'message' => 'This field is required',
             ),
         ),

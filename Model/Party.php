@@ -5,8 +5,8 @@ class Party extends AppModel {
     var $name = 'Party';
     var $validate = array(
         'name' => array(
-            'notEmpty' => array(
-                'rule' => 'notEmpty',
+            'notBlank' => array(
+                'rule' => 'notBlank',
                 'message' => 'This field is required',
             ),
         ),
