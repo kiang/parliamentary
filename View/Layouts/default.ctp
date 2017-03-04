@@ -36,7 +36,6 @@
                     <ul class="nav navbar-nav">
                         <li><?php echo $this->Html->link('議員', '/parliamentarians'); ?></li>
                         <li><?php echo $this->Html->link('議案', '/motions'); ?></li>
-                        <li><?php echo $this->Html->link('議案標籤雲', '/motions/terms'); ?></li>
                         <li><?php echo $this->Html->link('議員建議事項', '/grants'); ?></li>
                         <?php if ($this->Session->read('Auth.User.id')): ?>
                             <li><?php echo $this->Html->link('Parliamentarians', '/admin/parliamentarians'); ?></li>
