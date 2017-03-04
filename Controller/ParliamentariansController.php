@@ -186,7 +186,9 @@ class ParliamentariansController extends AppController {
 
     function stat() {
         $this->layout = 'blank';
-        $this->set('items', $this->Parliamentarian->find('all'));
+        $this->set('items', $this->Parliamentarian->find('all', array(
+            'fields' => array('id', 'name', 'count_submits', 'count_petitions', 'Party_id', 'ad'),
+        )));
     }
 
     function admin_index($foreignModel = null, $foreignId = 0, $op = null) {

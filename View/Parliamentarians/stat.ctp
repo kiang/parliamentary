@@ -20,7 +20,7 @@ foreach ($items AS $item) {
     }
     $data['children'][] = array(
         'id' => $item['Parliamentarian']['id'],
-        'className' => $item['Parliamentarian']['name'],
+        'className' => "[{$item['Parliamentarian']['ad']}]{$item['Parliamentarian']['name']}",
         'linkTitle' => implode("\n", array(
             '提案： ' . $item['Parliamentarian']['count_submits'],
             '連署： ' . $item['Parliamentarian']['count_petitions'],
