@@ -70,7 +70,10 @@ class ParliamentariansController extends AppController {
         }
         $this->set('scope', $scope);
         $this->paginate['Parliamentarian']['limit'] = 20;
-        $this->paginate['Parliamentarian']['order'] = array('modified' => 'DESC');
+        $this->paginate['Parliamentarian']['order'] = array(
+            'Parliamentarian.ad' => 'DESC',
+            'Parliamentarian.count_submits' => 'DESC'
+        );
         $this->paginate['Parliamentarian']['fields'] = array(
             'id', 'Party_id', 'name', 'district', 'links_council', 'image_url',
         );
@@ -93,7 +96,7 @@ class ParliamentariansController extends AppController {
                 ),
                 'limit' => 5,
                 'order' => array(
-                    'Motion.modified' => 'DESC'
+                    'Motion.result_date' => 'DESC'
                 ),
             ));
         }
@@ -161,7 +164,7 @@ class ParliamentariansController extends AppController {
                     'conditions' => $motionConditions,
                 ),
             );
-            $this->paginate['Motion']['order'] = array('Motion.modified' => 'DESC');
+            $this->paginate['Motion']['order'] = array('Motion.result_date' => 'DESC');
             $motions = $this->paginate($this->Parliamentarian->Motion, $scope);
             $this->set('motions', $motions);
             $this->set('item', $item);
