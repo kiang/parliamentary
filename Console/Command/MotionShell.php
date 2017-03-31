@@ -152,6 +152,10 @@ class MotionShell extends AppShell {
                 file_put_contents($itemCacheFile, file_get_contents('http://www.tncc.gov.tw/motions/page.asp?mainid=' . $motionId));
             }
             $itemContent = file_get_contents($itemCacheFile);
+            if(empty($itemContent)) {
+                unlink($itemCacheFile);
+                continue;
+            }
             $itemContent = substr($itemContent, strpos($itemContent, '"table2">') + 10);
             $itemContent = substr($itemContent, 0, strpos($itemContent, '</table>'));
             $lines = explode('</tr>', $itemContent);

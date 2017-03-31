@@ -134,6 +134,9 @@ class MotionRefreshShell extends AppShell {
 
     public function processMotions() {
         $this->motionIdStack = $this->Parliamentarian->Motion->find('list', array(
+            'conditions' => array(
+                'Motion.result_date IS NULL'
+            ),
             'fields' => array('id', 'id'),
         ));
         $countTotal = count($this->motionIdStack);
@@ -150,8 +153,16 @@ class MotionRefreshShell extends AppShell {
                 file_put_contents($itemCacheFile, file_get_contents('http://www.tncc.gov.tw/motions/page.asp?mainid=' . $motionId));
             }
             $itemContent = file_get_contents($itemCacheFile);
+            if(empty($itemContent)) {
+                unlink($itemCacheFile);
+                continue;
+            }
             $itemContent = substr($itemContent, strpos($itemContent, '"table2">') + 10);
-            $itemContent = substr($itemContent, 0, strpos($itemContent, '</table>'));
+            $posEnd = strpos($itemContent, '</table>');
+            if(false === $posEnd) {
+                $posEnd = strlen($itemContent);
+            }
+            $itemContent = substr($itemContent, 0, $posEnd);
             $lines = explode('</tr>', $itemContent);
             $result = array();
             foreach ($lines AS $lineKey => $lineVal) {
@@ -178,6 +189,9 @@ class MotionRefreshShell extends AppShell {
                 switch ($lineKey) {
                     case 0:
                     case 1:
+                        if(!isset($lineCols[1])) {
+                            print_r($motionId); exit();
+                        }
                         // 4 cols
                         $result[$lineCols[0]] = $lineCols[1];
                         $result[$lineCols[2]] = $lineCols[3];
