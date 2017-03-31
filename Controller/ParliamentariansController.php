@@ -93,7 +93,7 @@ class ParliamentariansController extends AppController {
                 ),
                 'limit' => 5,
                 'order' => array(
-                    'Motion.result_date' => 'DESC'
+                    'Motion.modified' => 'DESC'
                 ),
             ));
         }
@@ -161,7 +161,7 @@ class ParliamentariansController extends AppController {
                     'conditions' => $motionConditions,
                 ),
             );
-            $this->paginate['Motion']['order'] = array('Motion.result_date' => 'DESC');
+            $this->paginate['Motion']['order'] = array('Motion.modified' => 'DESC');
             $motions = $this->paginate($this->Parliamentarian->Motion, $scope);
             $this->set('motions', $motions);
             $this->set('item', $item);
