@@ -227,14 +227,18 @@ class MotionShell extends AppShell {
                     if (false !== strpos($pagePart, 'menu1')) {
                         $getPage = intval(substr($pagePart, 0, strpos($pagePart, '&')));
                         if ($getPage > $finalPage) {
+                            $finalPageUpdated = true;
                             $finalPage = $getPage;
                         }
                     }
                 }
-                $finalPageUpdated = true;
             }
             $listContent = substr($listContent, strpos($listContent, 'id="printa"') + 12);
-            $listContent = substr($listContent, 0, strpos($listContent, '</table>'));
+            $posEnd = strpos($listContent, '</table>');
+            if(false === $posEnd) {
+                $posEnd = strlen($listContent);
+            }
+            $listContent = substr($listContent, 0, $posEnd);
             $listLines = explode('</tr>', $listContent);
             foreach ($listLines AS $listLine) {
                 $cols = explode('</td>', $listLine);
@@ -253,7 +257,9 @@ class MotionShell extends AppShell {
                             $cols[$k] = trim(strip_tags($col));
                     }
                 }
-                $this->motionIdStack[$cols[0]] = $cols;
+                if(!empty($cols[4]) && !empty($cols[5])) {
+                    $this->motionIdStack[$cols[0]] = $cols;
+                }
             }
         }
     }
